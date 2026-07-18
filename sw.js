@@ -1,4 +1,4 @@
-const CACHE='chanel-armani-bonus-boss-v17';
+const CACHE='chanel-armani-bonus-boss-v18';
 const APP_SHELL=[
   './',
   './index.html',

@@ -1,4 +1,4 @@
-const CACHE='chanel-armani-v24-world-tour-memory';
+const CACHE='chanel-armani-v25-world-tour-memory';
 const APP_SHELL=[
   './',
   './index.html',

@@ -112,11 +112,11 @@
 .worldGrid{display:grid;grid-template-columns:repeat(2,minmax(210px,1fr));gap:12px;margin:14px 0}.country{padding:14px;border:4px solid #362b23;border-radius:18px;background:#fff;font-weight:900;font-size:20px}.country.locked{filter:grayscale(.65);opacity:.65}.country small{display:block;font-size:13px;margin-top:5px}.switchBtn{background:#93c5fd!important}.activeName{color:#1d4ed8}.travelLine{font-size:28px;letter-spacing:7px;margin:8px}.mapCard{background:linear-gradient(180deg,#dbeafe,#dcfce7)}
 @media(max-width:560px){.worldGrid{grid-template-columns:1fr}.country{font-size:17px}}
 
-/* V22 – V19-Grafik mit Sehenswürdigkeiten, Infokarten und echtem Memory */
+/* V23 – V19-Grafik mit Landmarken, Infokarten und echtem Memory */
 #landmarkInfo{position:fixed;z-index:80;inset:0;display:none;align-items:center;justify-content:center;background:rgba(4,9,20,.68);padding:18px}
-#landmarkInfo.show{display:flex}.landmarkCard{width:min(560px,94vw);background:linear-gradient(145deg,#fff8df,#ffffff);color:#2d241d;border:4px solid #c98b36;border-radius:24px;padding:20px;text-align:center;box-shadow:0 22px 70px #0008}.landmarkCard .lmIcon{font-size:64px}.landmarkCard h2{margin:4px 0 8px;color:#8b3f16}.landmarkCard p{font-size:19px;line-height:1.35}.landmarkCard button{font-size:18px}
-#memory{background:radial-gradient(circle at 50% 20%,#174b75,#07101f)}.memoryCard{width:min(980px,98vw);max-height:98vh;overflow:auto}.memoryGrid{display:grid;grid-template-columns:repeat(4,minmax(70px,1fr));gap:10px;margin:12px auto;max-width:760px}.memTile{aspect-ratio:1/1;border-radius:16px;border:3px solid #f4c66d;background:linear-gradient(145deg,#1e3a5f,#10233d);font-size:clamp(26px,5vw,52px);display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 6px 0 #08111f;cursor:pointer}.memTile.open,.memTile.matched{background:linear-gradient(145deg,#fff7d6,#fff);color:#202020}.memTile.matched{border-color:#4ade80;opacity:.82}.memoryFact{min-height:70px;margin:8px auto;padding:10px;border-radius:14px;background:#fff4cc;color:#3b2a12;max-width:760px;font-size:17px}.memoryTop{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-weight:900}.italyStamp{font-size:70px;filter:drop-shadow(0 5px 5px #0005)}
-@media(max-width:600px){.memoryGrid{grid-template-columns:repeat(4,1fr);gap:6px}.memTile{border-width:2px}.landmarkCard p{font-size:16px}}
+#landmarkInfo.show{display:flex}.landmarkCard{width:min(560px,94vw);background:linear-gradient(145deg,#fff8df,#ffffff);color:#2d241d;border:4px solid #c98b36;border-radius:24px;padding:20px;text-align:center;box-shadow:0 22px 70px #0008}.landmarkCard .lmIcon{font-size:64px}.landmarkCard h2{margin:4px 0 8px;color:#8b3f16}.landmarkCard p{font-size:15px;line-height:1.35}.landmarkCard button{font-size:18px}
+#memory{background:radial-gradient(circle at 50% 20%,#174b75,#07101f)}.memoryCard{width:min(980px,98vw);max-height:98vh;overflow:auto}.memoryGrid{display:grid;grid-template-columns:repeat(4,minmax(70px,1fr));gap:10px;margin:12px auto;max-width:760px}.memTile{aspect-ratio:1/1;overflow:hidden;border-radius:16px;border:3px solid #f4c66d;background:linear-gradient(145deg,#1e3a5f,#10233d);font-size:clamp(26px,5vw,52px);display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 6px 0 #08111f;cursor:pointer}.memTile.open,.memTile.matched{background:linear-gradient(145deg,#fff7d6,#fff);color:#202020}.memTile.matched{border-color:#4ade80;opacity:.82}.memoryFact{min-height:62px;margin:8px auto;padding:9px;border-radius:14px;background:#fff4cc;color:#3b2a12;max-width:760px;font-size:14px}.memoryTop{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-weight:900}.italyStamp{font-size:70px;filter:drop-shadow(0 5px 5px #0005)}
+@media(max-width:600px){.landmarkCard h2{font-size:22px}.memoryCard h1{font-size:25px}.memoryCard p{font-size:14px}.memoryGrid{grid-template-columns:repeat(4,1fr);gap:6px}.memTile{border-width:2px}.landmarkCard p{font-size:16px}}
 </style></head><body>
 
 <div id="helpOverlay" class="screen" style="display:none;z-index:10000;background:linear-gradient(180deg,#7dd3fc,#fef3c7);overflow:auto">
@@ -217,31 +217,31 @@ font:700 14px Arial;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.35)">
 
 <button id="settingsBtn">⚙️ SOUND</button>
 <div id="settingsPanel">
-  <label>Musik <input id="musicVol" type="range" min="0" max="100" value="45"></label>
-  <label>Effekte <input id="sfxVol" type="range" min="0" max="100" value="70"></label>
-  <label>Schwierigkeit
+  <label>Music <input id="musicVol" type="range" min="0" max="100" value="45"></label>
+  <label>Effects <input id="sfxVol" type="range" min="0" max="100" value="70"></label>
+  <label>Difficulty
     <select id="difficulty">
-      <option value="easy">Leicht</option>
+      <option value="easy">Easy</option>
       <option value="normal" selected>Normal</option>
-      <option value="hard">Schwer</option>
+      <option value="hard">Hard</option>
     </select>
   </label>
-  <button id="muteBtn">🔊 AN/AUS</button>
+  <button id="muteBtn">🔊 ON/OFF</button>
 </div>
 <div id="bossBarWrap"><div id="bossBar"></div></div>
 
-<div id="hud"><span id="lev">🇮🇹 Italien</span><span>⭐<b id="sc">0</b></span><span>❤<b id="li">3</b></span><span>🦴<b id="bo">0</b></span><span id="we">☀️</span><span>🎮 <b id="activeChar" class="activeName">CHANEL</b></span><button id="switchChar" class="switchBtn">🔄 WECHSELN</button><button id="prev">◀ Land</button><button id="one">⏮ Italien</button></div>
+<div id="hud"><span id="lev">🇮🇹 Italien</span><span>⭐<b id="sc">0</b></span><span>❤<b id="li">3</b></span><span>🦴<b id="bo">0</b></span><span id="we">☀️</span><span>🎮 <b id="activeChar" class="activeName">CHANEL</b></span><button id="switchChar" class="switchBtn">🔄 SWITCH</button><button id="prev">◀ Country</button><button id="one">⏮ Italy</button></div>
 <div id="move" class="pad"><button class="ctrl" data-k="l">◀</button><button class="ctrl" data-k="r">▶</button></div><div id="act" class="pad"><button class="ctrl fire" data-k="f">🎈</button><button class="ctrl jump" data-k="j">⬆</button></div>
-<div id="menu" class="screen show"><div class="card"><h1>CHANEL & ARMANI</h1><h2>Die große Weltreise <small style="font-size:.38em">V22 – V19 ITALIEN DELUXE</small></h2><p>Chanel und Armani reisen gemeinsam durch Italien, Frankreich, Spanien und die Malediven. Eine Figur wird gesteuert, die andere folgt automatisch. Mit Q oder 🔄 kannst du jederzeit wechseln.</p><div class="travelLine">🇮🇹 ✈️ 🇫🇷 ✈️ 🇪🇸 ✈️ 🇲🇻</div><div class="row"><button id="journeyStart">🌍 WELTREISE STARTEN</button><button id="rankOpen">🏆 RANGLISTE</button></div></div></div>
-<div id="worldmap" class="screen"><div class="card mapCard"><h1>🌍 WELTKARTE</h1><p>Level 1 Italien wurde komplett neu aufgebaut. Weitere Länder folgen Level für Level und bleiben später erweiterbar.</p><div class="worldGrid"><button class="country" id="country1">🇮🇹 ITALIEN<small>Rom · Venedig · Pisa</small></button><button class="country locked">🇫🇷 FRANKREICH<small>Wird nach Italien freigeschaltet</small></button><button class="country locked">🇪🇸 SPANIEN<small>Wird nach Frankreich freigeschaltet</small></button><button class="country locked">🇲🇻 MALEDIVEN<small>Wird nach Spanien freigeschaltet</small></button></div><button id="mapBack">ZURÜCK</button></div></div>
-<div id="select" class="screen"><div class="card"><h2>Figur wählen</h2><h3>Spieler 1</h3><div class="row"><button class="char selected" data-p="1" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button><button class="char" data-p="1" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button></div><div id="p2" style="display:none"><h3>Spieler 2</h3><div class="row"><button class="char selected" data-p="2" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button><button class="char" data-p="2" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button></div></div><button id="start" class="sticky">SPIEL STARTEN</button>
-<button id="openHelpBtn" style="margin-top:8px">❓ Hilfe & Installation</button></div></div>
+<div id="menu" class="screen show"><div class="card"><h1>CHANEL & ARMANI</h1><h2>The Great World Tour <small style="font-size:.38em">V23 – WORLD TOUR & MEMORY</small></h2><p>Chanel and Armani travel through Italy, France, Spain, Iran, Turkey and the Maldives. Control one character while the other follows. Press Q or 🔄 to switch at any time.</p><div class="travelLine">🇮🇹 ✈️ 🇫🇷 ✈️ 🇪🇸 ✈️ 🇮🇷 ✈️ 🇹🇷 ✈️ 🇲🇻</div><div class="row"><button id="journeyStart">🌍 START WORLD TOUR</button><button id="rankOpen">🏆 HIGH SCORES</button></div></div></div>
+<div id="worldmap" class="screen"><div class="card mapCard"><h1>🌍 WORLD MAP</h1><p>Complete each country and its memory game to unlock the next destination.</p><div class="worldGrid"><button class="country" id="country1">🇮🇹 ITALY<small>Rome · Venice · Pisa</small></button><button class="country locked">🇫🇷 FRANCE<small>Paris · Eiffel Tower · Louvre</small></button><button class="country locked">🇪🇸 SPAIN<small>Barcelona · Madrid · Granada</small></button><button class="country locked">🇮🇷 IRAN<small>Persepolis · Isfahan · Tehran</small></button><button class="country locked">🇹🇷 TURKEY<small>Cappadocia · Hot-air balloons</small></button><button class="country locked">🇲🇻 MALDIVES<small>Islands · Reefs · Water villas</small></button></div><button id="mapBack">BACK</button></div></div>
+<div id="select" class="screen"><div class="card"><h2>Choose a character</h2><h3>Player 1</h3><div class="row"><button class="char selected" data-p="1" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button><button class="char" data-p="1" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button></div><div id="p2" style="display:none"><h3>Spieler 2</h3><div class="row"><button class="char selected" data-p="2" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button><button class="char" data-p="2" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button></div></div><button id="start" class="sticky">START GAME</button>
+<button id="openHelpBtn" style="margin-top:8px">❓ Help & Installation</button></div></div>
 
-<div id="landmarkInfo"><div class="landmarkCard"><div class="lmIcon" id="lmIcon">🏛️</div><h2 id="lmTitle">Sehenswürdigkeit</h2><p id="lmText"></p><button id="lmContinue">WEITERSPIELEN</button></div></div>
-<div id="memory" class="screen"><div class="card memoryCard"><h1>🇮🇹 ITALIEN-MEMORY</h1><p>Finde alle gleichen Sehenswürdigkeiten. Nach jedem Paar erfährst du etwas über Italien.</p><div class="memoryTop"><span>Versuche: <b id="memMoves">0</b></span><span>Paare: <b id="memPairs">0</b>/6</span></div><div id="memoryGrid" class="memoryGrid"></div><div id="memoryFact" class="memoryFact">Tippe zwei Karten an.</div><button id="memoryContinue" style="display:none">ITALIEN-STEMPEL HOLEN UND WEITER</button><div id="italyStamp" class="italyStamp" style="display:none">✅🇮🇹</div></div></div>
-<div id="over" class="screen"><div class="card"><h1 style="color:red">LOSER</h1><button id="retry">NEUER VERSUCH IM LETZTEN LEVEL</button><button id="home">HAUPTMENÜ</button></div></div>
-<div id="win" class="screen"><div class="card"><h1>GESCHAFFT!</h1><p>Die erste Weltreise ist geschafft. Weitere Länder können als neue Reisepakete ergänzt werden.</p><button id="winRank">PUNKTZAHL SPEICHERN</button><button id="again">NOCH EINMAL</button></div></div>
-<div id="rank" class="screen"><div class="card"><h1>PUNKT-RANG</h1><div class="row"><input id="name" maxlength="18" placeholder="Name"><button id="save">SPEICHERN</button></div><ol id="list"></ol><button id="back">ZURÜCK</button></div></div>
+<div id="landmarkInfo"><div class="landmarkCard"><div class="lmIcon" id="lmIcon">🏛️</div><h2 id="lmTitle">Landmark</h2><p id="lmText"></p><button id="lmContinue">CONTINUE</button></div></div>
+<div id="memory" class="screen"><div class="card memoryCard"><h1 id="memoryTitle">MEMORY</h1><p id="memoryIntro">Match the landmark pictures. Each pair reveals a short fact.</p><div class="memoryTop"><span>Moves: <b id="memMoves">0</b></span><span>Pairs: <b id="memPairs">0</b>/6</span></div><div id="memoryGrid" class="memoryGrid"></div><div id="memoryFact" class="memoryFact">Tap two cards.</div><button id="memoryContinue" style="display:none">COLLECT STAMP AND CONTINUE</button><div id="italyStamp" class="italyStamp" style="display:none">✅</div></div></div>
+<div id="over" class="screen"><div class="card"><h1 style="color:red">LOSER</h1><button id="retry">RETRY LAST LEVEL</button><button id="home">MAIN MENU</button></div></div>
+<div id="win" class="screen"><div class="card"><h1>WORLD TOUR COMPLETE!</h1><p>You completed all six countries and their memory games!</p><button id="winRank">SAVE SCORE</button><button id="again">PLAY AGAIN</button></div></div>
+<div id="rank" class="screen"><div class="card"><h1>HIGH SCORES</h1><div class="row"><input id="name" maxlength="18" placeholder="Name"><button id="save">SAVE</button></div><ol id="list"></ol><button id="back">BACK</button></div></div>
 
 
 
@@ -306,8 +306,8 @@ font:700 14px Arial;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.35)">
 <script>
 'use strict';const $=x=>document.getElementById(x),cv=$('game'),c=cv.getContext('2d');let W,H,D=1,last=0,time=0,state='menu',run=false,mode='solo',level=1,lastLevel=1,world=2800,weather='sun',skyMode='day',score=0,bonesN=0,celebrate=0,victoryPending=false,difficulty='normal',bossArena=false,bossIntro=0,gameFinished=false;let choose={1:'chanel',2:'armani'},activePlayer=0,P=[],plats=[],items=[],en=[],shots=[],esh=[],parts=[],boss=null;const K={l:0,r:0,j:0,f:0},CH={chanel:{sp:300,j:620,d:1},armani:{sp:260,j:575,d:2}},screens=['menu','worldmap','select','over','win','rank','bossFight','firework','memory','zumba','pac','dash','shadow'];
 function show(id){screens.forEach(s=>$(s).classList.toggle('show',s===id))}function resize(){D=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*D;cv.height=H*D;cv.style.width=W+'px';cv.style.height=H+'px';c.setTransform(D,0,0,D,0,0)}addEventListener('resize',resize);resize();
-const COUNTRIES={1:{name:'Italien',flag:'🇮🇹'},2:{name:'Frankreich',flag:'🇫🇷'},3:{name:'Spanien',flag:'🇪🇸'},4:{name:'Malediven',flag:'🇲🇻'}};
-function updateCountryHud(){const x=COUNTRIES[level]||COUNTRIES[1];$('lev').textContent=x.flag+' '+x.name+' '+level+'/4';$('activeChar').textContent=(P[activePlayer]?.k||'chanel').toUpperCase()}
+const COUNTRIES={1:{name:'Italy',flag:'🇮🇹'},2:{name:'France',flag:'🇫🇷'},3:{name:'Spain',flag:'🇪🇸'},4:{name:'Iran',flag:'🇮🇷'},5:{name:'Turkey',flag:'🇹🇷'},6:{name:'Maldives',flag:'🇲🇻'}};
+function updateCountryHud(){const x=COUNTRIES[level]||COUNTRIES[1];$('lev').textContent=x.flag+' '+x.name+' '+level+'/6';$('activeChar').textContent=(P[activePlayer]?.k||'chanel').toUpperCase()}
 function switchCharacter(){if(P.length<2)return;activePlayer=activePlayer?0:1;const a=P[activePlayer],b=P[activePlayer?0:1];a.x=Math.max(0,b.x+(a.x<b.x?-55:55));a.y=Math.min(a.y,b.y);updateCountryHud();sfx('collect')}
 
 function rr(q,x,y,w,h,r){q.beginPath();q.moveTo(x+r,y);q.lineTo(x+w-r,y);q.quadraticCurveTo(x+w,y,x+w,y+r);q.lineTo(x+w,y+h-r);q.quadraticCurveTo(x+w,y+h,x+w-r,y+h);q.lineTo(x+r,y+h);q.quadraticCurveTo(x,y+h,x,y+h-r);q.lineTo(x,y+r);q.quadraticCurveTo(x,y,x+r,y);q.closePath()}
@@ -375,13 +375,13 @@ function hit(a,b){return a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y}func
   const z=sizes[t]||[48,44];
   en.push({x,y,w:z[0],h:z[1],t,hp:3,maxHp:3,vx:speeds[t]||58,a:1,p:Math.random()*6,hop:Math.random()*2,stomped:0})
 }
-function build(n){level=n;if(n===1)seenLandmarks=new Set();celebrate=0;victoryPending=false;bossArena=false;bossIntro=0;gameFinished=false;difficulty=$('difficulty').value;lastLevel=n;weather=n===4?'sun':(n===2?'rain':'sun');skyMode=n===3?'day':'day';plats=[];items=[];en=[];shots=[];esh=[];parts=[];boss=null;world=[0,4200,3100,3400,3800][n];let gaps=n===1?[[690,150],[1510,180],[2460,170],[3350,190]]:n===2?[[520,190],[1420,220],[2480,180]]:n===3?[[650,180],[1580,210],[2660,200]]:[[900,190],[1980,220],[3050,180]],cur=0;gaps.forEach(g=>{if(g[0]>cur)ground(cur,g[0]-cur);cur=g[0]+g[1]});if(cur<world)ground(cur,world-cur);let S=n===1?[[260,H-230,200],[570,H-330,180],[900,H-270,220],[1250,H-390,230],[1700,H-250,220],[2040,H-410,260],[2650,H-290,230],[3010,H-430,250],[3550,H-310,230],[3890,H-400,220]]:n===2?[[260,H-260,200],[610,H-410,220],[1010,H-300,230],[1430,H-450,250],[1880,H-330,220],[2290,H-440,260]]:n===3?[[300,H-240,220],[710,H-380,240],[1120,H-290,220],[1540,H-440,250],[1990,H-320,230],[2440,H-410,260]]:[[350,H-250,230],[800,H-400,260],[1260,H-310,230],[1710,H-450,280],[2250,H-340,240],[2740,H-430,260],[3240,H-300,240]];S.forEach(v=>plat(...v));
+function build(n){level=n;seenLandmarks=new Set();celebrate=0;victoryPending=false;bossArena=false;bossIntro=0;gameFinished=false;difficulty=$('difficulty').value;lastLevel=n;weather=n===6?'sun':(n===2?'rain':'sun');skyMode=n===3?'day':'day';plats=[];items=[];en=[];shots=[];esh=[];parts=[];boss=null;world=[0,4200,3300,3500,3600,3900,4000][n];let gaps=n===1?[[690,150],[1510,180],[2460,170],[3350,190]]:n===2?[[520,190],[1420,220],[2480,180]]:n===3?[[650,180],[1580,210],[2660,200]]:[[900,190],[1980,220],[3050,180]],cur=0;gaps.forEach(g=>{if(g[0]>cur)ground(cur,g[0]-cur);cur=g[0]+g[1]});if(cur<world)ground(cur,world-cur);let S=n===1?[[260,H-230,200],[570,H-330,180],[900,H-270,220],[1250,H-390,230],[1700,H-250,220],[2040,H-410,260],[2650,H-290,230],[3010,H-430,250],[3550,H-310,230],[3890,H-400,220]]:n===2?[[260,H-260,200],[610,H-410,220],[1010,H-300,230],[1430,H-450,250],[1880,H-330,220],[2290,H-440,260]]:n===3?[[300,H-240,220],[710,H-380,240],[1120,H-290,220],[1540,H-440,250],[1990,H-320,230],[2440,H-410,260]]:[[350,H-250,230],[800,H-400,260],[1260,H-310,230],[1710,H-450,280],[2250,H-340,240],[2740,H-430,260],[3240,H-300,240]];S.forEach(v=>plat(...v));
 const floating=n===1?[[430,H-470,145],[1080,H-510,160],[1870,H-500,170],[2800,H-520,165],[3700,H-500,160]]:
 n===2?[[390,H-500,155],[1160,H-530,180],[2140,H-500,165],[2780,H-540,150]]:
 n===3?[[500,H-500,165],[1320,H-540,175],[2240,H-510,185],[3000,H-550,145]]:
 [[560,H-510,170],[1450,H-550,180],[2480,H-520,180],[3220,H-560,150]];
 floating.forEach(v=>{plat(...v);items.push({t:'bone',x:v[0]+v[2]/2,y:v[1]-28,a:1})});
-if(n===4){
+if(n===6){
   plat(3200,H-100,600);plat(3260,H-360,150);plat(3440,H-430,150);plat(3600,H-300,140);
   items.push({t:'heart',x:3290,y:H-390,a:1},{t:'power',x:3490,y:H-465,a:1});
 }for(let i=0;i<10+n;i++)items.push({t:'bone',x:170+i*(world-340)/(9+n),y:H-(i%2?360:160),a:1});[360,980,1760,world-420].forEach((x,i)=>items.push({t:'heart',x,y:H-(i%2?250:150),a:1}));items.push({t:'power',x:world*.58,y:H-210,a:1});if(n===1){
@@ -394,6 +394,12 @@ if(n===3){
 enemy(390,H-144,'shadow');enemy(690,H-144,'hedgehog');enemy(970,H-250,'bat');enemy(1260,H-144,'wolf');enemy(1570,H-144,'fox');enemy(1900,H-260,'owl');enemy(2190,H-144,'raccoon');enemy(2510,H-144,'boar');enemy(2880,H-144,'cat');enemy(3160,H-250,'bat')
 }
 if(n===4){
+enemy(420,H-144,'fox');enemy(760,H-144,'raccoon');enemy(1120,H-250,'owl');enemy(1510,H-144,'hedgehog');enemy(1910,H-144,'wolf');enemy(2300,H-250,'bat');enemy(2710,H-144,'boar');enemy(3150,H-144,'cat')
+}
+if(n===5){
+enemy(390,H-144,'rabbit');enemy(720,H-144,'fox');enemy(1050,H-250,'owl');enemy(1410,H-144,'raccoon');enemy(1780,H-144,'wolf');enemy(2180,H-250,'bat');enemy(2580,H-144,'hedgehog');enemy(3020,H-144,'boar');enemy(3460,H-250,'owl')
+}
+if(n===6){
 enemy(420,H-144,'fox');enemy(650,H-144,'rabbit');enemy(880,H-144,'boar');enemy(1120,H-270,'owl');
 enemy(1370,H-144,'hedgehog');enemy(1610,H-144,'wolf');enemy(1880,H-260,'bat');enemy(2140,H-144,'raccoon');
 enemy(2410,H-144,'shadow');enemy(2660,H-250,'owl');enemy(2870,H-144,'cat');enemy(3070,H-144,'mouse');
@@ -402,13 +408,13 @@ boss={x:3470,y:H-190,w:88,h:96,hp:difficulty==='easy'?9:difficulty==='hard'?18:1
 function start(){gameFinished=false;ensureAudio();show('');useMainGameControls(true);score=0;bonesN=0;activePlayer=0;P=[mkP(1,'chanel',70),mkP(2,'armani',125)];build(1);state='game';run=1;last=performance.now()}
 function hud(){
       $('sc').textContent=score;$('bo').textContent=bonesN;$('li').textContent=Math.max(...P.map(p=>p.lives));
-      const visible=level===4&&boss&&boss.a&&state==='game';
+      const visible=level===6&&boss&&boss.a&&state==='game';
       $('bossBarWrap').style.display=visible?'block':'none';
       if(visible)$('bossBar').style.transform='scaleX('+(boss.hp/boss.max)+')';
     }
 function burst(x,y,col,n=10){for(let i=0;i<n;i++){let a=Math.random()*7,s=50+Math.random()*150;parts.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-70,life:.8,col,z:2+Math.random()*4})}}
 function hurt(p){if(p.inv>0)return;if(p.big){p.big=0;p.w=38;p.h=42;p.inv=1;return}p.lives--;p.inv=1.2;if(p.lives<=0){run=0;state='over';show('over');$('hud').style.display=$('move').style.display=$('act').style.display='none'}else{p.x=Math.max(30,p.x-180);p.y=20;p.vx=p.vy=0}}
-function updP(p,dt){const isActive=P[activePlayer]===p;const leader=P[activePlayer],dx=leader&&leader!==p?leader.x-p.x:0;let L=isActive&&K.l,R=isActive&&K.r,J=isActive&&K.j,F=isActive&&K.f;if(!isActive&&leader){L=dx<-70;R=dx>70;J=(Math.abs(dx)>100&&leader.y+25<p.y)||(!p.g&&leader.y<p.y-45);F=false;if(Math.abs(dx)>520){p.x=leader.x-55;p.y=leader.y-20;p.vx=p.vy=0}}p.vx=((R?1:0)-(L?1:0))*p.sp;if(p.vx)p.face=Math.sign(p.vx);if(J&&!p.lock&&p.jumps<2){p.vy=-(p.jumps?p.j*1.08:p.j);p.jumps++;p.lock=1;sfx('jump')}if(!J)p.lock=0;p.vy+=1500*dt;let oy=p.y;p.x+=p.vx*dt;p.y+=p.vy*dt;p.g=0;p.x=Math.max(0,Math.min(world-p.w,p.x));plats.forEach(r=>{if(p.x+p.w>r.x&&p.x<r.x+r.w&&oy+p.h<=r.y+8&&p.y+p.h>=r.y&&p.vy>=0){p.y=r.y-p.h;p.vy=0;p.g=1;p.jumps=0}});if(level===4&&bossArena&&p.y+p.h>H-100){p.y=H-100-p.h;p.vy=0;p.g=1;p.jumps=0}if(p.y>H+100){hurt(p);p.x=Math.max(30,p.x-250);p.y=20}p.inv=Math.max(0,p.inv-dt);p.cd-=dt;if(F&&p.cd<=0){shots.push({x:p.x+(p.face>0?p.w:0),y:p.y+p.h*.35,w:18,h:24,vx:p.face*560,d:1,dead:0,hue:Math.floor(Math.random()*360),bob:Math.random()*6});p.cd=.25;sfx('shoot')}p.pose=!p.g?'jump':Math.abs(p.vx)>10?'run':'idle';p.ft+=dt;if(p.ft>.1){p.fr=(p.fr+1)%4;p.ft=0}items.forEach(i=>{if(i.a&&Math.hypot(p.x+p.w/2-i.x,p.y+p.h/2-i.y)<35){i.a=0;if(i.t==='bone'){score+=10;bonesN++;sfx('collect')}if(i.t==='heart'){p.lives++;score+=25;sfx('heart')}if(i.t==='power'){p.big=1;p.w=64;p.h=72;p.y-=30;score+=40;sfx('power')}}});let goal=world-110;if(level===4&&boss&&boss.a&&p.x>3235)enterBossArena();if(level<4&&p.x>goal)p.done=1;if(level===4&&boss&&!boss.a&&!gameFinished)startVictorySequence()}
+function updP(p,dt){const isActive=P[activePlayer]===p;const leader=P[activePlayer],dx=leader&&leader!==p?leader.x-p.x:0;let L=isActive&&K.l,R=isActive&&K.r,J=isActive&&K.j,F=isActive&&K.f;if(!isActive&&leader){L=dx<-70;R=dx>70;J=(Math.abs(dx)>100&&leader.y+25<p.y)||(!p.g&&leader.y<p.y-45);F=false;if(Math.abs(dx)>520){p.x=leader.x-55;p.y=leader.y-20;p.vx=p.vy=0}}p.vx=((R?1:0)-(L?1:0))*p.sp;if(p.vx)p.face=Math.sign(p.vx);if(J&&!p.lock&&p.jumps<2){p.vy=-(p.jumps?p.j*1.08:p.j);p.jumps++;p.lock=1;sfx('jump')}if(!J)p.lock=0;p.vy+=1500*dt;let oy=p.y;p.x+=p.vx*dt;p.y+=p.vy*dt;p.g=0;p.x=Math.max(0,Math.min(world-p.w,p.x));plats.forEach(r=>{if(p.x+p.w>r.x&&p.x<r.x+r.w&&oy+p.h<=r.y+8&&p.y+p.h>=r.y&&p.vy>=0){p.y=r.y-p.h;p.vy=0;p.g=1;p.jumps=0}});if(level===6&&bossArena&&p.y+p.h>H-100){p.y=H-100-p.h;p.vy=0;p.g=1;p.jumps=0}if(p.y>H+100){hurt(p);p.x=Math.max(30,p.x-250);p.y=20}p.inv=Math.max(0,p.inv-dt);p.cd-=dt;if(F&&p.cd<=0){shots.push({x:p.x+(p.face>0?p.w:0),y:p.y+p.h*.35,w:18,h:24,vx:p.face*560,d:1,dead:0,hue:Math.floor(Math.random()*360),bob:Math.random()*6});p.cd=.25;sfx('shoot')}p.pose=!p.g?'jump':Math.abs(p.vx)>10?'run':'idle';p.ft+=dt;if(p.ft>.1){p.fr=(p.fr+1)%4;p.ft=0}items.forEach(i=>{if(i.a&&Math.hypot(p.x+p.w/2-i.x,p.y+p.h/2-i.y)<35){i.a=0;if(i.t==='bone'){score+=10;bonesN++;sfx('collect')}if(i.t==='heart'){p.lives++;score+=25;sfx('heart')}if(i.t==='power'){p.big=1;p.w=64;p.h=72;p.y-=30;score+=40;sfx('power')}}});let goal=world-110;if(level===6&&boss&&boss.a&&p.x>3235)enterBossArena();if(level<6&&p.x>goal)p.done=1;if(level===6&&boss&&!boss.a&&!gameFinished)startVictorySequence()}
 
 
 function hitBossShot(s,b){
@@ -424,7 +430,7 @@ function trimEffects(){
   if(esh.length>14)esh=esh.slice(-14);
 }
 function enterBossArena(){
-  if(level!==4||!boss||!boss.a||bossFightActive)return;
+  if(level!==6||!boss||!boss.a||bossFightActive)return;
   startBossFight()
 }
 function leaveBossArena(){
@@ -578,7 +584,9 @@ let fwRAF=0,zumbaRAF=0,zumbaScore=0,zumbaEnd=0,zumbaBeat=0;
 
 function startVictorySequence(){
   if(gameFinished)return;
-  gameFinished=true;run=0;state='firework';bossArena=false;
+  gameFinished=true;run=0;bossArena=false;
+  setTimeout(()=>{gameFinished=false;startCountryMemory(6)},300);return;
+  state='firework';
   shots=[];esh=[];en.forEach(e=>e.a=0);
   $('bossBarWrap').style.display='none';
   useMainGameControls(false);
@@ -661,7 +669,7 @@ function finishGame(reason='boss'){
 }
 function emergencyRecover(message){
   try{localStorage.setItem('caLastError',String(message).slice(0,500))}catch(e){}
-  if(level===4&&boss&&!boss.a)finishGame('recovery')
+  if(level===6&&boss&&!boss.a)finishGame('recovery')
 }
 window.addEventListener('error',e=>emergencyRecover(e.message||'JavaScript error'));
 window.addEventListener('unhandledrejection',e=>emergencyRecover(e.reason||'Promise error'));
@@ -727,13 +735,8 @@ else e.x+=e.vx*dt;if(e.x<80||e.x>world-80)e.vx*=-1;shots.forEach(s=>{if(!s.dead&
 let camX=Math.max(0,Math.min(world-W,(P[activePlayer]||P[0]||{x:0}).x-W*.38));
 en.forEach(e=>{e.paused=Math.abs((e.x-camX)-W*.5)>W*.95});
 en=en.filter(e=>e.a||Math.abs((e.x-camX)-W*.5)<W*1.2);
-trimEffects();if(P.every(p=>p.done)){
-  if(level===1)startItalyMemory();
-  else if(level===2)startDash();
-  else if(level===3)startShadow();
-  else if(level<4)build(level+1)
-}
-if(level===4&&boss&&!boss.a&&!gameFinished)startVictorySequence();
+trimEffects();if(P.every(p=>p.done)){startCountryMemory(level)}
+if(level===6&&boss&&!boss.a&&!gameFinished)startVictorySequence();
 if(!gameFinished){checkLandmarkInfo();hud()}}
 
 function flower(x,y,col='#ff5ea8',s=1){
@@ -893,12 +896,12 @@ drawCountryLandmarks(ox);items.forEach(i=>{if(!i.a)return;let x=i.x-ox,y=i.y;if(
   if(boss.phase>=2){c.strokeStyle='rgba(255,255,255,.65)';c.lineWidth=2;for(let i=0;i<5;i++){let a=boss.anim*2+i*1.25;c.beginPath();c.arc(44+Math.cos(a)*48,44+Math.sin(a)*28,4,0,7);c.stroke()}}
   c.restore();
   c.fillStyle='#111827';c.fillRect(x,y-18,boss.w,10);c.fillStyle=boss.phase===3?'#ef4444':'#22c55e';c.fillRect(x,y-18,boss.w*(boss.hp/boss.max),10)
-}shots.forEach(s=>{let x=s.x-ox,y=s.y+Math.sin(time*7+(s.bob||0))*2;c.save();c.fillStyle='hsl('+(s.hue||320)+',90%,62%)';c.strokeStyle='#fff';c.lineWidth=1.5;c.beginPath();c.ellipse(x+9,y+9,8,10,0,0,7);c.fill();c.stroke();c.fillStyle='#fff';c.beginPath();c.moveTo(x+6,y+18);c.lineTo(x+12,y+18);c.lineTo(x+9,y+23);c.closePath();c.fill();c.strokeStyle='rgba(255,255,255,.7)';c.beginPath();c.moveTo(x+9,y+23);c.lineTo(x+9,y+28);c.stroke();c.restore()});esh.forEach(s=>{c.fillStyle='#c084fc';c.beginPath();c.arc(s.x-ox,s.y,8,0,7);c.fill()});P.forEach(p=>{c.globalAlpha=p.inv>0&&Math.floor(p.inv*12)%2===0?.45:1;dog(c,p.x-ox,p.y,p.k,p.big?1:.58,p.face,p.pose,p.fr);c.globalAlpha=1});if(level===4&&bossArena){
+}shots.forEach(s=>{let x=s.x-ox,y=s.y+Math.sin(time*7+(s.bob||0))*2;c.save();c.fillStyle='hsl('+(s.hue||320)+',90%,62%)';c.strokeStyle='#fff';c.lineWidth=1.5;c.beginPath();c.ellipse(x+9,y+9,8,10,0,0,7);c.fill();c.stroke();c.fillStyle='#fff';c.beginPath();c.moveTo(x+6,y+18);c.lineTo(x+12,y+18);c.lineTo(x+9,y+23);c.closePath();c.fill();c.strokeStyle='rgba(255,255,255,.7)';c.beginPath();c.moveTo(x+9,y+23);c.lineTo(x+9,y+28);c.stroke();c.restore()});esh.forEach(s=>{c.fillStyle='#c084fc';c.beginPath();c.arc(s.x-ox,s.y,8,0,7);c.fill()});P.forEach(p=>{c.globalAlpha=p.inv>0&&Math.floor(p.inv*12)%2===0?.45:1;dog(c,p.x-ox,p.y,p.k,p.big?1:.58,p.face,p.pose,p.fr);c.globalAlpha=1});if(level===6&&bossArena){
   c.fillStyle='rgba(120,70,160,.18)';c.fillRect(3200-ox,0,600,H);
   c.strokeStyle='#a855f7';c.lineWidth=3;c.strokeRect(3200-ox,78,600,H-178);
   c.fillStyle='#fff';c.font='bold 18px Arial';c.fillText('ENDBOSS-ARENA',3380-ox,108)
 }
-let gx=world-80-ox;c.fillStyle=level===4&&boss&&boss.a?'#777':'#22c55e';c.fillRect(gx,H-220,8,120)}
+let gx=world-80-ox;c.fillStyle=level===6&&boss&&boss.a?'#777':'#22c55e';c.fillRect(gx,H-220,8,120)}
 
 /* V18: neue Bärenfiguren und deutlich getrennte Länderwelten */
 function dog(q,x,y,k,s=1,f=1,pose='idle',fr=0){
@@ -951,6 +954,8 @@ function drawItalyForeground(ox){
   let vx=1900-ox;c.fillStyle='rgba(25,150,190,.65)';c.fillRect(vx,H-100,620,100);c.strokeStyle='rgba(255,255,255,.55)';c.lineWidth=2;for(let i=0;i<8;i++){let yy=H-88+i*12;c.beginPath();c.moveTo(vx,yy);c.quadraticCurveTo(vx+150,yy-5,vx+310,yy);c.quadraticCurveTo(vx+470,yy+5,vx+620,yy);c.stroke()}
   // Gondola
   let gx=2210-ox+Math.sin(time*.8)*25;c.fillStyle='#171717';c.beginPath();c.moveTo(gx-55,H-116);c.quadraticCurveTo(gx,H-92,gx+60,H-116);c.lineTo(gx+48,H-102);c.lineTo(gx-45,H-102);c.closePath();c.fill();c.strokeStyle='#d9b24c';c.lineWidth=3;c.beginPath();c.moveTo(gx+35,H-122);c.lineTo(gx+68,H-160);c.stroke();
+  // Accurate Leaning Tower of Pisa silhouette
+  drawPisaTowerDetailed(3020-ox,H-105,0.92);
   // Lemon trees near Amalfi
   for(let i=0;i<5;i++){let x=3570+i*120-ox;c.strokeStyle='#6b4424';c.lineWidth=7;c.beginPath();c.moveTo(x,H-105);c.lineTo(x,H-175);c.stroke();c.fillStyle='#2f8d46';c.beginPath();c.arc(x,H-188,31,0,7);c.fill();c.fillStyle='#ffd633';for(let j=0;j<4;j++){c.beginPath();c.arc(x-15+j*10,H-196+(j%2)*13,5,0,7);c.fill()}}
 }
@@ -966,10 +971,24 @@ function drawMaldivesScene(ox){
   c.fillStyle='#22b8cf';c.fillRect(0,H*.60,W,H*.40);c.fillStyle='rgba(255,255,255,.35)';for(let i=0;i<20;i++){let y=H*.64+i*16;c.fillRect((i*73-time*25)%W,y,70,2)}
   for(let i=-1;i<12;i++){let x=i*310-(ox*.22%310);c.fillStyle='#d7a86e';c.fillRect(x,H-195,85,55);c.fillStyle='#a65332';c.beginPath();c.moveTo(x-10,H-195);c.lineTo(x+42,H-230);c.lineTo(x+95,H-195);c.fill();c.fillStyle='#8b5a2b';c.fillRect(x+20,H-140,7,35);c.fillRect(x+60,H-140,7,35)}
 }
+function drawIranScene(ox){
+  c.fillStyle='rgba(210,164,95,.38)';for(let i=-1;i<14;i++){let x=i*290-(ox*.18%290);c.fillRect(x,H-245,210,140);c.fillStyle='#2a9d8f';c.beginPath();c.arc(x+105,H-245,46,Math.PI,0);c.fill();c.fillStyle='rgba(210,164,95,.38)'}
+  c.fillStyle='#1f6f5f';for(let i=-1;i<24;i++){let x=i*150-(ox*.42%150);c.fillRect(x,H-175,8,70);c.beginPath();c.ellipse(x+4,H-185,25,45,0,0,7);c.fill()}
+}
+function drawTurkeyScene(ox){
+  c.fillStyle='rgba(195,120,75,.35)';for(let i=-1;i<18;i++){let x=i*220-(ox*.20%220);c.beginPath();c.moveTo(x,H-105);c.lineTo(x+45,H-250-(i%3)*25);c.lineTo(x+90,H-105);c.closePath();c.fill()}
+  for(let i=0;i<9;i++){let x=((i*190-time*(10+i%3))-ox*.12)%(W+300)-120,y=90+(i%4)*55;c.fillStyle=['#ef4444','#f59e0b','#3b82f6','#10b981'][i%4];c.beginPath();c.ellipse(x,y,26,34,0,0,7);c.fill();c.strokeStyle='#5b3a29';c.beginPath();c.moveTo(x-9,y+28);c.lineTo(x-6,y+45);c.lineTo(x+6,y+45);c.lineTo(x+9,y+28);c.stroke();c.fillStyle='#7c4a2d';c.fillRect(x-7,y+44,14,9)}
+}
+function drawPisaTowerDetailed(x,y,scale=1){
+ c.save();c.translate(x,y);c.rotate(-0.115);c.scale(scale,scale);c.fillStyle='#eadfc8';c.strokeStyle='#8b7b68';c.lineWidth=2;
+ c.fillRect(-31,-160,62,150);c.strokeRect(-31,-160,62,150);
+ for(let r=0;r<7;r++){let yy=-151+r*20;c.fillStyle=r%2?'#f4ead6':'#e9ddc5';c.fillRect(-34,yy,68,17);c.strokeRect(-34,yy,68,17);c.fillStyle='#6f6559';for(let a=0;a<5;a++){c.beginPath();c.arc(-23+a*11,yy+11,3.8,Math.PI,0);c.fill()}}
+ c.fillStyle='#ddd0b8';c.beginPath();c.ellipse(0,-164,34,8,0,0,7);c.fill();c.stroke();c.fillStyle='#c8b99e';c.fillRect(-38,-10,76,10);c.strokeRect(-38,-10,76,10);c.restore();
+}
 function bg(ox){
-  const gradients={1:['#67b7ef','#f4e5b5','#78a84b'],2:['#8bc7ef','#f4dce8','#6f9b62'],3:['#f8b36a','#f9d67c','#a65b3c'],4:['#57d4ed','#b9f2ff','#19a7a8']};
+  const gradients={1:['#67b7ef','#f4e5b5','#78a84b'],2:['#8bc7ef','#f4dce8','#6f9b62'],3:['#f8b36a','#f9d67c','#a65b3c'],4:['#59b5c9','#f1d6a6','#7b9a63'],5:['#76b9e8','#f6c77b','#b86643'],6:['#57d4ed','#b9f2ff','#19a7a8']};
   let a=gradients[level]||gradients[1],g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,a[0]);g.addColorStop(.55,a[1]);g.addColorStop(1,a[2]);c.fillStyle=g;c.fillRect(0,0,W,H);drawCelestial();
-  if(level===1)drawItalianScene(ox);else if(level===2)drawFrenchScene(ox);else if(level===3)drawSpanishScene(ox);else drawMaldivesScene(ox);
+  if(level===1)drawItalianScene(ox);else if(level===2)drawFrenchScene(ox);else if(level===3)drawSpanishScene(ox);else if(level===4)drawIranScene(ox);else if(level===5)drawTurkeyScene(ox);else drawMaldivesScene(ox);
   if(weather==='rain'){c.strokeStyle='#d8efffcc';for(let i=0;i<65;i++){let x=(i*73+time*400)%W,y=(i*41+time*620)%H;c.beginPath();c.moveTo(x,y);c.lineTo(x-8,y+20);c.stroke()}}
 }
 function drawCountryLandmarks(ox){
@@ -982,73 +1001,46 @@ function drawCountryLandmarks(ox){
       c.strokeStyle='#374151';c.lineWidth=6;c.beginPath();c.moveTo(x,y);c.lineTo(x,y-115);c.moveTo(x,y-115);c.lineTo(x-43,y);c.moveTo(x,y-115);c.lineTo(x+43,y);c.moveTo(x-30,y-34);c.lineTo(x+30,y-34);c.moveTo(x-18,y-70);c.lineTo(x+18,y-70);c.stroke();c.fillStyle='#fbbf24';c.fillRect(x-3,y-127,6,14)
     }else if(level===3){
       c.fillStyle='#e7a34d';for(let t=0;t<4;t++){let tx=x-48+t*30;c.fillRect(tx,y-80-(t%2)*35,22,80+(t%2)*35);c.fillStyle='#c23b32';c.beginPath();c.moveTo(tx-5,y-80-(t%2)*35);c.lineTo(tx+11,y-110-(t%2)*35);c.lineTo(tx+27,y-80-(t%2)*35);c.fill();c.fillStyle='#e7a34d'}
+    }else if(level===4){
+      c.fillStyle='#d7b36a';c.fillRect(x-48,y-75,96,75);c.fillStyle='#2a9d8f';c.beginPath();c.arc(x,y-75,38,Math.PI,0);c.fill();c.fillStyle='#f3ead3';for(let a=0;a<3;a++)c.fillRect(x-38+a*38,y-48,20,48)
+    }else if(level===5){
+      c.fillStyle='#c8794b';c.beginPath();c.moveTo(x-45,y);c.lineTo(x,y-125);c.lineTo(x+45,y);c.closePath();c.fill();c.fillStyle='#ef4444';c.beginPath();c.ellipse(x-55,y-135,17,23,0,0,7);c.fill();c.fillStyle='#7c4a2d';c.fillRect(x-61,y-112,12,9)
     }else{
       c.fillStyle='#8b5a2b';c.fillRect(x-3,y-100,7,100);c.strokeStyle='#8b5a2b';c.lineWidth=6;c.beginPath();c.moveTo(x,y-90);c.quadraticCurveTo(x+15,y-122,x+30,y-135);c.stroke();c.fillStyle='#2fb344';for(let a=0;a<7;a++){let ang=-2.8+a*.45;c.beginPath();c.ellipse(x+30+Math.cos(ang)*22,y-135+Math.sin(ang)*18,24,7,ang,0,7);c.fill()}c.fillStyle='#f4ddad';c.fillRect(x-55,y-10,110,10)
     }c.restore()
   }
-  c.save();c.font='900 24px Arial';c.textAlign='center';c.fillStyle='rgba(255,255,255,.88)';c.strokeStyle='rgba(0,0,0,.5)';c.lineWidth=4;let label=(COUNTRIES[level]||COUNTRIES[1]).flag+' '+(COUNTRIES[level]||COUNTRIES[1]).name;c.strokeText(label,W/2,92);c.fillText(label,W/2,92);c.restore()
+  c.save();c.font='900 19px Arial';c.textAlign='center';c.fillStyle='rgba(255,255,255,.88)';c.strokeStyle='rgba(0,0,0,.5)';c.lineWidth=4;let label=(COUNTRIES[level]||COUNTRIES[1]).flag+' '+(COUNTRIES[level]||COUNTRIES[1]).name;c.strokeText(label,W/2,92);c.fillText(label,W/2,92);c.restore()
 }
 
-// ---------- V22 LANDMARK INFO ----------
-const ITALY_LANDMARKS=[
- {x:520,icon:'🍇',title:'Die Toskana',text:'Die Toskana ist berühmt für sanfte Hügel, Weinberge, Olivenbäume und alte Städte. Ihre Hauptstadt ist Florenz.'},
- {x:1220,icon:'🏛️',title:'Das Kolosseum in Rom',text:'Im Kolosseum fanden vor fast 2.000 Jahren große Veranstaltungen statt. Es ist eines der bekanntesten Bauwerke des alten Rom.'},
- {x:1980,icon:'🚤',title:'Venedig und seine Kanäle',text:'Venedig wurde auf vielen kleinen Inseln gebaut. Statt Straßen gibt es dort zahlreiche Kanäle und Gondeln.'},
- {x:2380,icon:'🌉',title:'Die Rialtobrücke',text:'Die Rialtobrücke überspannt den Canal Grande. Sie gehört zu den berühmtesten Brücken von Venedig.'},
- {x:3020,icon:'🗼',title:'Der Schiefe Turm von Pisa',text:'Der Turm begann sich schon während des Baus zu neigen, weil der Untergrund zu weich war.'},
- {x:3740,icon:'🍋',title:'Die Amalfiküste',text:'Die Amalfiküste ist bekannt für steile Felsen, bunte Orte am Meer und große, duftende Zitronen.'}
-];
-let seenLandmarks=new Set(), landmarkPaused=false;
-function showLandmarkInfo(lm){
-  landmarkPaused=true; run=0; K.l=K.r=K.j=K.f=0;
-  $('lmIcon').textContent=lm.icon;$('lmTitle').textContent=lm.title;$('lmText').textContent=lm.text;
-  $('landmarkInfo').classList.add('show');
-}
+// ---------- V23 LANDMARK INFO & COUNTRY MEMORIES ----------
+const LANDMARKS={
+1:[{x:520,icon:'🍇',title:'Tuscany',text:'Tuscany is known for rolling hills, vineyards, olive trees and historic cities such as Florence.'},{x:1220,icon:'🏛️',title:'The Colosseum',text:'The Colosseum in Rome opened nearly 2,000 years ago and is one of the best-known buildings of ancient Rome.'},{x:1980,icon:'🚤',title:'Venice',text:'Venice was built on many small islands. Its canals are used like streets, and gondolas are traditional boats.'},{x:2380,icon:'🌉',title:'Rialto Bridge',text:'The Rialto Bridge crosses the Grand Canal and is one of Venice’s most famous bridges.'},{x:3020,icon:'PISA',title:'The Leaning Tower of Pisa',text:'This is the bell tower of Pisa Cathedral. It began to lean because the ground underneath was too soft.'},{x:3740,icon:'🍋',title:'Amalfi Coast',text:'The Amalfi Coast is famous for steep cliffs, colourful seaside towns and large lemons.'}],
+2:[{x:550,icon:'🗼',title:'Eiffel Tower',text:'The Eiffel Tower was completed in 1889 and became a symbol of Paris.'},{x:1450,icon:'🖼️',title:'The Louvre',text:'The Louvre is one of the world’s largest museums and is home to the Mona Lisa.'},{x:2450,icon:'🏛️',title:'Arc de Triomphe',text:'The Arc de Triomphe stands at the end of the Champs-Élysées in Paris.'}],
+3:[{x:600,icon:'⛪',title:'Sagrada Família',text:'This basilica in Barcelona was designed by Antoni Gaudí and is still being completed.'},{x:1650,icon:'🌳',title:'Park Güell',text:'Park Güell is filled with colourful mosaics and playful architecture by Gaudí.'},{x:2800,icon:'🏰',title:'Alhambra',text:'The Alhambra is a palace and fortress complex above Granada.'}],
+4:[{x:650,icon:'🏺',title:'Persepolis',text:'Persepolis was a ceremonial capital of the ancient Persian Empire.'},{x:1800,icon:'🕌',title:'Imam Square',text:'Imam Square in Isfahan is surrounded by famous mosques, a palace and a historic bazaar.'},{x:3000,icon:'🗼',title:'Azadi Tower',text:'The Azadi Tower is a modern landmark and gateway to Tehran.'}],
+5:[{x:600,icon:'🎈',title:'Cappadocia',text:'Cappadocia is known for unusual rock formations and colourful hot-air balloons at sunrise.'},{x:1800,icon:'🕌',title:'Hagia Sophia',text:'Hagia Sophia in Istanbul has served as a church, mosque and museum during its long history.'},{x:3050,icon:'💧',title:'Pamukkale',text:'Pamukkale has bright white terraces formed by mineral-rich thermal water.'}],
+6:[{x:650,icon:'🏝️',title:'Coral Islands',text:'The Maldives is made up of low coral islands grouped into atolls.'},{x:1900,icon:'🐢',title:'Coral Reefs',text:'Maldivian reefs support colourful fish, rays and sea turtles.'},{x:3150,icon:'🏠',title:'Water Villas',text:'Many resorts have villas built on stilts above clear lagoon water.'}]
+};
+let seenLandmarks=new Set(),landmarkPaused=false;
+function showLandmarkInfo(lm){landmarkPaused=true;run=0;K.l=K.r=K.j=K.f=0;$('lmIcon').textContent=lm.icon;$('lmTitle').textContent=lm.title;$('lmText').textContent=lm.text;$('landmarkInfo').classList.add('show')}
+$('lmContinue').textContent='CONTINUE';
 $('lmContinue').onclick=()=>{$('landmarkInfo').classList.remove('show');landmarkPaused=false;if(state==='game'){run=1;last=performance.now()}};
-function checkLandmarkInfo(){
-  if(level!==1||state!=='game'||landmarkPaused)return;
-  const px=(P[activePlayer]||P[0]||{x:0}).x;
-  ITALY_LANDMARKS.forEach((lm,i)=>{if(!seenLandmarks.has(i)&&Math.abs(px-lm.x)<45){seenLandmarks.add(i);showLandmarkInfo(lm)}})
-}
-
-// ---------- V22 ITALIEN MEMORY ----------
-const MEMORY_DATA=[
- {icon:'🏛️',name:'Kolosseum',fact:'Das Kolosseum steht in Rom und wurde im Jahr 80 nach Christus eröffnet.'},
- {icon:'🗼',name:'Schiefer Turm von Pisa',fact:'Der Schiefe Turm ist der freistehende Glockenturm des Doms von Pisa.'},
- {icon:'🌉',name:'Rialtobrücke',fact:'Die Rialtobrücke führt über den Canal Grande in Venedig.'},
- {icon:'🚤',name:'Gondel',fact:'Gondeln sind traditionelle, schmale Boote aus Venedig.'},
- {icon:'🍋',name:'Amalfiküste',fact:'An der Amalfiküste wachsen besonders große Zitronen.'},
- {icon:'🍇',name:'Toskana',fact:'Die Toskana ist für Weinberge, Kunst und historische Städte bekannt.'}
-];
-let memDeck=[],memOpen=[],memMatched=0,memMoves=0,memLocked=false;
+function checkLandmarkInfo(){if(state!=='game'||landmarkPaused)return;const px=(P[activePlayer]||P[0]||{x:0}).x;(LANDMARKS[level]||[]).forEach((lm,i)=>{if(!seenLandmarks.has(i)&&Math.abs(px-lm.x)<48){seenLandmarks.add(i);showLandmarkInfo(lm)}})}
+const MEMORY_BY_COUNTRY={
+1:[['pisa','Leaning Tower of Pisa','The tower is the freestanding bell tower of Pisa Cathedral.'],['colosseum','Colosseum','The Colosseum stands in Rome and opened in AD 80.'],['bridge','Rialto Bridge','The Rialto Bridge crosses Venice’s Grand Canal.'],['gondola','Gondola','Gondolas are traditional narrow boats from Venice.'],['lemon','Amalfi Coast','The Amalfi Coast is famous for dramatic cliffs and lemons.'],['grapes','Tuscany','Tuscany is known for vineyards, art and historic cities.']],
+2:[['eiffel','Eiffel Tower','The Eiffel Tower was built for the 1889 World’s Fair.'],['louvre','Louvre','The Louvre is one of the world’s largest museums.'],['arc','Arc de Triomphe','The monument honours people who fought for France.'],['notredame','Notre-Dame','Notre-Dame is a Gothic cathedral on an island in the Seine.'],['versailles','Versailles','Versailles was a royal palace near Paris.'],['croissant','French culture','The croissant is strongly associated with French bakeries.']],
+3:[['sagrada','Sagrada Família','Gaudí designed this extraordinary basilica in Barcelona.'],['guell','Park Güell','The park is famous for colourful mosaics.'],['alhambra','Alhambra','The Alhambra overlooks Granada.'],['flamenco','Flamenco','Flamenco combines singing, guitar and dance.'],['windmill','La Mancha','La Mancha is known for windmills and Don Quixote.'],['sun','Mediterranean coast','Spain has a long Mediterranean coastline.']],
+4:[['persepolis','Persepolis','Persepolis was a capital of the ancient Persian Empire.'],['azadi','Azadi Tower','The Azadi Tower is a landmark of Tehran.'],['square','Imam Square','Imam Square is a major historic square in Isfahan.'],['garden','Persian garden','Persian gardens use water, shade and symmetry.'],['tile','Persian tiles','Iranian architecture is famous for colourful tilework.'],['mountain','Mount Damavand','Damavand is the highest peak in Iran.']],
+5:[['balloon','Cappadocia balloons','Hot-air balloons often fly over Cappadocia at sunrise.'],['hagia','Hagia Sophia','Hagia Sophia is one of Istanbul’s best-known buildings.'],['mosque','Blue Mosque','The Blue Mosque is known for its six minarets.'],['pamukkale','Pamukkale','Mineral water formed Pamukkale’s white terraces.'],['bazaar','Grand Bazaar','Istanbul’s Grand Bazaar has thousands of shops.'],['tulip','Tulips','Tulips have an important place in Ottoman art and culture.']],
+6:[['island','Coral island','The Maldives contains about 1,200 coral islands.'],['villa','Water villa','Water villas stand on stilts above lagoons.'],['turtle','Sea turtle','Green and hawksbill turtles live around Maldivian reefs.'],['reef','Coral reef','Reefs protect islands and support marine life.'],['palm','Coconut palm','The coconut palm is the national tree of the Maldives.'],['dolphin','Dolphin','Several dolphin species can be seen in Maldivian waters.']]
+};
+function cardPicture(type){const svg={pisa:`<svg viewBox="0 0 100 100"><g transform="translate(50 94) rotate(-7)"><rect x="-22" y="-76" width="44" height="72" rx="3" fill="#eadfc8" stroke="#776b5d" stroke-width="2"/><g fill="#71675c">${[0,1,2,3,4,5].map(r=>[0,1,2,3].map(a=>`<path d="M${-16+a*10} ${-67+r*11}a4 4 0 0 1 8 0v5h-8z"/>`).join('')).join('')}</g><ellipse cy="-79" rx="24" ry="6" fill="#d8c9af" stroke="#776b5d" stroke-width="2"/></g></svg>`,colosseum:'🏛️',bridge:'🌉',gondola:'🚤',lemon:'🍋',grapes:'🍇',eiffel:'🗼',louvre:'🖼️',arc:'🏛️',notredame:'⛪',versailles:'🏰',croissant:'🥐',sagrada:'⛪',guell:'🦎',alhambra:'🏰',flamenco:'💃',windmill:'🌬️',sun:'☀️',persepolis:'🏺',azadi:'🗼',square:'🕌',garden:'🌳',tile:'🔷',mountain:'🏔️',balloon:'🎈',hagia:'🕌',mosque:'🕌',pamukkale:'💧',bazaar:'🛍️',tulip:'🌷',island:'🏝️',villa:'🏠',turtle:'🐢',reef:'🐠',palm:'🌴',dolphin:'🐬'};return svg[type]||'⭐'}
+let memoryLevel=1,memDeck=[],memOpen=[],memMatched=0,memMoves=0,memLocked=false;
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function startItalyMemory(){
-  run=0;state='memory';K.l=K.r=K.j=K.f=0;useMainGameControls(false);show('memory');
-  memDeck=shuffle(MEMORY_DATA.flatMap((x,i)=>[{...x,pair:i,id:i+'a'},{...x,pair:i,id:i+'b'}]));
-  memOpen=[];memMatched=0;memMoves=0;memLocked=false;
-  $('memMoves').textContent='0';$('memPairs').textContent='0';$('memoryFact').textContent='Tippe zwei Karten an.';
-  $('memoryContinue').style.display='none';$('italyStamp').style.display='none';renderMemory();
-}
-function renderMemory(){
-  const g=$('memoryGrid');g.innerHTML='';
-  memDeck.forEach((card,idx)=>{const b=document.createElement('button');b.className='memTile'+(card.matched?' matched':memOpen.includes(idx)?' open':'');b.textContent=(card.matched||memOpen.includes(idx))?card.icon:'?';b.setAttribute('aria-label',card.matched||memOpen.includes(idx)?card.name:'Verdeckte Karte');b.onclick=()=>flipMemory(idx);g.appendChild(b)})
-}
-function flipMemory(idx){
-  if(memLocked||memDeck[idx].matched||memOpen.includes(idx)||memOpen.length>=2)return;
-  memOpen.push(idx);renderMemory();
-  if(memOpen.length===2){
-    memMoves++;$('memMoves').textContent=memMoves;const [a,b]=memOpen;
-    if(memDeck[a].pair===memDeck[b].pair){
-      memDeck[a].matched=memDeck[b].matched=true;memMatched++;$('memPairs').textContent=memMatched;
-      $('memoryFact').innerHTML='<b>'+memDeck[a].name+':</b> '+memDeck[a].fact;memOpen=[];score+=100;sfx('collect');renderMemory();
-      if(memMatched===MEMORY_DATA.length){$('memoryFact').innerHTML='<b>Bravo!</b> Du hast alle Sehenswürdigkeiten gefunden.';$('memoryContinue').style.display='inline-block';$('italyStamp').style.display='block';try{localStorage.setItem('caItalyStamp','earned')}catch(e){}}
-    }else{
-      memLocked=true;$('memoryFact').textContent='Noch nicht gleich – versuche es noch einmal.';
-      setTimeout(()=>{memOpen=[];memLocked=false;renderMemory()},800)
-    }
-  }
-}
-$('memoryContinue').onclick=()=>{useMainGameControls(true);state='game';build(2);show('');run=1;last=performance.now();toast('ITALIEN GESCHAFFT! 🇮🇹')};
+function startCountryMemory(n){memoryLevel=n;run=0;state='memory';K.l=K.r=K.j=K.f=0;useMainGameControls(false);show('memory');const country=COUNTRIES[n],data=MEMORY_BY_COUNTRY[n];$('memoryTitle').textContent=country.flag+' '+country.name.toUpperCase()+' MEMORY';$('memoryIntro').textContent='Match all landmark pictures. Every pair reveals a short fact.';$('memoryContinue').textContent=n<6?'COLLECT STAMP AND CONTINUE':'COLLECT FINAL STAMP';$('italyStamp').textContent='✅'+country.flag;memDeck=shuffle(data.flatMap((x,i)=>[{type:x[0],name:x[1],fact:x[2],pair:i,id:i+'a'},{type:x[0],name:x[1],fact:x[2],pair:i,id:i+'b'}]));memOpen=[];memMatched=0;memMoves=0;memLocked=false;$('memMoves').textContent='0';$('memPairs').textContent='0';$('memoryFact').textContent='Tap two cards.';$('memoryContinue').style.display='none';$('italyStamp').style.display='none';renderMemory()}
+function renderMemory(){const g=$('memoryGrid');g.innerHTML='';memDeck.forEach((card,idx)=>{const b=document.createElement('button');b.className='memTile'+(card.matched?' matched':memOpen.includes(idx)?' open':'');const open=card.matched||memOpen.includes(idx);if(open){const pic=cardPicture(card.type);if(pic.startsWith('<svg'))b.innerHTML=pic;else b.textContent=pic}else b.textContent='?';b.setAttribute('aria-label',open?card.name:'Hidden card');b.onclick=()=>flipMemory(idx);g.appendChild(b)})}
+function flipMemory(idx){if(memLocked||memDeck[idx].matched||memOpen.includes(idx)||memOpen.length>=2)return;memOpen.push(idx);renderMemory();if(memOpen.length===2){memMoves++;$('memMoves').textContent=memMoves;const[a,b]=memOpen;if(memDeck[a].pair===memDeck[b].pair){memDeck[a].matched=memDeck[b].matched=true;memMatched++;$('memPairs').textContent=memMatched;$('memoryFact').innerHTML='<b>'+memDeck[a].name+':</b> '+memDeck[a].fact;memOpen=[];score+=100;sfx('collect');renderMemory();if(memMatched===6){$('memoryFact').innerHTML='<b>Excellent!</b> You found every pair.';$('memoryContinue').style.display='inline-block';$('italyStamp').style.display='block';try{localStorage.setItem('caStamp'+memoryLevel,'earned')}catch(e){}}}else{memLocked=true;$('memoryFact').textContent='Not a match yet — try again.';setTimeout(()=>{memOpen=[];memLocked=false;renderMemory()},720)}}}
+$('memoryContinue').onclick=()=>{useMainGameControls(true);if(memoryLevel<6){gameFinished=false;state='game';build(memoryLevel+1);seenLandmarks=new Set();show('');run=1;last=performance.now();toast((COUNTRIES[memoryLevel].name+' COMPLETE! '+COUNTRIES[memoryLevel].flag).toUpperCase())}else{state='win';show('win');run=0;useMainGameControls(false)}};
 
 let hiddenPause=false;
 document.addEventListener('visibilitychange',()=>{hiddenPause=document.hidden;last=performance.now()});
@@ -1082,7 +1074,7 @@ $('settingsBtn').onclick=()=>{ensureAudio();$('settingsPanel').classList.toggle(
 $('musicVol').oninput=applyAudioSettings;
 $('sfxVol').oninput=applyAudioSettings;
 $('difficulty').onchange=()=>{difficulty=$('difficulty').value;try{localStorage.setItem('caDifficulty',difficulty)}catch(e){}};
-$('muteBtn').onclick=()=>{audioMuted=!audioMuted;applyAudioSettings();$('muteBtn').textContent=audioMuted?'🔇 AUS':'🔊 AN/AUS'};
+$('muteBtn').onclick=()=>{audioMuted=!audioMuted;applyAudioSettings();$('muteBtn').textContent=audioMuted?'🔇 AUS':'🔊 ON/OFF'};
 try{
   const d=localStorage.getItem('caDifficulty');if(d&&['easy','normal','hard'].includes(d)){$('difficulty').value=d;difficulty=d}
 }catch(e){}

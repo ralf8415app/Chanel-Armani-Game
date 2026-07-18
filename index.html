@@ -1,4 +1,4 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#101827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><title>Chanel & Armani – Italien Deluxe V21</title>
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#101827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><title>Chanel & Armani – Weltreise V19</title>
 <style>
 *{box-sizing:border-box;-webkit-user-select:none;user-select:none}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#08101d;font-family:Arial}canvas{display:block}#game{position:fixed;inset:0;width:100%;height:100%;touch-action:none}
 .screen{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:8px;background:linear-gradient(#61c5ffed,#6bd06bed)}.screen.show{display:flex}.card{width:min(96vw,920px);max-height:94vh;overflow:auto;background:#f4ead7;border:5px solid #362b23;border-radius:22px;padding:14px;text-align:center;box-shadow:0 18px 55px #0008}h1{margin:0;font-size:clamp(30px,6vw,62px);text-shadow:3px 3px #fff}h2,h3{margin:5px}.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:8px}button,input{font:inherit}button{border:4px solid #362b23;border-radius:14px;padding:10px 14px;font-weight:900;font-size:16px;background:#f3c34e;box-shadow:0 5px #8b6515}.char{min-width:145px;background:#eee6da}.char.selected{outline:6px solid #22c55e}.preview{width:100px;height:78px;border:3px solid #362b23;border-radius:10px;background:#9bdcff}.sticky{position:sticky;bottom:0;width:min(320px,90%)}
@@ -108,18 +108,27 @@
   .v16Header p{display:none}
 }
 
+
+.worldGrid{display:grid;grid-template-columns:repeat(2,minmax(210px,1fr));gap:12px;margin:14px 0}.country{padding:14px;border:4px solid #362b23;border-radius:18px;background:#fff;font-weight:900;font-size:20px}.country.locked{filter:grayscale(.65);opacity:.65}.country small{display:block;font-size:13px;margin-top:5px}.switchBtn{background:#93c5fd!important}.activeName{color:#1d4ed8}.travelLine{font-size:28px;letter-spacing:7px;margin:8px}.mapCard{background:linear-gradient(180deg,#dbeafe,#dcfce7)}
+@media(max-width:560px){.worldGrid{grid-template-columns:1fr}.country{font-size:17px}}
+
+/* V22 – V19-Grafik mit Sehenswürdigkeiten, Infokarten und echtem Memory */
+#landmarkInfo{position:fixed;z-index:80;inset:0;display:none;align-items:center;justify-content:center;background:rgba(4,9,20,.68);padding:18px}
+#landmarkInfo.show{display:flex}.landmarkCard{width:min(560px,94vw);background:linear-gradient(145deg,#fff8df,#ffffff);color:#2d241d;border:4px solid #c98b36;border-radius:24px;padding:20px;text-align:center;box-shadow:0 22px 70px #0008}.landmarkCard .lmIcon{font-size:64px}.landmarkCard h2{margin:4px 0 8px;color:#8b3f16}.landmarkCard p{font-size:19px;line-height:1.35}.landmarkCard button{font-size:18px}
+#memory{background:radial-gradient(circle at 50% 20%,#174b75,#07101f)}.memoryCard{width:min(980px,98vw);max-height:98vh;overflow:auto}.memoryGrid{display:grid;grid-template-columns:repeat(4,minmax(70px,1fr));gap:10px;margin:12px auto;max-width:760px}.memTile{aspect-ratio:1/1;border-radius:16px;border:3px solid #f4c66d;background:linear-gradient(145deg,#1e3a5f,#10233d);font-size:clamp(26px,5vw,52px);display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 6px 0 #08111f;cursor:pointer}.memTile.open,.memTile.matched{background:linear-gradient(145deg,#fff7d6,#fff);color:#202020}.memTile.matched{border-color:#4ade80;opacity:.82}.memoryFact{min-height:70px;margin:8px auto;padding:10px;border-radius:14px;background:#fff4cc;color:#3b2a12;max-width:760px;font-size:17px}.memoryTop{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-weight:900}.italyStamp{font-size:70px;filter:drop-shadow(0 5px 5px #0005)}
+@media(max-width:600px){.memoryGrid{grid-template-columns:repeat(4,1fr);gap:6px}.memTile{border-width:2px}.landmarkCard p{font-size:16px}}
 </style></head><body>
 
 <div id="helpOverlay" class="screen" style="display:none;z-index:10000;background:linear-gradient(180deg,#7dd3fc,#fef3c7);overflow:auto">
   <div style="width:min(94vw,920px);margin:18px auto;padding:16px;background:rgba(255,255,255,.94);border:4px solid #2563eb;border-radius:22px;box-shadow:0 12px 40px rgba(0,0,0,.25);font-family:Arial;color:#172554">
     <h1 style="margin:0 0 8px;text-align:center;font-size:clamp(28px,5vw,48px)">👋 Willkommen bei Chanel & Armani!</h1>
-    <p style="font-size:clamp(18px,3vw,25px);text-align:center;margin:6px 0 16px"><b>Hilf den beiden Hunden bei ihrem Abenteuer!</b></p>
+    <p style="font-size:clamp(18px,3vw,25px);text-align:center;margin:6px 0 16px"><b>Hilf Chanel und Armani bei ihrer Weltreise!</b></p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
       <div style="padding:12px;border:3px solid #60a5fa;border-radius:18px;background:#eff6ff">
         <h2 style="margin:0 0 8px">🎮 So steuerst du</h2>
         <p style="font-size:20px;margin:6px 0">⬅️ Linke Seite: <b>links und rechts laufen</b></p>
-        <p style="font-size:20px;margin:6px 0">➡️ Rechte Seite: <b>springen</b> und 🎈 <b>Luftballons werfen</b></p>
+        <p style="font-size:20px;margin:6px 0">➡️ Rechte Seite: <b>springen</b> und 🎈 <b>Luftballons werfen</b><br>🔄 Mit Q oder WECHSELN die Figur tauschen</p>
       </div>
 
       <div style="padding:12px;border:3px solid #f59e0b;border-radius:18px;background:#fff7ed">
@@ -221,13 +230,17 @@ font:700 14px Arial;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.35)">
 </div>
 <div id="bossBarWrap"><div id="bossBar"></div></div>
 
-<div id="hud"><span id="lev">Level 1/4</span><span>⭐<b id="sc">0</b></span><span>❤<b id="li">3</b></span><span>🦴<b id="bo">0</b></span><span id="we">☀️</span><button id="prev">◀ Level</button><button id="one">⏮ Level 1</button></div>
+<div id="hud"><span id="lev">🇮🇹 Italien</span><span>⭐<b id="sc">0</b></span><span>❤<b id="li">3</b></span><span>🦴<b id="bo">0</b></span><span id="we">☀️</span><span>🎮 <b id="activeChar" class="activeName">CHANEL</b></span><button id="switchChar" class="switchBtn">🔄 WECHSELN</button><button id="prev">◀ Land</button><button id="one">⏮ Italien</button></div>
 <div id="move" class="pad"><button class="ctrl" data-k="l">◀</button><button class="ctrl" data-k="r">▶</button></div><div id="act" class="pad"><button class="ctrl fire" data-k="f">🎈</button><button class="ctrl jump" data-k="j">⬆</button></div>
-<div id="menu" class="screen show"><div class="card"><h1>CHANEL & ARMANI</h1><h2>Das neue Würfel-Abenteuer <small style="font-size:.38em">V16 BONUS+BOSS NEUBAU</small></h2><p>Offline-Version: Chanel und Armani spielen gemeinsam. Einheitliche Steuerung in allen Leveln und Bonusspielen, viele Tiergegner, Kopfsprünge, Luftballons und Feuerwerk. PC: A/D oder Pfeile, W/↑ springen, F/Enter schießen, Q Figur wechseln.</p><div class="row"><button data-mode="solo">👤 SPIEL STARTEN</button><button id="rankOpen">🏆 RANGLISTE</button></div></div></div>
+<div id="menu" class="screen show"><div class="card"><h1>CHANEL & ARMANI</h1><h2>Die große Weltreise <small style="font-size:.38em">V22 – V19 ITALIEN DELUXE</small></h2><p>Chanel und Armani reisen gemeinsam durch Italien, Frankreich, Spanien und die Malediven. Eine Figur wird gesteuert, die andere folgt automatisch. Mit Q oder 🔄 kannst du jederzeit wechseln.</p><div class="travelLine">🇮🇹 ✈️ 🇫🇷 ✈️ 🇪🇸 ✈️ 🇲🇻</div><div class="row"><button id="journeyStart">🌍 WELTREISE STARTEN</button><button id="rankOpen">🏆 RANGLISTE</button></div></div></div>
+<div id="worldmap" class="screen"><div class="card mapCard"><h1>🌍 WELTKARTE</h1><p>Level 1 Italien wurde komplett neu aufgebaut. Weitere Länder folgen Level für Level und bleiben später erweiterbar.</p><div class="worldGrid"><button class="country" id="country1">🇮🇹 ITALIEN<small>Rom · Venedig · Pisa</small></button><button class="country locked">🇫🇷 FRANKREICH<small>Wird nach Italien freigeschaltet</small></button><button class="country locked">🇪🇸 SPANIEN<small>Wird nach Frankreich freigeschaltet</small></button><button class="country locked">🇲🇻 MALEDIVEN<small>Wird nach Spanien freigeschaltet</small></button></div><button id="mapBack">ZURÜCK</button></div></div>
 <div id="select" class="screen"><div class="card"><h2>Figur wählen</h2><h3>Spieler 1</h3><div class="row"><button class="char selected" data-p="1" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button><button class="char" data-p="1" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button></div><div id="p2" style="display:none"><h3>Spieler 2</h3><div class="row"><button class="char selected" data-p="2" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button><button class="char" data-p="2" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button></div></div><button id="start" class="sticky">SPIEL STARTEN</button>
 <button id="openHelpBtn" style="margin-top:8px">❓ Hilfe & Installation</button></div></div>
+
+<div id="landmarkInfo"><div class="landmarkCard"><div class="lmIcon" id="lmIcon">🏛️</div><h2 id="lmTitle">Sehenswürdigkeit</h2><p id="lmText"></p><button id="lmContinue">WEITERSPIELEN</button></div></div>
+<div id="memory" class="screen"><div class="card memoryCard"><h1>🇮🇹 ITALIEN-MEMORY</h1><p>Finde alle gleichen Sehenswürdigkeiten. Nach jedem Paar erfährst du etwas über Italien.</p><div class="memoryTop"><span>Versuche: <b id="memMoves">0</b></span><span>Paare: <b id="memPairs">0</b>/6</span></div><div id="memoryGrid" class="memoryGrid"></div><div id="memoryFact" class="memoryFact">Tippe zwei Karten an.</div><button id="memoryContinue" style="display:none">ITALIEN-STEMPEL HOLEN UND WEITER</button><div id="italyStamp" class="italyStamp" style="display:none">✅🇮🇹</div></div></div>
 <div id="over" class="screen"><div class="card"><h1 style="color:red">LOSER</h1><button id="retry">NEUER VERSUCH IM LETZTEN LEVEL</button><button id="home">HAUPTMENÜ</button></div></div>
-<div id="win" class="screen"><div class="card"><h1>GESCHAFFT!</h1><p>Der Schattenfürst ist besiegt. Das war das letzte Level – danach folgt kein weiteres Level.</p><button id="winRank">PUNKTZAHL SPEICHERN</button><button id="again">NOCH EINMAL</button></div></div>
+<div id="win" class="screen"><div class="card"><h1>GESCHAFFT!</h1><p>Die erste Weltreise ist geschafft. Weitere Länder können als neue Reisepakete ergänzt werden.</p><button id="winRank">PUNKTZAHL SPEICHERN</button><button id="again">NOCH EINMAL</button></div></div>
 <div id="rank" class="screen"><div class="card"><h1>PUNKT-RANG</h1><div class="row"><input id="name" maxlength="18" placeholder="Name"><button id="save">SPEICHERN</button></div><ol id="list"></ol><button id="back">ZURÜCK</button></div></div>
 
 
@@ -291,8 +304,12 @@ font:700 14px Arial;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.35)">
   </div>
 </div>
 <script>
-'use strict';const $=x=>document.getElementById(x),cv=$('game'),c=cv.getContext('2d');let W,H,D=1,last=0,time=0,state='menu',run=false,mode='solo',level=1,lastLevel=1,world=2800,weather='sun',skyMode='day',score=0,bonesN=0,celebrate=0,victoryPending=false,difficulty='normal',bossArena=false,bossIntro=0,gameFinished=false;let choose={1:'chanel',2:'armani'},P=[],plats=[],items=[],en=[],shots=[],esh=[],parts=[],boss=null;const K={l:0,r:0,j:0,f:0},CH={chanel:{sp:300,j:620,d:1},armani:{sp:260,j:575,d:2}},screens=['menu','select','over','win','rank','bossFight','firework','zumba','pac','dash','shadow'];
+'use strict';const $=x=>document.getElementById(x),cv=$('game'),c=cv.getContext('2d');let W,H,D=1,last=0,time=0,state='menu',run=false,mode='solo',level=1,lastLevel=1,world=2800,weather='sun',skyMode='day',score=0,bonesN=0,celebrate=0,victoryPending=false,difficulty='normal',bossArena=false,bossIntro=0,gameFinished=false;let choose={1:'chanel',2:'armani'},activePlayer=0,P=[],plats=[],items=[],en=[],shots=[],esh=[],parts=[],boss=null;const K={l:0,r:0,j:0,f:0},CH={chanel:{sp:300,j:620,d:1},armani:{sp:260,j:575,d:2}},screens=['menu','worldmap','select','over','win','rank','bossFight','firework','memory','zumba','pac','dash','shadow'];
 function show(id){screens.forEach(s=>$(s).classList.toggle('show',s===id))}function resize(){D=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*D;cv.height=H*D;cv.style.width=W+'px';cv.style.height=H+'px';c.setTransform(D,0,0,D,0,0)}addEventListener('resize',resize);resize();
+const COUNTRIES={1:{name:'Italien',flag:'🇮🇹'},2:{name:'Frankreich',flag:'🇫🇷'},3:{name:'Spanien',flag:'🇪🇸'},4:{name:'Malediven',flag:'🇲🇻'}};
+function updateCountryHud(){const x=COUNTRIES[level]||COUNTRIES[1];$('lev').textContent=x.flag+' '+x.name+' '+level+'/4';$('activeChar').textContent=(P[activePlayer]?.k||'chanel').toUpperCase()}
+function switchCharacter(){if(P.length<2)return;activePlayer=activePlayer?0:1;const a=P[activePlayer],b=P[activePlayer?0:1];a.x=Math.max(0,b.x+(a.x<b.x?-55:55));a.y=Math.min(a.y,b.y);updateCountryHud();sfx('collect')}
+
 function rr(q,x,y,w,h,r){q.beginPath();q.moveTo(x+r,y);q.lineTo(x+w-r,y);q.quadraticCurveTo(x+w,y,x+w,y+r);q.lineTo(x+w,y+h-r);q.quadraticCurveTo(x+w,y+h,x+w-r,y+h);q.lineTo(x+r,y+h);q.quadraticCurveTo(x,y+h,x,y+h-r);q.lineTo(x,y+r);q.quadraticCurveTo(x,y,x+r,y);q.closePath()}
 function dog(q,x,y,k,s=1,f=1,pose='idle',fr=0){let b=k==='chanel',fur=b?'#15181d':'#f7f7f4',dk=b?'#050608':'#c6cbd1',ac=b?'#f2c94c':'#60a5fa',bob=pose==='run'?Math.sin(fr*1.57)*2:Math.sin(time*3)*1.2,tail=Math.sin(time*7+fr)*5;q.save();q.translate(x,y+bob);if(f<0){q.translate(66*s,0);q.scale(-1,1)}q.fillStyle='#0003';q.beginPath();q.ellipse(32*s,70*s,25*s,6*s,0,0,7);q.fill();q.strokeStyle=fur;q.lineWidth=8*s;q.beginPath();q.moveTo(12*s,38*s);q.quadraticCurveTo((-2-tail)*s,(27-tail)*s,7*s,16*s);q.stroke();q.fillStyle=fur;q.strokeStyle='#222';q.lineWidth=2*s;rr(q,12*s,28*s,42*s,31*s,10*s);q.fill();q.stroke();rr(q,18*s,3*s,38*s,34*s,11*s);q.fill();q.stroke();q.fillStyle=dk;rr(q,17*s,0,11*s,15*s,5*s);q.fill();rr(q,46*s,0,11*s,15*s,5*s);q.fill();rr(q,42*s,18*s,21*s,15*s,7*s);q.fill();q.fillStyle='#111';q.beginPath();q.arc(56*s,23*s,4*s,0,7);q.fill();q.fillStyle='#fff';q.beginPath();q.ellipse(29*s,15*s,4*s,6*s,0,0,7);q.ellipse(46*s,15*s,4*s,6*s,0,0,7);q.fill();q.fillStyle='#111';q.beginPath();q.arc(30*s,17*s,2*s,0,7);q.arc(47*s,17*s,2*s,0,7);q.fill();q.fillStyle=ac;q.fillRect(16*s,43*s,40*s,8*s);q.fillStyle=fur;rr(q,18*s,(54+(fr%2?5:-3))*s,11*s,18*s,4*s);q.fill();rr(q,42*s,(54+(fr%2?-3:5))*s,11*s,18*s,4*s);q.fill();q.restore()}
 document.querySelectorAll('[data-pr]').forEach(v=>{let q=v.getContext('2d');q.fillStyle='#9bdcff';q.fillRect(0,0,100,78);q.fillStyle='#61b54e';q.fillRect(0,58,100,20);dog(q,18,3,v.dataset.pr,.9)});
@@ -340,7 +357,7 @@ function sfx(name){
 }
 function startMusic(){
   if(musicTimer)return;
-  const melody=[261.6,329.6,392,523.3,392,329.6,293.7,349.2,440,587.3,440,349.2];
+  const melodies={1:[261.6,329.6,392,523.3,392,329.6,293.7,349.2],2:[293.7,349.2,440,523.3,440,392,349.2,293.7],3:[329.6,392,493.9,659.3,493.9,440,392,329.6],4:[261.6,392,440,523.3,440,392,329.6,293.7]};const melody=melodies[level]||melodies[1];
   musicTimer=setInterval(()=>{
     if(!audioCtx||state==='over')return;
     const base=state==='game'?(level>=3?.8:1):.9;
@@ -358,8 +375,8 @@ function hit(a,b){return a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y}func
   const z=sizes[t]||[48,44];
   en.push({x,y,w:z[0],h:z[1],t,hp:3,maxHp:3,vx:speeds[t]||58,a:1,p:Math.random()*6,hop:Math.random()*2,stomped:0})
 }
-function build(n){level=n;celebrate=0;victoryPending=false;bossArena=false;bossIntro=0;gameFinished=false;difficulty=$('difficulty').value;lastLevel=n;weather=['sun','rain','snow'][Math.floor(Math.random()*3)];skyMode=Math.random()<.42?'night':'day';plats=[];items=[];en=[];shots=[];esh=[];parts=[];boss=null;world=[0,2800,3100,3400,3800][n];let gaps=n===1?[[760,170],[1720,190]]:n===2?[[520,190],[1420,220],[2480,180]]:n===3?[[650,180],[1580,210],[2660,200]]:[[900,190],[1980,220],[3050,180]],cur=0;gaps.forEach(g=>{if(g[0]>cur)ground(cur,g[0]-cur);cur=g[0]+g[1]});if(cur<world)ground(cur,world-cur);let S=n===1?[[300,H-230,220],[650,H-350,240],[1080,H-260,230],[1460,H-400,250],[2080,H-300,260]]:n===2?[[260,H-260,200],[610,H-410,220],[1010,H-300,230],[1430,H-450,250],[1880,H-330,220],[2290,H-440,260]]:n===3?[[300,H-240,220],[710,H-380,240],[1120,H-290,220],[1540,H-440,250],[1990,H-320,230],[2440,H-410,260]]:[[350,H-250,230],[800,H-400,260],[1260,H-310,230],[1710,H-450,280],[2250,H-340,240],[2740,H-430,260],[3240,H-300,240]];S.forEach(v=>plat(...v));
-const floating=n===1?[[520,H-480,150],[1280,H-510,175],[2360,H-470,155]]:
+function build(n){level=n;if(n===1)seenLandmarks=new Set();celebrate=0;victoryPending=false;bossArena=false;bossIntro=0;gameFinished=false;difficulty=$('difficulty').value;lastLevel=n;weather=n===4?'sun':(n===2?'rain':'sun');skyMode=n===3?'day':'day';plats=[];items=[];en=[];shots=[];esh=[];parts=[];boss=null;world=[0,4200,3100,3400,3800][n];let gaps=n===1?[[690,150],[1510,180],[2460,170],[3350,190]]:n===2?[[520,190],[1420,220],[2480,180]]:n===3?[[650,180],[1580,210],[2660,200]]:[[900,190],[1980,220],[3050,180]],cur=0;gaps.forEach(g=>{if(g[0]>cur)ground(cur,g[0]-cur);cur=g[0]+g[1]});if(cur<world)ground(cur,world-cur);let S=n===1?[[260,H-230,200],[570,H-330,180],[900,H-270,220],[1250,H-390,230],[1700,H-250,220],[2040,H-410,260],[2650,H-290,230],[3010,H-430,250],[3550,H-310,230],[3890,H-400,220]]:n===2?[[260,H-260,200],[610,H-410,220],[1010,H-300,230],[1430,H-450,250],[1880,H-330,220],[2290,H-440,260]]:n===3?[[300,H-240,220],[710,H-380,240],[1120,H-290,220],[1540,H-440,250],[1990,H-320,230],[2440,H-410,260]]:[[350,H-250,230],[800,H-400,260],[1260,H-310,230],[1710,H-450,280],[2250,H-340,240],[2740,H-430,260],[3240,H-300,240]];S.forEach(v=>plat(...v));
+const floating=n===1?[[430,H-470,145],[1080,H-510,160],[1870,H-500,170],[2800,H-520,165],[3700,H-500,160]]:
 n===2?[[390,H-500,155],[1160,H-530,180],[2140,H-500,165],[2780,H-540,150]]:
 n===3?[[500,H-500,165],[1320,H-540,175],[2240,H-510,185],[3000,H-550,145]]:
 [[560,H-510,170],[1450,H-550,180],[2480,H-520,180],[3220,H-560,150]];
@@ -368,7 +385,7 @@ if(n===4){
   plat(3200,H-100,600);plat(3260,H-360,150);plat(3440,H-430,150);plat(3600,H-300,140);
   items.push({t:'heart',x:3290,y:H-390,a:1},{t:'power',x:3490,y:H-465,a:1});
 }for(let i=0;i<10+n;i++)items.push({t:'bone',x:170+i*(world-340)/(9+n),y:H-(i%2?360:160),a:1});[360,980,1760,world-420].forEach((x,i)=>items.push({t:'heart',x,y:H-(i%2?250:150),a:1}));items.push({t:'power',x:world*.58,y:H-210,a:1});if(n===1){
-enemy(430,H-144,'rabbit');enemy(690,H-144,'cat');enemy(980,H-144,'fox');enemy(1270,H-144,'hedgehog');enemy(1550,H-144,'raccoon');enemy(1870,H-144,'wolf');enemy(2200,H-250,'owl');enemy(2520,H-144,'boar')
+enemy(420,H-144,'rabbit');enemy(650,H-144,'cat');enemy(930,H-144,'fox');enemy(1210,H-144,'hedgehog');enemy(1510,H-144,'raccoon');enemy(1810,H-144,'wolf');enemy(2140,H-260,'owl');enemy(2480,H-144,'boar');enemy(2810,H-144,'cat');enemy(3150,H-250,'owl');enemy(3480,H-144,'fox');enemy(3820,H-144,'boar')
 }
 if(n===2){
 enemy(360,H-144,'mouse');enemy(620,H-144,'fox');enemy(910,H-250,'bat');enemy(1190,H-144,'raccoon');enemy(1510,H-144,'hedgehog');enemy(1810,H-144,'wolf');enemy(2140,H-260,'owl');enemy(2440,H-144,'boar');enemy(2780,H-144,'rabbit')
@@ -381,8 +398,8 @@ enemy(420,H-144,'fox');enemy(650,H-144,'rabbit');enemy(880,H-144,'boar');enemy(1
 enemy(1370,H-144,'hedgehog');enemy(1610,H-144,'wolf');enemy(1880,H-260,'bat');enemy(2140,H-144,'raccoon');
 enemy(2410,H-144,'shadow');enemy(2660,H-250,'owl');enemy(2870,H-144,'cat');enemy(3070,H-144,'mouse');
 boss={x:3470,y:H-190,w:88,h:96,hp:difficulty==='easy'?9:difficulty==='hard'?18:12,max:difficulty==='easy'?9:difficulty==='hard'?18:12,a:1,cd:1.2,phase:1,anim:0,dir:-1,vy:0,stun:0,summonCd:4.5,flash:0,lastHit:0}
-}let diffMul=difficulty==='easy'?.8:difficulty==='hard'?1.25:1;en.forEach(e=>e.vx*=diffMul);P.forEach((p,i)=>{p.x=70+i*70;p.y=20;p.vx=p.vy=0;p.done=0;p.big=0;p.w=38;p.h=42});$('lev').textContent='Level '+n+'/4';$('we').textContent=weather==='sun'?'☀️':weather==='rain'?'🌧️':'❄️';hud()}
-function start(){gameFinished=false;ensureAudio();show('');useMainGameControls(true);score=0;bonesN=0;P=[mkP(1,choose[1],70)];if(mode==='coop')P.push(mkP(2,choose[2],140));build(1);state='game';run=1;last=performance.now()}
+}let diffMul=difficulty==='easy'?.8:difficulty==='hard'?1.25:1;en.forEach(e=>e.vx*=diffMul);P.forEach((p,i)=>{p.x=70+i*70;p.y=20;p.vx=p.vy=0;p.done=0;p.big=0;p.w=38;p.h=42});updateCountryHud();$('we').textContent=weather==='sun'?'☀️':weather==='rain'?'🌧️':'❄️';hud()}
+function start(){gameFinished=false;ensureAudio();show('');useMainGameControls(true);score=0;bonesN=0;activePlayer=0;P=[mkP(1,'chanel',70),mkP(2,'armani',125)];build(1);state='game';run=1;last=performance.now()}
 function hud(){
       $('sc').textContent=score;$('bo').textContent=bonesN;$('li').textContent=Math.max(...P.map(p=>p.lives));
       const visible=level===4&&boss&&boss.a&&state==='game';
@@ -391,7 +408,7 @@ function hud(){
     }
 function burst(x,y,col,n=10){for(let i=0;i<n;i++){let a=Math.random()*7,s=50+Math.random()*150;parts.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-70,life:.8,col,z:2+Math.random()*4})}}
 function hurt(p){if(p.inv>0)return;if(p.big){p.big=0;p.w=38;p.h=42;p.inv=1;return}p.lives--;p.inv=1.2;if(p.lives<=0){run=0;state='over';show('over');$('hud').style.display=$('move').style.display=$('act').style.display='none'}else{p.x=Math.max(30,p.x-180);p.y=20;p.vx=p.vy=0}}
-function updP(p,dt){let L=p.i===1&&K.l,R=p.i===1&&K.r,J=p.i===1&&K.j,F=p.i===1&&K.f;p.vx=((R?1:0)-(L?1:0))*p.sp;if(p.vx)p.face=Math.sign(p.vx);if(J&&!p.lock&&p.jumps<2){p.vy=-(p.jumps?p.j*1.08:p.j);p.jumps++;p.lock=1;sfx('jump')}if(!J)p.lock=0;p.vy+=1500*dt;let oy=p.y;p.x+=p.vx*dt;p.y+=p.vy*dt;p.g=0;p.x=Math.max(0,Math.min(world-p.w,p.x));plats.forEach(r=>{if(p.x+p.w>r.x&&p.x<r.x+r.w&&oy+p.h<=r.y+8&&p.y+p.h>=r.y&&p.vy>=0){p.y=r.y-p.h;p.vy=0;p.g=1;p.jumps=0}});if(level===4&&bossArena&&p.y+p.h>H-100){p.y=H-100-p.h;p.vy=0;p.g=1;p.jumps=0}if(p.y>H+100){hurt(p);p.x=Math.max(30,p.x-250);p.y=20}p.inv=Math.max(0,p.inv-dt);p.cd-=dt;if(F&&p.cd<=0){shots.push({x:p.x+(p.face>0?p.w:0),y:p.y+p.h*.35,w:18,h:24,vx:p.face*560,d:1,dead:0,hue:Math.floor(Math.random()*360),bob:Math.random()*6});p.cd=.25;sfx('shoot')}p.pose=!p.g?'jump':Math.abs(p.vx)>10?'run':'idle';p.ft+=dt;if(p.ft>.1){p.fr=(p.fr+1)%4;p.ft=0}items.forEach(i=>{if(i.a&&Math.hypot(p.x+p.w/2-i.x,p.y+p.h/2-i.y)<35){i.a=0;if(i.t==='bone'){score+=10;bonesN++;sfx('collect')}if(i.t==='heart'){p.lives++;score+=25;sfx('heart')}if(i.t==='power'){p.big=1;p.w=64;p.h=72;p.y-=30;score+=40;sfx('power')}}});let goal=world-110;if(level===4&&boss&&boss.a&&p.x>3235)enterBossArena();if(level<4&&p.x>goal)p.done=1;if(level===4&&boss&&!boss.a&&!gameFinished)startVictorySequence()}
+function updP(p,dt){const isActive=P[activePlayer]===p;const leader=P[activePlayer],dx=leader&&leader!==p?leader.x-p.x:0;let L=isActive&&K.l,R=isActive&&K.r,J=isActive&&K.j,F=isActive&&K.f;if(!isActive&&leader){L=dx<-70;R=dx>70;J=(Math.abs(dx)>100&&leader.y+25<p.y)||(!p.g&&leader.y<p.y-45);F=false;if(Math.abs(dx)>520){p.x=leader.x-55;p.y=leader.y-20;p.vx=p.vy=0}}p.vx=((R?1:0)-(L?1:0))*p.sp;if(p.vx)p.face=Math.sign(p.vx);if(J&&!p.lock&&p.jumps<2){p.vy=-(p.jumps?p.j*1.08:p.j);p.jumps++;p.lock=1;sfx('jump')}if(!J)p.lock=0;p.vy+=1500*dt;let oy=p.y;p.x+=p.vx*dt;p.y+=p.vy*dt;p.g=0;p.x=Math.max(0,Math.min(world-p.w,p.x));plats.forEach(r=>{if(p.x+p.w>r.x&&p.x<r.x+r.w&&oy+p.h<=r.y+8&&p.y+p.h>=r.y&&p.vy>=0){p.y=r.y-p.h;p.vy=0;p.g=1;p.jumps=0}});if(level===4&&bossArena&&p.y+p.h>H-100){p.y=H-100-p.h;p.vy=0;p.g=1;p.jumps=0}if(p.y>H+100){hurt(p);p.x=Math.max(30,p.x-250);p.y=20}p.inv=Math.max(0,p.inv-dt);p.cd-=dt;if(F&&p.cd<=0){shots.push({x:p.x+(p.face>0?p.w:0),y:p.y+p.h*.35,w:18,h:24,vx:p.face*560,d:1,dead:0,hue:Math.floor(Math.random()*360),bob:Math.random()*6});p.cd=.25;sfx('shoot')}p.pose=!p.g?'jump':Math.abs(p.vx)>10?'run':'idle';p.ft+=dt;if(p.ft>.1){p.fr=(p.fr+1)%4;p.ft=0}items.forEach(i=>{if(i.a&&Math.hypot(p.x+p.w/2-i.x,p.y+p.h/2-i.y)<35){i.a=0;if(i.t==='bone'){score+=10;bonesN++;sfx('collect')}if(i.t==='heart'){p.lives++;score+=25;sfx('heart')}if(i.t==='power'){p.big=1;p.w=64;p.h=72;p.y-=30;score+=40;sfx('power')}}});let goal=world-110;if(level===4&&boss&&boss.a&&p.x>3235)enterBossArena();if(level<4&&p.x>goal)p.done=1;if(level===4&&boss&&!boss.a&&!gameFinished)startVictorySequence()}
 
 
 function hitBossShot(s,b){
@@ -707,17 +724,17 @@ else e.x+=e.vx*dt;if(e.x<80||e.x>world-80)e.vx*=-1;shots.forEach(s=>{if(!s.dead&
   });
   P.forEach(p=>{if(hit(p,boss))hurt(p)})
 }esh.forEach(s=>P.forEach(p=>{if(!s.dead&&hit(s,p)){s.dead=1;hurt(p)}}));shots=shots.filter(s=>!s.dead&&s.x<world+100);esh=esh.filter(s=>!s.dead&&s.y<H+100);parts.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=380*dt;p.life-=dt});parts=parts.filter(p=>p.life>0);
-let camX=Math.max(0,Math.min(world-W,(P[0]||{x:0}).x-W*.38));
+let camX=Math.max(0,Math.min(world-W,(P[activePlayer]||P[0]||{x:0}).x-W*.38));
 en.forEach(e=>{e.paused=Math.abs((e.x-camX)-W*.5)>W*.95});
 en=en.filter(e=>e.a||Math.abs((e.x-camX)-W*.5)<W*1.2);
 trimEffects();if(P.every(p=>p.done)){
-  if(level===1)startPac();
+  if(level===1)startItalyMemory();
   else if(level===2)startDash();
   else if(level===3)startShadow();
   else if(level<4)build(level+1)
 }
 if(level===4&&boss&&!boss.a&&!gameFinished)startVictorySequence();
-if(!gameFinished)hud()}
+if(!gameFinished){checkLandmarkInfo();hud()}}
 
 function flower(x,y,col='#ff5ea8',s=1){
   c.strokeStyle='#2f7d32';c.lineWidth=2*s;c.beginPath();c.moveTo(x,y);c.lineTo(x,y-16*s);c.stroke();
@@ -782,16 +799,16 @@ function bg(ox){
 }
 
 function drawPlatform3D(r,ox){
-  const x=r.x-ox,y=r.y,depth=Math.min(24,Math.max(10,r.h*.24)),floating=r.y<H-145,dark=level>=3;
+  const x=r.x-ox,y=r.y,depth=Math.min(24,Math.max(10,r.h*.24)),floating=r.y<H-145,dark=level>=3,italy=level===1;
   c.save();
   c.shadowColor='rgba(0,0,0,.32)';c.shadowBlur=floating?18:8;c.shadowOffsetY=floating?12:5;
   let face=c.createLinearGradient(x,y,x,y+r.h);
-  face.addColorStop(0,dark?'#57405f':'#8b6538');face.addColorStop(1,dark?'#271c2e':'#49301b');
+  face.addColorStop(0,dark?'#57405f':italy?'#c99862':'#8b6538');face.addColorStop(1,dark?'#271c2e':italy?'#765035':'#49301b');
   c.fillStyle=face;c.fillRect(x,y,r.w,r.h);
   c.shadowColor='transparent';
   let top=c.createLinearGradient(x,y-depth,x,y+12);
-  top.addColorStop(0,weather==='snow'?'#ffffff':dark?'#836092':'#7bd462');
-  top.addColorStop(1,weather==='snow'?'#dcecff':dark?'#4f365a':'#3f9d3b');
+  top.addColorStop(0,weather==='snow'?'#ffffff':dark?'#836092':italy?'#8fcf63':'#7bd462');
+  top.addColorStop(1,weather==='snow'?'#dcecff':dark?'#4f365a':italy?'#4f943d':'#3f9d3b');
   c.fillStyle=top;c.beginPath();c.moveTo(x,y);c.lineTo(x+depth,y-depth*.6);c.lineTo(x+r.w+depth,y-depth*.6);c.lineTo(x+r.w,y);c.closePath();c.fill();
   let side=c.createLinearGradient(x+r.w,y,x+r.w+depth,y+r.h);
   side.addColorStop(0,dark?'#46304f':'#6a4726');side.addColorStop(1,dark?'#211727':'#2f2114');
@@ -856,12 +873,8 @@ function drawWorldLife(ox){
   for(let i=0;i<10;i++){let x=(i*173+Math.sin(time*2+i)*24)-(ox*.2%173),y=100+(i%4)*65+Math.sin(time*3+i)*10;c.fillStyle=i%2?'#ffd84d':'#67e8f9';c.beginPath();c.arc(x,y,4,0,7);c.fill()}
 }
 
-function draw(){c.clearRect(0,0,W,H);let ox=Math.max(0,Math.min(world-W,(P[0]||{x:0}).x-W*.38));bg(ox);drawWorldLife(ox);plats.forEach(r=>drawPlatform3D(r,ox));drawDepthFog();
-for(let i=0;i<6;i++){let x=i*560-(ox*.7%560)+120,y=H-165;
-if(level===1){c.fillStyle='#f59e0b';c.fillRect(x,y-65,18,65);c.fillStyle='#fde68a';c.fillRect(x-8,y-76,34,12)}
-else if(level===2){c.fillStyle='#38bdf8';c.beginPath();c.arc(x,y-26,26,Math.PI,0);c.lineTo(x+26,y);c.lineTo(x-26,y);c.closePath();c.fill()}
-else if(level===3){c.fillStyle='#7c3aed';c.fillRect(x,y-78,16,78);c.fillStyle='#c4b5fd';c.beginPath();c.moveTo(x-8,y-78);c.lineTo(x+8,y-98);c.lineTo(x+24,y-78);c.closePath();c.fill()}
-else{c.strokeStyle='#ef4444';c.lineWidth=8;c.beginPath();c.arc(x,y-38,32,Math.PI,0);c.stroke()}}items.forEach(i=>{if(!i.a)return;let x=i.x-ox,y=i.y;if(i.t==='bone'){drawBone3D(x,y)}if(i.t==='heart'){drawHeart3D(x,y)}if(i.t==='power'){let g=c.createRadialGradient(x,y,2,x,y,22);g.addColorStop(0,'#60a5fa');g.addColorStop(.5,'#111827');g.addColorStop(1,'#2563eb');c.fillStyle=g;c.beginPath();c.arc(x,y,22,0,7);c.fill()}});en.forEach(e=>{if(!e.a||e.paused)return;drawEnemy3D(e,ox)});if(boss&&boss.a){
+function draw(){c.clearRect(0,0,W,H);let ox=Math.max(0,Math.min(world-W,(P[activePlayer]||P[0]||{x:0}).x-W*.38));bg(ox);drawWorldLife(ox);plats.forEach(r=>drawPlatform3D(r,ox));drawDepthFog();
+drawCountryLandmarks(ox);items.forEach(i=>{if(!i.a)return;let x=i.x-ox,y=i.y;if(i.t==='bone'){drawBone3D(x,y)}if(i.t==='heart'){drawHeart3D(x,y)}if(i.t==='power'){let g=c.createRadialGradient(x,y,2,x,y,22);g.addColorStop(0,'#60a5fa');g.addColorStop(.5,'#111827');g.addColorStop(1,'#2563eb');c.fillStyle=g;c.beginPath();c.arc(x,y,22,0,7);c.fill()}});en.forEach(e=>{if(!e.a||e.paused)return;drawEnemy3D(e,ox)});if(boss&&boss.a){
   let x=boss.x-ox,y=boss.y,bob=Math.sin(boss.anim*5)*3,wing=Math.sin(boss.anim*7)*8;
   c.save();c.translate(x,y+bob);if(boss.dir>0){c.translate(boss.w,0);c.scale(-1,1)}
   let gl=c.createRadialGradient(44,45,5,44,45,82);gl.addColorStop(0,boss.phase===3?'rgba(239,68,68,.75)':'rgba(168,85,247,.8)');gl.addColorStop(1,'rgba(168,85,247,0)');
@@ -886,6 +899,157 @@ else{c.strokeStyle='#ef4444';c.lineWidth=8;c.beginPath();c.arc(x,y-38,32,Math.PI
   c.fillStyle='#fff';c.font='bold 18px Arial';c.fillText('ENDBOSS-ARENA',3380-ox,108)
 }
 let gx=world-80-ox;c.fillStyle=level===4&&boss&&boss.a?'#777':'#22c55e';c.fillRect(gx,H-220,8,120)}
+
+/* V18: neue Bärenfiguren und deutlich getrennte Länderwelten */
+function dog(q,x,y,k,s=1,f=1,pose='idle',fr=0){
+  const brown=k==='chanel';
+  const fur=brown?'#9a5b32':'#f7f7f2', dark=brown?'#6f351d':'#20242a', muzzle=brown?'#d9a06f':'#ece8dc';
+  const bob=pose==='run'?Math.sin(fr*1.57)*2:Math.sin(time*3)*1.1;
+  q.save();q.translate(x,y+bob);if(f<0){q.translate(66*s,0);q.scale(-1,1)}
+  q.fillStyle='rgba(0,0,0,.24)';q.beginPath();q.ellipse(32*s,69*s,25*s,6*s,0,0,7);q.fill();
+  // body
+  q.fillStyle=fur;q.strokeStyle='#2b211b';q.lineWidth=2*s;rr(q,14*s,29*s,40*s,31*s,13*s);q.fill();q.stroke();
+  // ears and head
+  q.beginPath();q.arc(23*s,9*s,10*s,0,7);q.arc(49*s,9*s,10*s,0,7);q.fill();q.stroke();
+  if(!brown){q.fillStyle=dark;q.beginPath();q.arc(23*s,9*s,8*s,0,7);q.arc(49*s,9*s,8*s,0,7);q.fill()}
+  q.fillStyle=fur;q.beginPath();q.arc(36*s,22*s,22*s,0,7);q.fill();q.stroke();
+  if(!brown){q.fillStyle=dark;q.beginPath();q.ellipse(27*s,19*s,8*s,10*s,-.22,0,7);q.ellipse(45*s,19*s,8*s,10*s,.22,0,7);q.fill()}
+  q.fillStyle='#fff';q.beginPath();q.arc(28*s,18*s,4*s,0,7);q.arc(44*s,18*s,4*s,0,7);q.fill();
+  q.fillStyle='#111';q.beginPath();q.arc(29*s,19*s,2*s,0,7);q.arc(45*s,19*s,2*s,0,7);q.fill();
+  q.fillStyle=muzzle;q.beginPath();q.ellipse(36*s,30*s,13*s,9*s,0,0,7);q.fill();
+  q.fillStyle='#241712';q.beginPath();q.ellipse(36*s,27*s,4.5*s,3.5*s,0,0,7);q.fill();
+  q.strokeStyle='#241712';q.lineWidth=1.6*s;q.beginPath();q.moveTo(36*s,30*s);q.quadraticCurveTo(31*s,35*s,27*s,32*s);q.moveTo(36*s,30*s);q.quadraticCurveTo(41*s,35*s,45*s,32*s);q.stroke();
+  // accessories matching the supplied bears: Chanel bow, Armani neck bow
+  if(brown){q.fillStyle='#d8b4fe';q.beginPath();q.moveTo(18*s,3*s);q.lineTo(7*s,-3*s);q.lineTo(9*s,11*s);q.closePath();q.fill();q.beginPath();q.moveTo(20*s,3*s);q.lineTo(30*s,-3*s);q.lineTo(29*s,11*s);q.closePath();q.fill();q.fillStyle='#7c3aed';q.beginPath();q.arc(19*s,4*s,4*s,0,7);q.fill()}
+  else{q.fillStyle='#ef4444';q.beginPath();q.moveTo(36*s,42*s);q.lineTo(25*s,36*s);q.lineTo(25*s,48*s);q.closePath();q.fill();q.beginPath();q.moveTo(36*s,42*s);q.lineTo(47*s,36*s);q.lineTo(47*s,48*s);q.closePath();q.fill();q.fillStyle='#991b1b';q.beginPath();q.arc(36*s,42*s,4*s,0,7);q.fill()}
+  // legs and arms
+  q.fillStyle=fur;rr(q,17*s,(54+(fr%2?5:-2))*s,12*s,18*s,6*s);q.fill();q.stroke();rr(q,43*s,(54+(fr%2?-2:5))*s,12*s,18*s,6*s);q.fill();q.stroke();
+  q.beginPath();q.arc(13*s,43*s,7*s,0,7);q.arc(59*s,43*s,7*s,0,7);q.fill();q.stroke();
+  q.restore()
+}
+function drawItalianScene(ox){
+  // Layered Italian journey: Tuscany -> Rome -> Venice -> Pisa -> Amalfi
+  c.fillStyle='rgba(92,142,64,.40)';
+  for(let i=-1;i<12;i++){let x=i*360-(ox*.10%360);c.beginPath();c.ellipse(x+160,H*.68,250,100,0,Math.PI,0);c.fill()}
+  c.fillStyle='rgba(218,183,104,.30)';
+  for(let i=-1;i<14;i++){let x=i*300-(ox*.18%300);c.beginPath();c.ellipse(x+130,H*.75,190,65,0,Math.PI,0);c.fill()}
+  // Cypress trees
+  for(let i=-1;i<28;i++){let x=i*155-(ox*.34%155);c.fillStyle='#3d6b35';c.fillRect(x,H-218,7,112);c.beginPath();c.ellipse(x+3,H-226,18,65,0,0,7);c.fill()}
+  // Warm distant villages
+  for(let i=-1;i<18;i++){let x=i*230-(ox*.25%230),y=H-165-(i%3)*18;c.fillStyle='#e7c28a';c.fillRect(x,y-35,58,35);c.fillStyle='#b85138';c.beginPath();c.moveTo(x-5,y-35);c.lineTo(x+29,y-58);c.lineTo(x+63,y-35);c.fill();c.fillStyle='#8a5a39';c.fillRect(x+24,y-18,9,18)}
+}
+function drawItalyForeground(ox){
+  const zones=[
+    {x:280,label:'TOSKANA',flag:'🍇'},
+    {x:1120,label:'ROM',flag:'🏛️'},
+    {x:2050,label:'VENEDIG',flag:'🚤'},
+    {x:2920,label:'PISA',flag:'🗼'},
+    {x:3700,label:'AMALFI',flag:'🍋'}
+  ];
+  zones.forEach(z=>{let x=z.x-ox;if(x<-180||x>W+180)return;c.save();c.translate(x,H-118);c.fillStyle='rgba(255,255,255,.90)';c.strokeStyle='#6b3f24';c.lineWidth=3;rr(c,-72,-55,144,42,12);c.fill();c.stroke();c.fillStyle='#5b2c1b';c.font='900 16px Arial';c.textAlign='center';c.fillText(z.flag+' '+z.label,0,-28);c.restore()});
+  // Venice water canal section
+  let vx=1900-ox;c.fillStyle='rgba(25,150,190,.65)';c.fillRect(vx,H-100,620,100);c.strokeStyle='rgba(255,255,255,.55)';c.lineWidth=2;for(let i=0;i<8;i++){let yy=H-88+i*12;c.beginPath();c.moveTo(vx,yy);c.quadraticCurveTo(vx+150,yy-5,vx+310,yy);c.quadraticCurveTo(vx+470,yy+5,vx+620,yy);c.stroke()}
+  // Gondola
+  let gx=2210-ox+Math.sin(time*.8)*25;c.fillStyle='#171717';c.beginPath();c.moveTo(gx-55,H-116);c.quadraticCurveTo(gx,H-92,gx+60,H-116);c.lineTo(gx+48,H-102);c.lineTo(gx-45,H-102);c.closePath();c.fill();c.strokeStyle='#d9b24c';c.lineWidth=3;c.beginPath();c.moveTo(gx+35,H-122);c.lineTo(gx+68,H-160);c.stroke();
+  // Lemon trees near Amalfi
+  for(let i=0;i<5;i++){let x=3570+i*120-ox;c.strokeStyle='#6b4424';c.lineWidth=7;c.beginPath();c.moveTo(x,H-105);c.lineTo(x,H-175);c.stroke();c.fillStyle='#2f8d46';c.beginPath();c.arc(x,H-188,31,0,7);c.fill();c.fillStyle='#ffd633';for(let j=0;j<4;j++){c.beginPath();c.arc(x-15+j*10,H-196+(j%2)*13,5,0,7);c.fill()}}
+}
+function drawFrenchScene(ox){
+  c.fillStyle='rgba(119,142,180,.25)';for(let i=-1;i<14;i++){let x=i*240-(ox*.16%240);c.fillRect(x,H-250-(i%3)*20,155,145+(i%3)*20);c.fillStyle='rgba(244,114,182,.22)';c.fillRect(x+18,H-225,20,20);c.fillStyle='rgba(119,142,180,.25)'}
+  c.fillStyle='#7c3aed';for(let i=-1;i<50;i++){let x=i*65-(ox*.55%65);c.beginPath();c.arc(x,H-112,9,0,7);c.fill()}
+}
+function drawSpanishScene(ox){
+  c.fillStyle='rgba(205,111,58,.40)';for(let i=-1;i<12;i++){let x=i*280-(ox*.18%280);c.fillRect(x,H-245,210,140);c.fillStyle='#f6c453';c.fillRect(x+18,H-225,30,35);c.fillStyle='rgba(205,111,58,.40)'}
+  for(let i=-1;i<20;i++){let x=i*190-(ox*.42%190);c.strokeStyle='#71451d';c.lineWidth=7;c.beginPath();c.moveTo(x,H-105);c.lineTo(x,H-185);c.stroke();c.fillStyle='#159447';c.beginPath();c.arc(x,H-195,28,0,7);c.fill()}
+}
+function drawMaldivesScene(ox){
+  c.fillStyle='#22b8cf';c.fillRect(0,H*.60,W,H*.40);c.fillStyle='rgba(255,255,255,.35)';for(let i=0;i<20;i++){let y=H*.64+i*16;c.fillRect((i*73-time*25)%W,y,70,2)}
+  for(let i=-1;i<12;i++){let x=i*310-(ox*.22%310);c.fillStyle='#d7a86e';c.fillRect(x,H-195,85,55);c.fillStyle='#a65332';c.beginPath();c.moveTo(x-10,H-195);c.lineTo(x+42,H-230);c.lineTo(x+95,H-195);c.fill();c.fillStyle='#8b5a2b';c.fillRect(x+20,H-140,7,35);c.fillRect(x+60,H-140,7,35)}
+}
+function bg(ox){
+  const gradients={1:['#67b7ef','#f4e5b5','#78a84b'],2:['#8bc7ef','#f4dce8','#6f9b62'],3:['#f8b36a','#f9d67c','#a65b3c'],4:['#57d4ed','#b9f2ff','#19a7a8']};
+  let a=gradients[level]||gradients[1],g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,a[0]);g.addColorStop(.55,a[1]);g.addColorStop(1,a[2]);c.fillStyle=g;c.fillRect(0,0,W,H);drawCelestial();
+  if(level===1)drawItalianScene(ox);else if(level===2)drawFrenchScene(ox);else if(level===3)drawSpanishScene(ox);else drawMaldivesScene(ox);
+  if(weather==='rain'){c.strokeStyle='#d8efffcc';for(let i=0;i<65;i++){let x=(i*73+time*400)%W,y=(i*41+time*620)%H;c.beginPath();c.moveTo(x,y);c.lineTo(x-8,y+20);c.stroke()}}
+}
+function drawCountryLandmarks(ox){
+  if(level===1)drawItalyForeground(ox);
+  for(let i=0;i<7;i++){let x=i*520-(ox*.72%520)+100,y=H-165;c.save();
+    if(level===1){
+      if(i%2===0){c.fillStyle='#d7a66f';c.fillRect(x-48,y-85,96,85);c.strokeStyle='#80552f';c.lineWidth=3;for(let r=0;r<3;r++)for(let a=0;a<4;a++){c.beginPath();c.arc(x-33+a*22,y-62+r*23,7,Math.PI,0);c.stroke()}}
+      else{c.translate(x,y);c.rotate(-.12);c.fillStyle='#eee0c8';c.fillRect(-23,-105,46,105);c.strokeStyle='#8a7258';for(let r=0;r<5;r++)c.strokeRect(-19,-95+r*19,38,12)}
+    }else if(level===2){
+      c.strokeStyle='#374151';c.lineWidth=6;c.beginPath();c.moveTo(x,y);c.lineTo(x,y-115);c.moveTo(x,y-115);c.lineTo(x-43,y);c.moveTo(x,y-115);c.lineTo(x+43,y);c.moveTo(x-30,y-34);c.lineTo(x+30,y-34);c.moveTo(x-18,y-70);c.lineTo(x+18,y-70);c.stroke();c.fillStyle='#fbbf24';c.fillRect(x-3,y-127,6,14)
+    }else if(level===3){
+      c.fillStyle='#e7a34d';for(let t=0;t<4;t++){let tx=x-48+t*30;c.fillRect(tx,y-80-(t%2)*35,22,80+(t%2)*35);c.fillStyle='#c23b32';c.beginPath();c.moveTo(tx-5,y-80-(t%2)*35);c.lineTo(tx+11,y-110-(t%2)*35);c.lineTo(tx+27,y-80-(t%2)*35);c.fill();c.fillStyle='#e7a34d'}
+    }else{
+      c.fillStyle='#8b5a2b';c.fillRect(x-3,y-100,7,100);c.strokeStyle='#8b5a2b';c.lineWidth=6;c.beginPath();c.moveTo(x,y-90);c.quadraticCurveTo(x+15,y-122,x+30,y-135);c.stroke();c.fillStyle='#2fb344';for(let a=0;a<7;a++){let ang=-2.8+a*.45;c.beginPath();c.ellipse(x+30+Math.cos(ang)*22,y-135+Math.sin(ang)*18,24,7,ang,0,7);c.fill()}c.fillStyle='#f4ddad';c.fillRect(x-55,y-10,110,10)
+    }c.restore()
+  }
+  c.save();c.font='900 24px Arial';c.textAlign='center';c.fillStyle='rgba(255,255,255,.88)';c.strokeStyle='rgba(0,0,0,.5)';c.lineWidth=4;let label=(COUNTRIES[level]||COUNTRIES[1]).flag+' '+(COUNTRIES[level]||COUNTRIES[1]).name;c.strokeText(label,W/2,92);c.fillText(label,W/2,92);c.restore()
+}
+
+// ---------- V22 LANDMARK INFO ----------
+const ITALY_LANDMARKS=[
+ {x:520,icon:'🍇',title:'Die Toskana',text:'Die Toskana ist berühmt für sanfte Hügel, Weinberge, Olivenbäume und alte Städte. Ihre Hauptstadt ist Florenz.'},
+ {x:1220,icon:'🏛️',title:'Das Kolosseum in Rom',text:'Im Kolosseum fanden vor fast 2.000 Jahren große Veranstaltungen statt. Es ist eines der bekanntesten Bauwerke des alten Rom.'},
+ {x:1980,icon:'🚤',title:'Venedig und seine Kanäle',text:'Venedig wurde auf vielen kleinen Inseln gebaut. Statt Straßen gibt es dort zahlreiche Kanäle und Gondeln.'},
+ {x:2380,icon:'🌉',title:'Die Rialtobrücke',text:'Die Rialtobrücke überspannt den Canal Grande. Sie gehört zu den berühmtesten Brücken von Venedig.'},
+ {x:3020,icon:'🗼',title:'Der Schiefe Turm von Pisa',text:'Der Turm begann sich schon während des Baus zu neigen, weil der Untergrund zu weich war.'},
+ {x:3740,icon:'🍋',title:'Die Amalfiküste',text:'Die Amalfiküste ist bekannt für steile Felsen, bunte Orte am Meer und große, duftende Zitronen.'}
+];
+let seenLandmarks=new Set(), landmarkPaused=false;
+function showLandmarkInfo(lm){
+  landmarkPaused=true; run=0; K.l=K.r=K.j=K.f=0;
+  $('lmIcon').textContent=lm.icon;$('lmTitle').textContent=lm.title;$('lmText').textContent=lm.text;
+  $('landmarkInfo').classList.add('show');
+}
+$('lmContinue').onclick=()=>{$('landmarkInfo').classList.remove('show');landmarkPaused=false;if(state==='game'){run=1;last=performance.now()}};
+function checkLandmarkInfo(){
+  if(level!==1||state!=='game'||landmarkPaused)return;
+  const px=(P[activePlayer]||P[0]||{x:0}).x;
+  ITALY_LANDMARKS.forEach((lm,i)=>{if(!seenLandmarks.has(i)&&Math.abs(px-lm.x)<45){seenLandmarks.add(i);showLandmarkInfo(lm)}})
+}
+
+// ---------- V22 ITALIEN MEMORY ----------
+const MEMORY_DATA=[
+ {icon:'🏛️',name:'Kolosseum',fact:'Das Kolosseum steht in Rom und wurde im Jahr 80 nach Christus eröffnet.'},
+ {icon:'🗼',name:'Schiefer Turm von Pisa',fact:'Der Schiefe Turm ist der freistehende Glockenturm des Doms von Pisa.'},
+ {icon:'🌉',name:'Rialtobrücke',fact:'Die Rialtobrücke führt über den Canal Grande in Venedig.'},
+ {icon:'🚤',name:'Gondel',fact:'Gondeln sind traditionelle, schmale Boote aus Venedig.'},
+ {icon:'🍋',name:'Amalfiküste',fact:'An der Amalfiküste wachsen besonders große Zitronen.'},
+ {icon:'🍇',name:'Toskana',fact:'Die Toskana ist für Weinberge, Kunst und historische Städte bekannt.'}
+];
+let memDeck=[],memOpen=[],memMatched=0,memMoves=0,memLocked=false;
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startItalyMemory(){
+  run=0;state='memory';K.l=K.r=K.j=K.f=0;useMainGameControls(false);show('memory');
+  memDeck=shuffle(MEMORY_DATA.flatMap((x,i)=>[{...x,pair:i,id:i+'a'},{...x,pair:i,id:i+'b'}]));
+  memOpen=[];memMatched=0;memMoves=0;memLocked=false;
+  $('memMoves').textContent='0';$('memPairs').textContent='0';$('memoryFact').textContent='Tippe zwei Karten an.';
+  $('memoryContinue').style.display='none';$('italyStamp').style.display='none';renderMemory();
+}
+function renderMemory(){
+  const g=$('memoryGrid');g.innerHTML='';
+  memDeck.forEach((card,idx)=>{const b=document.createElement('button');b.className='memTile'+(card.matched?' matched':memOpen.includes(idx)?' open':'');b.textContent=(card.matched||memOpen.includes(idx))?card.icon:'?';b.setAttribute('aria-label',card.matched||memOpen.includes(idx)?card.name:'Verdeckte Karte');b.onclick=()=>flipMemory(idx);g.appendChild(b)})
+}
+function flipMemory(idx){
+  if(memLocked||memDeck[idx].matched||memOpen.includes(idx)||memOpen.length>=2)return;
+  memOpen.push(idx);renderMemory();
+  if(memOpen.length===2){
+    memMoves++;$('memMoves').textContent=memMoves;const [a,b]=memOpen;
+    if(memDeck[a].pair===memDeck[b].pair){
+      memDeck[a].matched=memDeck[b].matched=true;memMatched++;$('memPairs').textContent=memMatched;
+      $('memoryFact').innerHTML='<b>'+memDeck[a].name+':</b> '+memDeck[a].fact;memOpen=[];score+=100;sfx('collect');renderMemory();
+      if(memMatched===MEMORY_DATA.length){$('memoryFact').innerHTML='<b>Bravo!</b> Du hast alle Sehenswürdigkeiten gefunden.';$('memoryContinue').style.display='inline-block';$('italyStamp').style.display='block';try{localStorage.setItem('caItalyStamp','earned')}catch(e){}}
+    }else{
+      memLocked=true;$('memoryFact').textContent='Noch nicht gleich – versuche es noch einmal.';
+      setTimeout(()=>{memOpen=[];memLocked=false;renderMemory()},800)
+    }
+  }
+}
+$('memoryContinue').onclick=()=>{useMainGameControls(true);state='game';build(2);show('');run=1;last=performance.now();toast('ITALIEN GESCHAFFT! 🇮🇹')};
+
 let hiddenPause=false;
 document.addEventListener('visibilitychange',()=>{hiddenPause=document.hidden;last=performance.now()});
 function loop(t){
@@ -901,9 +1065,10 @@ function loop(t){
   }
   requestAnimationFrame(loop)
 }requestAnimationFrame(loop);
-document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;$('p2').style.display=mode==='coop'?'block':'none';show('select')});document.querySelectorAll('.char').forEach(b=>b.onclick=()=>{let p=b.dataset.p;choose[p]=b.dataset.c;document.querySelectorAll('.char[data-p="'+p+'"]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')});$('start').onclick=start;$('retry').onclick=()=>{gameFinished=false;show('');useMainGameControls(true);P=[mkP(1,choose[1],70)];if(mode==='coop')P.push(mkP(2,choose[2],140));build(lastLevel);state='game';run=1;last=performance.now()};$('home').onclick=()=>{run=0;state='menu';show('menu')};$('again').onclick=()=>{gameFinished=false;state='menu';show('menu')};$('zumbaTap').onclick=zumbaTap;$('prev').onclick=()=>{if(state==='game'&&level>1)build(level-1)};$('one').onclick=()=>{if(state==='game'&&level>1)build(1)};
+$('journeyStart').onclick=()=>show('worldmap');$('country1').onclick=start;$('mapBack').onclick=()=>show('menu');$('switchChar').onclick=switchCharacter;document.querySelectorAll('.char').forEach(b=>b.onclick=()=>{let p=b.dataset.p;choose[p]=b.dataset.c;document.querySelectorAll('.char[data-p="'+p+'"]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')});$('start').onclick=start;$('retry').onclick=()=>{gameFinished=false;show('');useMainGameControls(true);activePlayer=0;P=[mkP(1,'chanel',70),mkP(2,'armani',125)];build(lastLevel);state='game';run=1;last=performance.now()};$('home').onclick=()=>{run=0;state='menu';show('menu')};$('again').onclick=()=>{gameFinished=false;state='menu';show('menu')};$('zumbaTap').onclick=zumbaTap;$('prev').onclick=()=>{if(state==='game'&&level>1)build(level-1)};$('one').onclick=()=>{if(state==='game'&&level>1)build(1)};
 
 addEventListener('keydown',e=>{
+  if(e.key==='q'||e.key==='Q'){switchCharacter();e.preventDefault();return}
   const m={a:'l',A:'l',d:'r',D:'r',w:'j',W:'j',f:'f',F:'f',ArrowLeft:'l',ArrowRight:'r',ArrowUp:'j',Enter:'f',' ':'j'};
   if(m[e.key]){K[m[e.key]]=1;e.preventDefault()}
 });
@@ -1123,7 +1288,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
   if('serviceWorker' in navigator){
     navigator.serviceWorker.ready.then(async reg=>{
       try{
-        const cache = await caches.open('chanel-armani-offline-v13');
+        const cache = await caches.open('chanel-armani-offline-v22');
         const ok = await cache.match('./index.html');
         showMessage(ok ? 'Offline bereit. Auf iPhone/iPad über „Zum Home-Bildschirm“ installieren.' : 'Offline-Dateien werden vorbereitet …', false);
         if(ok) setTimeout(()=>banner.style.display='none',4500);
@@ -1255,51 +1420,4 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 })();
 </script>
 
-
-<style>
-#italyInfo{z-index:60000;background:rgba(7,16,29,.78)}
-#italyInfo .card{width:min(92vw,620px);background:linear-gradient(#fffdf2,#f3dfb7);border-color:#7a4a28}
-#italyIcon{font-size:70px}.italyBadge{display:inline-block;padding:6px 12px;border-radius:999px;background:#198754;color:white;font-weight:900}
-#italyMemory{z-index:60000;background:linear-gradient(160deg,#17824d,#f6f1d5 50%,#c83d3d)}
-#memoryGridV21{display:grid;grid-template-columns:repeat(4,minmax(62px,1fr));gap:9px;max-width:650px;margin:12px auto}
-.memoryV21{aspect-ratio:4/3;padding:2px;font-size:34px;background:#183b59;color:white;border-color:white;box-shadow:0 4px #0b2134}
-.memoryV21.open,.memoryV21.done{background:#fff7db;color:#1b2b3c}.memoryV21.done{outline:4px solid #39a85b}
-#memoryTextV21{min-height:52px;font-size:17px;font-weight:800;padding:7px}
-#italyProgress{position:fixed;left:8px;top:52px;z-index:23;background:#fff9e8dd;color:#2d241d;border:2px solid #2d241d;border-radius:10px;padding:4px 8px;font-weight:900;display:none}
-@media(max-width:600px){#memoryGridV21{gap:6px}.memoryV21{font-size:27px}}
-</style>
-<div id="italyProgress">🇮🇹 <span id="italyRegion">Toskana</span></div>
-<div id="italyInfo" class="screen"><div class="card">
-  <div id="italyIcon">🏛️</div><div class="italyBadge">SEHENSWÜRDIGKEIT ENTDECKT</div>
-  <h1 id="italyTitle">Italien</h1><p id="italyText" style="font-size:19px"></p>
-  <button id="italyContinue">WEITER SPIELEN</button>
-</div></div>
-<div id="italyMemory" class="screen"><div class="card">
-  <h1>🇮🇹 ITALIEN-MEMORY</h1><p>Finde zwei gleiche Karten. Zu jedem Paar erhältst du eine kurze Erklärung.</p>
-  <div id="memoryGridV21"></div><div id="memoryTextV21">Tippe auf eine Karte.</div>
-  <div class="row"><button id="memoryResetV21">NEU MISCHEN</button><button id="memoryBackV21">ZURÜCK</button></div>
-</div></div>
-<script>
-(function(){
-  const italyLandmarks={
-    1:[{x:560,icon:'🌻',title:'Toskana',text:'Die Toskana ist für sanfte Hügel, Zypressen, Weinberge und Sonnenblumen bekannt.'},{x:2200,icon:'🗼',title:'Schiefer Turm von Pisa',text:'Der Turm steht in Pisa. Er ist schief, weil der weiche Boden unter dem Bauwerk nachgegeben hat.'}],
-    2:[{x:760,icon:'🏛️',title:'Kolosseum',text:'Das Kolosseum steht in Rom und wurde vor fast 2.000 Jahren für große Veranstaltungen gebaut.'},{x:2100,icon:'⛲',title:'Trevi-Brunnen',text:'Der Trevi-Brunnen ist einer der berühmtesten Brunnen Roms. Viele Besucher werfen eine Münze hinein.'}],
-    3:[{x:750,icon:'🚤',title:'Venedig und seine Gondeln',text:'Venedig wurde auf vielen kleinen Inseln erbaut. Gondeln fahren durch die zahlreichen Kanäle.'},{x:2300,icon:'🌉',title:'Rialtobrücke',text:'Die Rialtobrücke führt über den Canal Grande und ist eine der bekanntesten Brücken Venedigs.'}],
-    4:[{x:700,icon:'🍋',title:'Amalfiküste',text:'Die Amalfiküste ist für steile Felsen, farbenfrohe Orte, blaues Meer und Zitronengärten bekannt.'},{x:2500,icon:'⛪',title:'Petersdom',text:'Der Petersdom steht in der Vatikanstadt. Seine große Kuppel ist schon aus weiter Entfernung zu sehen.'}]
-  };
-  let seen={}; let resumeRun=false;
-  const oldBuild=build; build=function(n){oldBuild(n);document.getElementById('italyProgress').style.display='block';document.getElementById('italyRegion').textContent=['','Toskana & Pisa','Rom','Venedig','Amalfiküste'][n]||'Italien';};
-  const oldUpdate=update; update=function(dt){oldUpdate(dt);if(state!=='game'||!P[0])return;(italyLandmarks[level]||[]).forEach((m,i)=>{let k=level+'-'+i;if(!seen[k]&&Math.abs(P[0].x-m.x)<34){seen[k]=1;resumeRun=!!run;run=0;document.getElementById('italyIcon').textContent=m.icon;document.getElementById('italyTitle').textContent=m.title;document.getElementById('italyText').textContent=m.text;document.getElementById('italyInfo').classList.add('show');}})};
-  const oldDraw=draw; draw=function(){oldDraw();if(state!=='game'||!P[0])return;let ox=Math.max(0,Math.min(world-W,P[0].x-W*.38));c.save();c.font='64px serif';c.textAlign='center';(italyLandmarks[level]||[]).forEach(m=>{let x=m.x-ox;if(x>-100&&x<W+100){c.fillStyle='rgba(255,255,255,.78)';c.beginPath();c.arc(x,H-235,48,0,7);c.fill();c.fillText(m.icon,x,H-215)}});c.restore();};
-  document.getElementById('italyContinue').onclick=()=>{document.getElementById('italyInfo').classList.remove('show');run=resumeRun?1:1;last=performance.now();requestAnimationFrame(loop)};
-  const winCard=document.querySelector('#win .card');if(winCard){winCard.querySelector('p').textContent='Italien ist geschafft! Du hast Toskana, Pisa, Rom, Venedig und die Amalfiküste entdeckt.';let b=document.createElement('button');b.id='openMemoryV21';b.textContent='🇮🇹 ITALIEN-MEMORY';winCard.insertBefore(b,winCard.querySelector('#again'));b.onclick=()=>openMemoryV21();}
-  const data=[['🏛️','Kolosseum','Das Kolosseum ist ein berühmtes antikes Bauwerk in Rom.'],['🗼','Schiefer Turm','Der Schiefe Turm von Pisa neigt sich wegen des weichen Untergrunds.'],['🌉','Rialtobrücke','Die Rialtobrücke überspannt den Canal Grande in Venedig.'],['⛲','Trevi-Brunnen','Der Trevi-Brunnen gehört zu den bekanntesten Brunnen der Welt.'],['⛪','Petersdom','Der Petersdom liegt in der Vatikanstadt innerhalb Roms.'],['🚤','Gondel','Gondeln sind traditionelle Boote auf den Kanälen von Venedig.'],['🍋','Amalfiküste','An der Amalfiküste wachsen viele Zitronen.'],['🌻','Toskana','Die Toskana ist für Hügel, Weinberge und Zypressen bekannt.']];
-  let open=[],lock=0,found=0;
-  function openMemoryV21(){run=0;document.getElementById('italyMemory').classList.add('show');makeMemory();}
-  function makeMemory(){open=[];lock=0;found=0;let deck=[...data,...data].map((d,i)=>({d,i})).sort(()=>Math.random()-.5),g=document.getElementById('memoryGridV21');g.innerHTML='';document.getElementById('memoryTextV21').textContent='Tippe auf eine Karte.';deck.forEach(o=>{let b=document.createElement('button');b.className='memoryV21';b.textContent='?';b.onclick=()=>flip(b,o);g.appendChild(b)})}
-  function flip(b,o){if(lock||b.classList.contains('open')||b.classList.contains('done'))return;b.classList.add('open');b.textContent=o.d[0];open.push({b,o});if(open.length===2){lock=1;let a=open[0],z=open[1];if(a.o.d[1]===z.o.d[1]){a.b.classList.add('done');z.b.classList.add('done');document.getElementById('memoryTextV21').textContent=a.o.d[1]+': '+a.o.d[2];open=[];lock=0;if(++found===data.length)setTimeout(()=>document.getElementById('memoryTextV21').textContent='🏆 Alle Paare gefunden – Italien-Memory geschafft!',400)}else setTimeout(()=>{a.b.classList.remove('open');z.b.classList.remove('open');a.b.textContent=z.b.textContent='?';open=[];lock=0},750)}}
-  document.getElementById('memoryResetV21').onclick=makeMemory;document.getElementById('memoryBackV21').onclick=()=>{document.getElementById('italyMemory').classList.remove('show');show('win')};
-  window.openMemoryV21=openMemoryV21;
-})();
-</script>
 </body></html>

@@ -1,8 +1,8 @@
 {
-  "name": "Chanel & Armani – Weltreise V19",
-  "short_name": "Weltreise V19",
+  "name": "Chanel & Armani – Italien Deluxe V21",
+  "short_name": "Italien V21",
   "description": "Neu gebaute Bonusspiele und Bosskampf mit eigener, zuverlässig sichtbarer Touch-Steuerung.",
-  "start_url": "./index.html?source=pwa",
+  "start_url": "./index.html?v=21",
   "scope": "./",
   "display": "standalone",
   "orientation": "landscape",

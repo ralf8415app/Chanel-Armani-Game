@@ -1,0 +1,9 @@
+{
+  "name": "Chanel & Armani – Italien V20",
+  "short_name": "Italien V20",
+  "start_url": "./index.html?v=20",
+  "display": "standalone",
+  "background_color": "#10263a",
+  "theme_color": "#17324d",
+  "icons": []
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Chanel & Armani – Weltreise V17",
+  "short_name": "Weltreise V17",
+  "description": "Neu gebaute Bonusspiele und Bosskampf mit eigener, zuverlässig sichtbarer Touch-Steuerung.",
+  "start_url": "./index.html?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#08101d",
+  "theme_color": "#101827",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "display_override": [
+    "fullscreen",
+    "standalone",
+    "minimal-ui"
+  ],
+  "categories": [
+    "games",
+    "entertainment"
+  ]
+}

@@ -1532,7 +1532,7 @@ function v26Menu(){
  const row=document.querySelector('#menu .row');if(!row||document.getElementById('v26Extras'))return;
  const box=document.createElement('div');box.id='v26Extras';box.className='v26MenuExtras';
  box.innerHTML='<button id="v26Continue" class="v26Continue"></button><button id="v26Album" class="v26Album"></button><button id="v26Legal" class="v26Legal"></button><button id="v26Reset" class="v26Reset"></button>';
- row.after(box);document.querySelector('#menu h2 small').textContent='V27 – EUROPE EXPANSION · PHASE 2';
+ row.after(box);document.querySelector('#menu h2 small').textContent='V27 – EUROPE EXPANSION · PHASE 2 HOTFIX 2';
  document.getElementById('v26Continue').onclick=()=>v26StartAt(Math.max(1,Math.min(COUNTRY_COUNT,v26Save.highest||1)));
  document.getElementById('v26Album').onclick=v26OpenAlbum;document.getElementById('v26Legal').onclick=v26OpenLegal;
  document.getElementById('v26Reset').onclick=()=>{if(confirm(TX().confirm)){localStorage.removeItem(V26_KEY);for(let i=1;i<=COUNTRY_COUNT;i++)localStorage.removeItem('caStamp'+i);v26Save=v26Load();v26Refresh();}};
@@ -1607,34 +1607,57 @@ const oldV26StartAt=window.v26StartAt;window.v26StartAt=function(n){p2Stage=1;se
 window.phase2CountryComplete=function(){if((level===7||level===8)&&p2Stage===1){p2Stage=2;P.forEach(p=>p.done=0);toast((COUNTRIES[level].name+' LEVEL 2').toUpperCase());build(level);state='game';run=1;last=performance.now();return}startCountryMemory(level)};
 const oldMemoryStart=window.startCountryMemory;window.startCountryMemory=function(n){setP2Landmarks(n);oldMemoryStart(n)};
 const mem=document.getElementById('memoryContinue');
-mem.onclick=function(e){
-  const n=memoryLevel;
-  // Fortschritt immer zuerst sicher speichern.
+function saveCountryCompletion(n){
+  v26Save.memory=v26Save.memory||{};
+  v26Save.completed=Array.isArray(v26Save.completed)?v26Save.completed:[];
   v26Save.memory[n]=true;
   if(!v26Save.completed.includes(n))v26Save.completed.push(n);
   v26Save.highest=Math.max(v26Save.highest||1,Math.min(COUNTRY_COUNT,n+1));
   if(Object.keys(v26Save.memory).length>=COUNTRY_COUNT)v26Unlock('Memory Master');
   if(n===COUNTRY_COUNT)v26Unlock('World Tour Champion');
+  try{localStorage.setItem('caStamp'+n,'earned')}catch(_e){}
   v26Write();v26UpdateWorldMap();
-
-  // Deutschland und Schweiz gehen nach dem Memory ins Länderquiz.
-  if(n===7||n===8){startQuiz(n);return false}
-
-  // Sauberer Länderwechsel mit frischen Spielfiguren. Dadurch werden keine
-  // verbrauchten Leben oder ein alter Boss-/Loser-Zustand in das nächste Land übernommen.
-  useMainGameControls(true);gameFinished=false;bossFightActive=false;bossArena=false;
+}
+function resetForNextCountry(){
+  run=0;gameFinished=false;bossFightActive=false;bossArena=false;bossIntro=0;victoryPending=false;celebrate=0;
   try{cancelAnimationFrame(bossRAF)}catch(_e){}
-  activePlayer=0;carriedPlayer=-1;K.l=K.r=K.j=K.f=0;
-  if(n<COUNTRY_COUNT){
-    state='game';
-    P=[mkP(1,'chanel',70),mkP(2,'armani',125)];
-    build(n+1);seenLandmarks=new Set();show('');run=1;last=performance.now();
-    toast((COUNTRIES[n].name+' COMPLETE! '+COUNTRIES[n].flag).toUpperCase());
-  }else{
-    state='win';show('win');run=0;useMainGameControls(false)
+  K.l=K.r=K.j=K.f=0;activePlayer=0;carriedPlayer=-1;
+  P=[mkP(1,'chanel',70),mkP(2,'armani',125)];
+  seenLandmarks=new Set();
+}
+function continueAfterMemory(e){
+  if(e){e.preventDefault();e.stopPropagation()}
+  if(mem.dataset.busy==='1')return false;
+  mem.dataset.busy='1';
+  const n=Number(memoryLevel)||1;
+  try{
+    saveCountryCompletion(n);
+    $('italyStamp').style.display='block';
+    if(n===7||n===8){startQuiz(n);return false}
+    resetForNextCountry();
+    if(n<COUNTRY_COUNT){
+      p2Stage=1;state='game';build(n+1);show('');useMainGameControls(true);run=1;last=performance.now();
+      toast((COUNTRIES[n].name+' COMPLETE! '+COUNTRIES[n].flag).toUpperCase());
+    }else{
+      state='win';show('win');run=0;useMainGameControls(false)
+    }
+  }catch(err){
+    console.error('Country transition failed',err);
+    // Sicherer Rückfall: Weltkarte bleibt bedienbar und Fortschritt ist gespeichert.
+    run=0;state='worldmap';show('worldmap');useMainGameControls(false);v26UpdateWorldMap();
+    toast('STEMPEL GESPEICHERT – LAND AUF DER WELTKARTE WÄHLEN');
+  }finally{
+    setTimeout(()=>{mem.dataset.busy='0'},250);
   }
   return false
-};
+}
+if(mem){
+  mem.onclick=null;
+  mem.type='button';
+  mem.style.position='relative';mem.style.zIndex='20';mem.style.pointerEvents='auto';
+  mem.addEventListener('click',continueAfterMemory);
+  mem.addEventListener('touchend',e=>{if(e.cancelable)e.preventDefault();continueAfterMemory(e)},{passive:false});
+}
 function startQuiz(n){quizCountry=n;quizIndex=0;quizScore=0;quizLocked=false;state='quiz';run=0;useMainGameControls(false);document.getElementById('memory').classList.remove('show');document.getElementById('quiz').classList.add('show');renderQuiz()}
 function renderQuiz(){const qs=P2_QUIZ[quizCountry],q=qs[quizIndex];document.getElementById('quizTitle').textContent=COUNTRIES[quizCountry].flag+' '+COUNTRIES[quizCountry].name.toUpperCase()+' QUIZ';document.getElementById('quizProgress').textContent=(quizIndex+1)+' / '+qs.length+' · ⭐ '+quizScore;document.getElementById('quizQuestion').textContent=q.q;document.getElementById('quizFact').textContent='';const a=document.getElementById('quizAnswers');a.innerHTML='';q.a.forEach((txt,i)=>{const b=document.createElement('button');b.textContent=txt;b.onclick=()=>answerQuiz(i,b);a.appendChild(b)});const n=document.getElementById('quizNext');n.style.display='none';n.textContent=quizIndex===qs.length-1?'QUIZ ABSCHLIESSEN':'WEITER';quizLocked=false}
 function answerQuiz(i,btn){if(quizLocked)return;quizLocked=true;const q=P2_QUIZ[quizCountry][quizIndex],buttons=[...document.querySelectorAll('#quizAnswers button')];buttons[q.c].classList.add('correct');if(i===q.c){quizScore++;sfx('collect')}else{btn.classList.add('wrong');sfx('hit')}document.getElementById('quizFact').textContent=q.f;document.getElementById('quizNext').style.display='inline-block'}

@@ -1,6 +1,6 @@
 {
-  "name": "Chanel & Armani – Weltreise V19",
-  "short_name": "Weltreise V19",
+  "name": "Chanel & Armani V27 Europe Expansion – Phase 2",
+  "short_name": "C&A V27 P2",
   "description": "Neu gebaute Bonusspiele und Bosskampf mit eigener, zuverlässig sichtbarer Touch-Steuerung.",
   "start_url": "./index.html?source=pwa",
   "scope": "./",
@@ -28,5 +28,6 @@
   "categories": [
     "games",
     "entertainment"
-  ]
+  ],
+  "version": "27.2"
 }

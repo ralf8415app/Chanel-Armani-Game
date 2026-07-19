@@ -1508,7 +1508,7 @@ applyLang();
 .v26Modal{position:fixed;inset:0;z-index:110000;display:none;align-items:center;justify-content:center;padding:10px;background:#07101fe8}.v26Modal.show{display:flex}.v26ModalCard{width:min(960px,96vw);max-height:94vh;overflow:auto;background:#fff;border:4px solid #2563eb;border-radius:22px;padding:16px;color:#172033;text-align:left}.v26ModalCard h2{text-align:center}.v26Close{display:block;margin:15px auto 0}.v26AlbumGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.v26AlbumItem{border:2px solid #94a3b8;border-radius:14px;padding:8px;background:#f8fafc;text-align:center}.v26AlbumItem.locked{filter:grayscale(1);opacity:.55}.v26AlbumItem svg{width:100%;height:115px}.v26Badge{display:inline-block;padding:5px 9px;margin:3px;border-radius:999px;background:#e2e8f0;font-weight:900}.v26Badge.done{background:#bbf7d0}.v26LegalText{line-height:1.45;font-size:14px}.v26LegalText input{width:100%;padding:7px;border:2px solid #94a3b8;border-radius:8px;user-select:text}.v26MusicNow{position:fixed;left:8px;top:52px;z-index:22;background:#07101dcc;color:#fff;border:1px solid #60a5fa;border-radius:10px;padding:4px 8px;font-size:10px;font-weight:900;display:none}
 @media(max-width:580px){.v26MenuExtras{grid-template-columns:1fr 1fr}.v26ModalCard{font-size:14px}}
 </style>
-<div id="v26Loading"><div class="v26LoadCard"><div class="v26Plane">✈️</div><div class="v26Logo">CHANEL & ARMANI</div><h2>WORLD TOUR DELUXE · V27</h2><div class="v26Bar"><i></i></div><p id="v26LoadTip">Loading countries, memories and music…</p></div></div>
+<div id="v26Loading"><div class="v26LoadCard"><div class="v26Plane">✈️</div><div class="v26Logo">CHANEL & ARMANI</div><h2>WORLD TOUR DELUXE · V27 STABLE</h2><div class="v26Bar"><i></i></div><p id="v26LoadTip">Loading countries, memories and music…</p></div></div>
 <div id="v26MusicNow" class="v26MusicNow"></div>
 <div id="v26AlbumModal" class="v26Modal"><div class="v26ModalCard"><h2 id="v26AlbumTitle">📖 Sammelalbum</h2><div id="v26AlbumGrid" class="v26AlbumGrid"></div><h3 id="v26AchievementsTitle">🏆 Erfolge</h3><div id="v26Achievements"></div><button class="v26Close" data-v26close="v26AlbumModal">SCHLIESSEN</button></div></div>
 <div id="v26LegalModal" class="v26Modal"><div class="v26ModalCard"><h2 id="v26LegalTitle">ℹ️ Datenschutz & Impressum</h2><div id="v26LegalContent" class="v26LegalText"></div><button class="v26Close" data-v26close="v26LegalModal">SCHLIESSEN</button></div></div>
@@ -1532,7 +1532,7 @@ function v26Menu(){
  const row=document.querySelector('#menu .row');if(!row||document.getElementById('v26Extras'))return;
  const box=document.createElement('div');box.id='v26Extras';box.className='v26MenuExtras';
  box.innerHTML='<button id="v26Continue" class="v26Continue"></button><button id="v26Album" class="v26Album"></button><button id="v26Legal" class="v26Legal"></button><button id="v26Reset" class="v26Reset"></button>';
- row.after(box);document.querySelector('#menu h2 small').textContent='V27 – EUROPE EXPANSION · PHASE 2 HOTFIX 2';
+ row.after(box);document.querySelector('#menu h2 small').textContent='V27 – STABLE FLOW REBUILD';
  document.getElementById('v26Continue').onclick=()=>v26StartAt(Math.max(1,Math.min(COUNTRY_COUNT,v26Save.highest||1)));
  document.getElementById('v26Album').onclick=v26OpenAlbum;document.getElementById('v26Legal').onclick=v26OpenLegal;
  document.getElementById('v26Reset').onclick=()=>{if(confirm(TX().confirm)){localStorage.removeItem(V26_KEY);for(let i=1;i<=COUNTRY_COUNT;i++)localStorage.removeItem('caStamp'+i);v26Save=v26Load();v26Refresh();}};
@@ -1558,6 +1558,10 @@ const memBtn=document.getElementById('memoryContinue');if(memBtn){const old=memB
 const oldApply=window.applyLang;window.applyLang=function(){oldApply();v26Refresh();const label=document.getElementById('v26MusicNow');if(label&&level)label.textContent='🎵 '+TX().music[level-1]};
 window.addEventListener('beforeunload',v26Write);setInterval(()=>{if(state==='game')v26Write()},10000);
 window.addEventListener('load',()=>{v26Menu();v26UpdateWorldMap();setTimeout(()=>{const l=document.getElementById('v26Loading');if(l){l.style.opacity='0';l.style.transition='opacity .35s';setTimeout(()=>l.remove(),380)}},1450)});
+// Public bridge for later expansion modules. The previous Phase-2 module called
+// private functions from this closure, which caused runtime ReferenceErrors.
+Object.defineProperty(window,'v26Save',{configurable:true,get:()=>v26Save,set:(value)=>{v26Save=value||v26Load()}});
+Object.assign(window,{v26StartAt,v26UpdateWorldMap,v26Write,v26Unlock,v26OpenAlbum,v26OpenLegal,v26Refresh});
 })();
 </script>
 
@@ -1626,37 +1630,37 @@ function resetForNextCountry(){
   seenLandmarks=new Set();
 }
 function continueAfterMemory(e){
-  if(e){e.preventDefault();e.stopPropagation()}
-  if(mem.dataset.busy==='1')return false;
-  mem.dataset.busy='1';
-  const n=Number(memoryLevel)||1;
-  try{
-    saveCountryCompletion(n);
-    $('italyStamp').style.display='block';
-    if(n===7||n===8){startQuiz(n);return false}
-    resetForNextCountry();
-    if(n<COUNTRY_COUNT){
-      p2Stage=1;state='game';build(n+1);show('');useMainGameControls(true);run=1;last=performance.now();
-      toast((COUNTRIES[n].name+' COMPLETE! '+COUNTRIES[n].flag).toUpperCase());
-    }else{
-      state='win';show('win');run=0;useMainGameControls(false)
-    }
-  }catch(err){
-    console.error('Country transition failed',err);
-    // Sicherer Rückfall: Weltkarte bleibt bedienbar und Fortschritt ist gespeichert.
-    run=0;state='worldmap';show('worldmap');useMainGameControls(false);v26UpdateWorldMap();
-    toast('STEMPEL GESPEICHERT – LAND AUF DER WELTKARTE WÄHLEN');
-  }finally{
-    setTimeout(()=>{mem.dataset.busy='0'},250);
+  if(e){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation&&e.stopImmediatePropagation()}
+  const button=document.getElementById('memoryContinue');
+  if(!button||button.dataset.busy==='1')return false;
+  button.dataset.busy='1';
+  const n=Math.max(1,Math.min(COUNTRY_COUNT,Number(memoryLevel)||1));
+  saveCountryCompletion(n);
+  $('italyStamp').style.display='block';
+  if(n===7||n===8){
+    button.dataset.busy='0';
+    startQuiz(n);
+    return false;
   }
-  return false
+  resetForNextCountry();
+  if(n<COUNTRY_COUNT){
+    p2Stage=1;
+    // Der zentrale Länderstart setzt Figuren, Kamera, Steuerung und Levelzustand vollständig zurück.
+    v26StartAt(n+1);
+    toast((COUNTRIES[n].name+' COMPLETE! '+COUNTRIES[n].flag).toUpperCase());
+  }else{
+    state='win';show('win');run=0;useMainGameControls(false);
+  }
+  setTimeout(()=>{const b=document.getElementById('memoryContinue');if(b)b.dataset.busy='0'},350);
+  return false;
 }
 if(mem){
-  mem.onclick=null;
-  mem.type='button';
-  mem.style.position='relative';mem.style.zIndex='20';mem.style.pointerEvents='auto';
-  mem.addEventListener('click',continueAfterMemory);
-  mem.addEventListener('touchend',e=>{if(e.cancelable)e.preventDefault();continueAfterMemory(e)},{passive:false});
+  // Button klonen: entfernt zuverlässig sämtliche alten click/touch-Handler aus früheren Versionen.
+  const clean=mem.cloneNode(true);
+  mem.replaceWith(clean);
+  clean.onclick=continueAfterMemory;
+  clean.type='button';
+  clean.style.position='relative';clean.style.zIndex='20';clean.style.pointerEvents='auto';
 }
 function startQuiz(n){quizCountry=n;quizIndex=0;quizScore=0;quizLocked=false;state='quiz';run=0;useMainGameControls(false);document.getElementById('memory').classList.remove('show');document.getElementById('quiz').classList.add('show');renderQuiz()}
 function renderQuiz(){const qs=P2_QUIZ[quizCountry],q=qs[quizIndex];document.getElementById('quizTitle').textContent=COUNTRIES[quizCountry].flag+' '+COUNTRIES[quizCountry].name.toUpperCase()+' QUIZ';document.getElementById('quizProgress').textContent=(quizIndex+1)+' / '+qs.length+' · ⭐ '+quizScore;document.getElementById('quizQuestion').textContent=q.q;document.getElementById('quizFact').textContent='';const a=document.getElementById('quizAnswers');a.innerHTML='';q.a.forEach((txt,i)=>{const b=document.createElement('button');b.textContent=txt;b.onclick=()=>answerQuiz(i,b);a.appendChild(b)});const n=document.getElementById('quizNext');n.style.display='none';n.textContent=quizIndex===qs.length-1?'QUIZ ABSCHLIESSEN':'WEITER';quizLocked=false}

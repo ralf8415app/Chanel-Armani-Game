@@ -1,4 +1,4 @@
-const CACHE='chanel-armani-v27-phase2-hotfix2';
+const CACHE='chanel-armani-v27-phase2-hotfix3';
 const APP_SHELL=[
   './',
   './index.html',

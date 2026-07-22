@@ -1,17 +1,20 @@
-# Chanel & Armani – V12 ACTION
+# Chanel & Armani – V16 Remastered HD
 
-Direkt für GitHub Pages.
+## Start
+Öffne `index.html` im Browser. Für eine Installation als App empfiehlt sich GitHub Pages oder ein lokaler Webserver.
 
-Neu:
-- gleiche Touch-Steuerung in allen Haupt- und Bonusleveln
-- links: vor/zurück
-- rechts: Luftballon und springen
-- deutlich mehr Gegner
-- Tiere: Hase, Katze, Fuchs, Waschbär, Igel, Wolf, Eule, Fledermaus, Wildschwein und Maus
-- alle normalen Gegner können mit einem Kopfsprung besiegt werden
-- Gegner können zusätzlich mit Luftballons besiegt werden
-- Tiergegner auch in allen Bonusspielen
-- Bosskampf, Feuerwerk, Zumba und automatischer Neustart bleiben erhalten
-- neuer Service-Worker-Cache V12
+## Steuerung
+- Links/Rechts: Pfeiltasten oder A/D
+- Springen: Pfeil hoch, W oder Leertaste
+- Figur wechseln: F
+- Smartphone/Tablet: rote Bildschirmtasten
 
-Nach Upload mit `?v=12` öffnen. Im Menü muss `V12 ACTION` stehen.
+## Inhalte
+- 3 vollständige Welten
+- Chanel und Armani als wechselbare Spielfiguren
+- Maus, Katze, Löwe und Rohr-Hase
+- Rohre als begehbare Plattformen
+- Löwenkönig in Leicht/Mittel
+- Bärenkönig als Hauptboss in Schwer
+- Bossangriffe: Prankenhieb, Sprung und Schockwelle
+- Speichern/Fortsetzen, Touchsteuerung, PWA/Offline-Cache

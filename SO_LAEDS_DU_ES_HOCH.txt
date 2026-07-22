@@ -1,0 +1,14 @@
+CHANEL & ARMANI – GITHUB EINZELDATEI
+
+1. Öffne dein GitHub-Repository.
+2. Tippe Add file / Upload files.
+3. Lade NUR die Datei index.html hoch.
+4. Commit changes bestätigen.
+5. Unter Settings > Pages einstellen:
+   Source: Deploy from a branch
+   Branch: main
+   Folder: /(root)
+6. Nach kurzer Zeit den GitHub-Pages-Link öffnen.
+
+Wichtig: index.html muss direkt im Hauptverzeichnis liegen, nicht in einem Unterordner.
+Die Datei enthält Grafik, CSS und JavaScript vollständig eingebettet.

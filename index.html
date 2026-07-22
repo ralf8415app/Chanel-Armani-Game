@@ -1,4 +1,4 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#101827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><title>Chanel & Armani – World Tour Deluxe V26</title>
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#101827"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><title>Chanel & Armani – V16 Remastered</title>
 <style>
 *{box-sizing:border-box;-webkit-user-select:none;user-select:none}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#08101d;font-family:Arial}canvas{display:block}#game{position:fixed;inset:0;width:100%;height:100%;touch-action:none}
 .screen{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:8px;background:linear-gradient(#61c5ffed,#6bd06bed)}.screen.show{display:flex}.card{width:min(96vw,920px);max-height:94vh;overflow:auto;background:#f4ead7;border:5px solid #362b23;border-radius:22px;padding:14px;text-align:center;box-shadow:0 18px 55px #0008}h1{margin:0;font-size:clamp(30px,6vw,62px);text-shadow:3px 3px #fff}h2,h3{margin:5px}.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:8px}button,input{font:inherit}button{border:4px solid #362b23;border-radius:14px;padding:10px 14px;font-weight:900;font-size:16px;background:#f3c34e;box-shadow:0 5px #8b6515}.char{min-width:145px;background:#eee6da}.char.selected{outline:6px solid #22c55e}.preview{width:100px;height:78px;border:3px solid #362b23;border-radius:10px;background:#9bdcff}.sticky{position:sticky;bottom:0;width:min(320px,90%)}
@@ -109,32 +109,20 @@
 }
 
 
-.worldGrid{display:grid;grid-template-columns:repeat(2,minmax(210px,1fr));gap:12px;margin:14px 0}.country{padding:14px;border:4px solid #362b23;border-radius:18px;background:#fff;font-weight:900;font-size:20px}.country.locked{filter:grayscale(.65);opacity:.65}.country small{display:block;font-size:13px;margin-top:5px}.switchBtn{background:#93c5fd!important}.activeName{color:#1d4ed8}.travelLine{font-size:28px;letter-spacing:7px;margin:8px}.mapCard{background:linear-gradient(180deg,#dbeafe,#dcfce7)}
-@media(max-width:560px){.worldGrid{grid-template-columns:1fr}.country{font-size:17px}}
-
-/* V23 – V19-Grafik mit Landmarken, Infokarten und echtem Memory */
-#landmarkInfo{position:fixed;z-index:80;inset:0;display:none;align-items:center;justify-content:center;background:rgba(4,9,20,.68);padding:18px}
-#landmarkInfo.show{display:flex}.landmarkCard{width:min(560px,94vw);background:linear-gradient(145deg,#fff8df,#ffffff);color:#2d241d;border:4px solid #c98b36;border-radius:24px;padding:20px;text-align:center;box-shadow:0 22px 70px #0008}.landmarkCard .lmIcon{font-size:64px}.landmarkCard h2{margin:4px 0 8px;color:#8b3f16}.landmarkCard p{font-size:15px;line-height:1.35}.landmarkCard button{font-size:18px}
-#memory{background:radial-gradient(circle at 50% 20%,#174b75,#07101f)}.memoryCard{width:min(980px,98vw);max-height:98vh;overflow:auto}.memoryGrid{display:grid;grid-template-columns:repeat(4,minmax(70px,1fr));gap:10px;margin:12px auto;max-width:760px}.memTile{aspect-ratio:1/1;overflow:hidden;border-radius:16px;position:relative;flex-direction:column;gap:2px;padding:5px;border:3px solid #f4c66d;background:linear-gradient(145deg,#1e3a5f,#10233d);font-size:clamp(26px,5vw,52px);display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 6px 0 #08111f;cursor:pointer}.memTile.open,.memTile.matched{background:linear-gradient(145deg,#fff7d6,#fff);color:#202020}.memTile.matched{border-color:#4ade80;opacity:.9}.memPic{display:flex;align-items:center;justify-content:center;width:100%;height:72%;font-size:clamp(24px,4.5vw,48px)}.memPic svg{width:100%;height:100%}.memName{font-size:clamp(9px,1.7vw,13px);font-weight:900;line-height:1.05;color:#18212e;text-align:center}.carryBtn{background:#f9a8d4!important}.carryHint{font-size:12px;opacity:.9}.memoryFact{min-height:62px;margin:8px auto;padding:9px;border-radius:14px;background:#fff4cc;color:#3b2a12;max-width:760px;font-size:14px}.memoryTop{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;font-weight:900}.italyStamp{font-size:70px;filter:drop-shadow(0 5px 5px #0005)}
-@media(max-width:600px){.landmarkCard h2{font-size:22px}.memoryCard h1{font-size:25px}.memoryCard p{font-size:14px}.memoryGrid{grid-template-columns:repeat(4,1fr);gap:6px}.memTile{border-width:2px}.landmarkCard p{font-size:16px}}
-
-.v25Lang{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0}.v25Lang select,.v25Lang button{font-size:16px;padding:9px 12px;border-radius:12px;font-weight:800}.v25Picture{width:min(420px,86vw);height:190px;margin:4px auto 10px}.v25Picture svg{width:100%;height:100%;filter:drop-shadow(0 8px 8px #0003)}#v25Guide{position:fixed;z-index:10000;inset:0;background:#07101fe8;display:none;align-items:center;justify-content:center;padding:12px}#v25Guide.show{display:flex}#v25Guide .guideCard{width:min(900px,96vw);max-height:94vh;overflow:auto;background:#fff;color:#172033;border-radius:22px;padding:18px;border:4px solid #2563eb;text-align:left}#v25Guide h2{text-align:center}.guideGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.guideBox{border:2px solid #94a3b8;border-radius:14px;padding:10px;background:#f8fafc}.guideBox p{font-size:15px;line-height:1.35;margin:5px 0}.guideClose{display:block;margin:14px auto 0;font-size:18px}.landmarkCard .lmIcon{font-size:0}.landmarkCard .lmIcon svg{width:100%;height:100%}.landmarkCard .lmIcon{width:100%;height:190px}.memoryGrid{max-width:820px}.memPic svg{max-width:100%;max-height:100%}html[dir="rtl"] .guideCard{text-align:right}html[dir="rtl"] .landmarkCard{text-align:right}@media(max-width:620px){.v25Picture{height:150px}.landmarkCard .lmIcon{height:150px}.guideBox p{font-size:14px}}
-</style>
-<style id="v27p2css">
-#quiz{position:fixed;inset:0;display:none;place-items:center;padding:18px;background:linear-gradient(180deg,#dbeafe,#dcfce7);z-index:1200;overflow:auto}#quiz.show{display:grid}.quizCard{width:min(760px,96vw);background:#fff;border:5px solid #362b23;border-radius:24px;padding:22px;box-shadow:0 20px 60px #0004;text-align:center}.quizProgress{font-weight:900;margin:8px}.quizQuestion{font-size:clamp(22px,4vw,34px);font-weight:900;margin:18px}.quizAnswers{display:grid;gap:12px}.quizAnswers button{font-size:20px;padding:14px;border:3px solid #362b23;border-radius:14px;background:#f8fafc;font-weight:900}.quizAnswers button.correct{background:#bbf7d0}.quizAnswers button.wrong{background:#fecaca}.quizFact{min-height:56px;margin:14px;font-weight:800}.phaseBadge{position:fixed;top:78px;left:50%;transform:translateX(-50%);z-index:80;background:#fff8;border:3px solid #362b23;border-radius:999px;padding:7px 14px;font-weight:900;backdrop-filter:blur(5px)}
-</style>
-</head><body>
+/* V16 REMASTERED */
+body{background:#4b97ef}.screen{background:linear-gradient(180deg,rgba(44,142,255,.90),rgba(119,211,255,.82))}#menu{background-image:linear-gradient(rgba(25,90,190,.12),rgba(25,90,190,.30)),url("cover-remastered.png");background-size:cover;background-position:center}#menu .card{margin-top:auto;margin-bottom:3vh;background:rgba(255,248,232,.92);backdrop-filter:blur(9px)}.card{border-color:#131722;background:linear-gradient(180deg,#fffdf7,#ffe8b9);box-shadow:0 15px 0 rgba(39,54,78,.24),0 25px 65px #123a7280}h1{font-family:Arial Black,Arial,sans-serif;letter-spacing:-2px;color:#fff;text-shadow:0 4px 0 #111,4px 0 0 #111,-4px 0 0 #111,0 -4px 0 #111,6px 7px 0 rgba(0,0,0,.25)}button{background:linear-gradient(#ff654d,#d82d1d);color:#fff;border-color:#fff;outline:3px solid #131722;box-shadow:0 7px 0 #7e170f,0 10px 18px #0005;text-shadow:0 2px 0 #0008}.char{color:#151722;background:linear-gradient(#fff,#dcecff);text-shadow:none}.char.selected{outline:6px solid #63e163}#hud{top:10px;background:rgba(255,255,255,.92);border:3px solid #111827;border-radius:18px;padding:8px 13px;font-family:Arial Black,Arial,sans-serif;font-size:15px;box-shadow:0 6px 0 #0003}.ctrl,.ugcButton{background:linear-gradient(#ff6249,#d92d1c)!important;color:white!important;border:5px solid white!important;outline:3px solid #1b2330!important;box-shadow:0 7px 0 #7b160e,0 10px 20px #0006!important}.fire,.ugcFire{background:linear-gradient(#ffcf3b,#f08c16)!important}
+</style></head><body>
 
 <div id="helpOverlay" class="screen" style="display:none;z-index:10000;background:linear-gradient(180deg,#7dd3fc,#fef3c7);overflow:auto">
   <div style="width:min(94vw,920px);margin:18px auto;padding:16px;background:rgba(255,255,255,.94);border:4px solid #2563eb;border-radius:22px;box-shadow:0 12px 40px rgba(0,0,0,.25);font-family:Arial;color:#172554">
     <h1 style="margin:0 0 8px;text-align:center;font-size:clamp(28px,5vw,48px)">👋 Willkommen bei Chanel & Armani!</h1>
-    <p style="font-size:clamp(18px,3vw,25px);text-align:center;margin:6px 0 16px"><b>Hilf Chanel und Armani bei ihrer Weltreise!</b></p>
+    <p style="font-size:clamp(18px,3vw,25px);text-align:center;margin:6px 0 16px"><b>Hilf den beiden Hunden bei ihrem Abenteuer!</b></p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
       <div style="padding:12px;border:3px solid #60a5fa;border-radius:18px;background:#eff6ff">
         <h2 style="margin:0 0 8px">🎮 So steuerst du</h2>
         <p style="font-size:20px;margin:6px 0">⬅️ Linke Seite: <b>links und rechts laufen</b></p>
-        <p style="font-size:20px;margin:6px 0">➡️ Rechte Seite: <b>springen</b> und 🎈 <b>Luftballons werfen</b><br>🔄 Mit Q oder WECHSELN die Figur tauschen</p>
+        <p style="font-size:20px;margin:6px 0">➡️ Rechte Seite: <b>springen</b> und 🎈 <b>Luftballons werfen</b></p>
       </div>
 
       <div style="padding:12px;border:3px solid #f59e0b;border-radius:18px;background:#fff7ed">
@@ -198,7 +186,6 @@
 </div>
 
 
-<div id="v25Guide"><div class="guideCard"><h2 id="guideTitle"></h2><p id="guideOrientation"></p><div class="guideGrid"><div class="guideBox"><h3 id="guideControlsTitle"></h3><div id="guideControls"></div></div><div class="guideBox"><h3>🍎 iPhone / iPad</h3><div id="guideIOS"></div></div><div class="guideBox"><h3>🤖 Android</h3><div id="guideAndroid"></div></div><div class="guideBox"><h3>💻 Windows</h3><div id="guideWindows"></div></div></div><button id="guideClose" class="guideClose"></button></div></div>
 <div id="offlineBanner" style="display:none;position:fixed;left:10px;right:10px;bottom:10px;z-index:9999;
 background:rgba(10,18,35,.94);color:#fff;border:2px solid #60a5fa;border-radius:14px;padding:10px 12px;
 font:700 14px Arial;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.35)">
@@ -224,31 +211,27 @@ font:700 14px Arial;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.35)">
 
 <button id="settingsBtn">⚙️ SOUND</button>
 <div id="settingsPanel">
-  <label>Music <input id="musicVol" type="range" min="0" max="100" value="45"></label>
-  <label>Effects <input id="sfxVol" type="range" min="0" max="100" value="70"></label>
-  <label>Difficulty
+  <label>Musik <input id="musicVol" type="range" min="0" max="100" value="45"></label>
+  <label>Effekte <input id="sfxVol" type="range" min="0" max="100" value="70"></label>
+  <label>Schwierigkeit
     <select id="difficulty">
-      <option value="easy">Easy</option>
+      <option value="easy">Leicht</option>
       <option value="normal" selected>Normal</option>
-      <option value="hard">Hard</option>
+      <option value="hard">Schwer</option>
     </select>
   </label>
-  <button id="muteBtn">🔊 ON/OFF</button>
+  <button id="muteBtn">🔊 AN/AUS</button>
 </div>
 <div id="bossBarWrap"><div id="bossBar"></div></div>
 
-<div id="hud"><span id="lev">🇮🇹 Italien</span><span>⭐<b id="sc">0</b></span><span>❤<b id="li">3</b></span><span>🦴<b id="bo">0</b></span><span id="we">☀️</span><span>🎮 <b id="activeChar" class="activeName">CHANEL</b></span><button id="switchChar" class="switchBtn">🔄 SWITCH</button><button id="carryChar" class="carryBtn">🐻 CARRY</button><button id="prev">◀ Country</button><button id="one">⏮ Italy</button></div>
-<div id="move" class="pad"><button class="ctrl" data-k="l">◀</button><button class="ctrl" data-k="r">▶</button></div><div id="act" class="pad"><button class="ctrl carryBtn" id="carryMobile">🐻</button><button class="ctrl fire" data-k="f">🎈</button><button class="ctrl jump" data-k="j">⬆</button></div>
-<div id="menu" class="screen show"><div class="card"><h1>CHANEL & ARMANI</h1><h2>The Great World Tour <small style="font-size:.38em">V25 – MULTILINGUAL LANDMARKS</small></h2><div class="v25Lang"><label for="languageSelect">🌐 <span id="languageLabel">Language</span></label><select id="languageSelect"><option value="de">Deutsch</option><option value="en">English</option><option value="fr">Français</option><option value="fa">فارسی</option></select><button id="v25HelpBtn">❓ <span id="v25HelpLabel">Spielanleitung</span></button></div><p>Chanel and Armani travel through Italy, France, Spain, Iran, Turkey, the Maldives, Germany and Switzerland. Control one character while the other follows. Press Q or 🔄 to switch. Press E or 🐻 to carry the other character piggyback when nearby.</p><div class="travelLine">🇮🇹 ✈️ 🇫🇷 ✈️ 🇪🇸 ✈️ 🇮🇷 ✈️ 🇹🇷 ✈️ 🇲🇻 ✈️ 🇩🇪 ✈️ 🇨🇭</div><div class="row"><button id="journeyStart">🌍 START WORLD TOUR</button><button id="rankOpen">🏆 HIGH SCORES</button></div></div></div>
-<div id="worldmap" class="screen"><div class="card mapCard"><h1>🌍 WORLD MAP</h1><p>Complete each country and its memory game to unlock the next destination.</p><div class="worldGrid"><button class="country" id="country1">🇮🇹 ITALY<small>Rome · Venice · Pisa</small></button><button class="country locked">🇫🇷 FRANCE<small>Paris · Eiffel Tower · Louvre</small></button><button class="country locked">🇪🇸 SPAIN<small>Barcelona · Madrid · Granada</small></button><button class="country locked">🇮🇷 IRAN<small>Persepolis · Isfahan · Tehran</small></button><button class="country locked">🇹🇷 TURKEY<small>Cappadocia · Hot-air balloons</small></button><button class="country locked">🇲🇻 MALDIVES<small>Islands · Reefs · Water villas</small></button><button class="country locked">🇩🇪 GERMANY<small>Berlin · Cologne · Neuschwanstein</small></button><button class="country locked">🇨🇭 SWITZERLAND<small>Matterhorn · Lucerne · Rhine Falls</small></button></div><button id="mapBack">BACK</button></div></div>
-<div id="select" class="screen"><div class="card"><h2>Choose a character</h2><h3>Player 1</h3><div class="row"><button class="char selected" data-p="1" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button><button class="char" data-p="1" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button></div><div id="p2" style="display:none"><h3>Spieler 2</h3><div class="row"><button class="char selected" data-p="2" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button><button class="char" data-p="2" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button></div></div><button id="start" class="sticky">START GAME</button>
-<button id="openHelpBtn" style="margin-top:8px">❓ Help & Installation</button></div></div>
-
-<div id="landmarkInfo"><div class="landmarkCard"><div class="lmIcon" id="lmIcon">🏛️</div><h2 id="lmTitle">Landmark</h2><p id="lmText"></p><button id="lmContinue">CONTINUE</button></div></div>
-<div id="memory" class="screen"><div class="card memoryCard"><h1 id="memoryTitle">MEMORY</h1><p id="memoryIntro">Match the landmark pictures. Each pair reveals a short fact.</p><div class="memoryTop"><span>Moves: <b id="memMoves">0</b></span><span>Pairs: <b id="memPairs">0</b>/6</span></div><div id="memoryGrid" class="memoryGrid"></div><div id="memoryFact" class="memoryFact">Tap two cards.</div><button id="memoryContinue" style="display:none">COLLECT STAMP AND CONTINUE</button><div id="italyStamp" class="italyStamp" style="display:none">✅</div></div></div>
-<div id="over" class="screen"><div class="card"><h1 style="color:red">LOSER</h1><button id="retry">RETRY LAST LEVEL</button><button id="home">MAIN MENU</button></div></div>
-<div id="win" class="screen"><div class="card"><h1>WORLD TOUR COMPLETE!</h1><p>You completed all eight countries and their memory games!</p><button id="winRank">SAVE SCORE</button><button id="again">PLAY AGAIN</button></div></div>
-<div id="rank" class="screen"><div class="card"><h1>HIGH SCORES</h1><div class="row"><input id="name" maxlength="18" placeholder="Name"><button id="save">SAVE</button></div><ol id="list"></ol><button id="back">BACK</button></div></div>
+<div id="hud"><span id="lev">Level 1/4</span><span>⭐<b id="sc">0</b></span><span>❤<b id="li">3</b></span><span>🦴<b id="bo">0</b></span><span id="we">☀️</span><button id="prev">◀ Level</button><button id="one">⏮ Level 1</button></div>
+<div id="move" class="pad"><button class="ctrl" data-k="l">◀</button><button class="ctrl" data-k="r">▶</button></div><div id="act" class="pad"><button class="ctrl fire" data-k="f">🎈</button><button class="ctrl jump" data-k="j">⬆</button></div>
+<div id="menu" class="screen show"><div class="card"><h1>CHANEL & ARMANI</h1><h2>Das Remastered Abenteuer <small style="font-size:.38em">V16 REMASTERED</small></h2><p>Offline-Version: einheitliche Steuerung in allen Leveln und Bonusspielen, viele Tiergegner, Kopfsprünge, Luftballons und Feuerwerk. PC: A/D oder Pfeile, W/↑ springen, F/Enter schießen.</p><div class="row"><button data-mode="solo">👤 SOLO</button><button data-mode="coop">👥 2 SPIELER</button><button id="rankOpen">🏆 RANG</button></div></div></div>
+<div id="select" class="screen"><div class="card"><h2>Figur wählen</h2><h3>Spieler 1</h3><div class="row"><button class="char selected" data-p="1" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button><button class="char" data-p="1" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button></div><div id="p2" style="display:none"><h3>Spieler 2</h3><div class="row"><button class="char selected" data-p="2" data-c="armani"><canvas class="preview" width="100" height="78" data-pr="armani"></canvas>ARMANI</button><button class="char" data-p="2" data-c="chanel"><canvas class="preview" width="100" height="78" data-pr="chanel"></canvas>CHANEL</button></div></div><button id="start" class="sticky">SPIEL STARTEN</button>
+<button id="openHelpBtn" style="margin-top:8px">❓ Hilfe & Installation</button></div></div>
+<div id="over" class="screen"><div class="card"><h1 style="color:red">LOSER</h1><button id="retry">NEUER VERSUCH IM LETZTEN LEVEL</button><button id="home">HAUPTMENÜ</button></div></div>
+<div id="win" class="screen"><div class="card"><h1>GESCHAFFT!</h1><p>Der Schattenfürst ist besiegt. Das war das letzte Level – danach folgt kein weiteres Level.</p><button id="winRank">PUNKTZAHL SPEICHERN</button><button id="again">NOCH EINMAL</button></div></div>
+<div id="rank" class="screen"><div class="card"><h1>PUNKT-RANG</h1><div class="row"><input id="name" maxlength="18" placeholder="Name"><button id="save">SPEICHERN</button></div><ol id="list"></ol><button id="back">ZURÜCK</button></div></div>
 
 
 
@@ -311,15 +294,10 @@ font:700 14px Arial;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.35)">
   </div>
 </div>
 <script>
-'use strict';const $=x=>document.getElementById(x),cv=$('game'),c=cv.getContext('2d');let W,H,D=1,last=0,time=0,state='menu',run=false,mode='solo',level=1,lastLevel=1,world=2800,weather='sun',skyMode='day',score=0,bonesN=0,celebrate=0,victoryPending=false,difficulty='normal',bossArena=false,bossIntro=0,gameFinished=false;let choose={1:'chanel',2:'armani'},activePlayer=0,P=[],carriedPlayer=-1,plats=[],items=[],en=[],shots=[],esh=[],parts=[],boss=null;const K={l:0,r:0,j:0,f:0},CH={chanel:{sp:300,j:620,d:1},armani:{sp:260,j:575,d:2}},screens=['menu','worldmap','select','over','win','rank','bossFight','firework','memory','zumba','pac','dash','shadow'];
+'use strict';const $=x=>document.getElementById(x),cv=$('game'),c=cv.getContext('2d');let W,H,D=1,last=0,time=0,state='menu',run=false,mode='solo',level=1,lastLevel=1,world=2800,weather='sun',skyMode='day',score=0,bonesN=0,celebrate=0,victoryPending=false,difficulty='normal',bossArena=false,bossIntro=0,gameFinished=false;let choose={1:'chanel',2:'armani'},P=[],plats=[],items=[],en=[],shots=[],esh=[],parts=[],boss=null;const K={l:0,r:0,j:0,f:0},CH={chanel:{sp:300,j:620,d:1},armani:{sp:260,j:575,d:2}},screens=['menu','select','over','win','rank','bossFight','firework','zumba','pac','dash','shadow'];
 function show(id){screens.forEach(s=>$(s).classList.toggle('show',s===id))}function resize(){D=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*D;cv.height=H*D;cv.style.width=W+'px';cv.style.height=H+'px';c.setTransform(D,0,0,D,0,0)}addEventListener('resize',resize);resize();
-const COUNTRY_COUNT=8;const COUNTRIES={1:{name:'Italy',flag:'🇮🇹'},2:{name:'France',flag:'🇫🇷'},3:{name:'Spain',flag:'🇪🇸'},4:{name:'Iran',flag:'🇮🇷'},5:{name:'Turkey',flag:'🇹🇷'},6:{name:'Maldives',flag:'🇲🇻'},7:{name:'Germany',flag:'🇩🇪'},8:{name:'Switzerland',flag:'🇨🇭'}};
-function updateCountryHud(){const x=COUNTRIES[level]||COUNTRIES[1];$('lev').textContent=x.flag+' '+x.name+' '+level+'/'+COUNTRY_COUNT;$('activeChar').textContent=(P[activePlayer]?.k||'chanel').toUpperCase()+((carriedPlayer>=0)?' + RIDER':'')}
-function switchCharacter(){if(P.length<2)return;if(carriedPlayer>=0){toast('PUT THE RIDER DOWN FIRST');return}activePlayer=activePlayer?0:1;const a=P[activePlayer],b=P[activePlayer?0:1];a.x=Math.max(0,b.x+(a.x<b.x?-55:55));a.y=Math.min(a.y,b.y);updateCountryHud();sfx('collect')}
-function toggleCarry(){if(P.length<2||state!=='game')return;const riderIndex=activePlayer?0:1,carrier=P[activePlayer],rider=P[riderIndex];if(carriedPlayer>=0){const r=P[carriedPlayer];r.x=Math.max(0,Math.min(world-r.w,carrier.x+(carrier.face>0?-48:48)));r.y=carrier.y; r.vx=carrier.vx; r.vy=-80; carriedPlayer=-1;toast('RIDER DOWN');updateCountryHud();sfx('collect');return}const dist=Math.hypot((carrier.x+carrier.w/2)-(rider.x+rider.w/2),(carrier.y+carrier.h/2)-(rider.y+rider.h/2));if(dist>125){toast('MOVE CLOSER TO CARRY');return}carriedPlayer=riderIndex;rider.vx=rider.vy=0;toast((carrier.k.toUpperCase())+' CARRIES '+rider.k.toUpperCase());updateCountryHud();sfx('heart')}
-
 function rr(q,x,y,w,h,r){q.beginPath();q.moveTo(x+r,y);q.lineTo(x+w-r,y);q.quadraticCurveTo(x+w,y,x+w,y+r);q.lineTo(x+w,y+h-r);q.quadraticCurveTo(x+w,y+h,x+w-r,y+h);q.lineTo(x+r,y+h);q.quadraticCurveTo(x,y+h,x,y+h-r);q.lineTo(x,y+r);q.quadraticCurveTo(x,y,x+r,y);q.closePath()}
-function dog(q,x,y,k,s=1,f=1,pose='idle',fr=0){let b=k==='chanel',fur=b?'#15181d':'#f7f7f4',dk=b?'#050608':'#c6cbd1',ac=b?'#f2c94c':'#60a5fa',bob=pose==='run'?Math.sin(fr*1.57)*2:Math.sin(time*3)*1.2,tail=Math.sin(time*7+fr)*5;q.save();q.translate(x,y+bob);if(f<0){q.translate(66*s,0);q.scale(-1,1)}q.fillStyle='#0003';q.beginPath();q.ellipse(32*s,70*s,25*s,6*s,0,0,7);q.fill();q.strokeStyle=fur;q.lineWidth=8*s;q.beginPath();q.moveTo(12*s,38*s);q.quadraticCurveTo((-2-tail)*s,(27-tail)*s,7*s,16*s);q.stroke();q.fillStyle=fur;q.strokeStyle='#222';q.lineWidth=2*s;rr(q,12*s,28*s,42*s,31*s,10*s);q.fill();q.stroke();rr(q,18*s,3*s,38*s,34*s,11*s);q.fill();q.stroke();q.fillStyle=dk;rr(q,17*s,0,11*s,15*s,5*s);q.fill();rr(q,46*s,0,11*s,15*s,5*s);q.fill();rr(q,42*s,18*s,21*s,15*s,7*s);q.fill();q.fillStyle='#111';q.beginPath();q.arc(56*s,23*s,4*s,0,7);q.fill();q.fillStyle='#fff';q.beginPath();q.ellipse(29*s,15*s,4*s,6*s,0,0,7);q.ellipse(46*s,15*s,4*s,6*s,0,0,7);q.fill();q.fillStyle='#111';q.beginPath();q.arc(30*s,17*s,2*s,0,7);q.arc(47*s,17*s,2*s,0,7);q.fill();q.fillStyle=ac;q.fillRect(16*s,43*s,40*s,8*s);q.fillStyle=fur;rr(q,18*s,(54+(fr%2?5:-3))*s,11*s,18*s,4*s);q.fill();rr(q,42*s,(54+(fr%2?-3:5))*s,11*s,18*s,4*s);q.fill();q.restore()}
+function dog(q,x,y,k,s=1,f=1,pose='idle',fr=0){const black=k==='chanel',fur=black?'#15171c':'#fffdf7',shade=black?'#050608':'#d9dce2',muzzle=black?'#b98351':'#ead5b7',accent=black?'#f6c63e':'#ffb53d',bob=pose==='run'?Math.sin(fr*1.57)*2.6:Math.sin(time*3)*1.1,step=pose==='run'?Math.sin(fr*1.57)*7:0;q.save();q.translate(x,y+bob);if(f<0){q.translate(66*s,0);q.scale(-1,1)}q.shadowColor='rgba(0,0,0,.28)';q.shadowBlur=10*s;q.shadowOffsetY=7*s;q.fillStyle='#0004';q.beginPath();q.ellipse(33*s,71*s,26*s,7*s,0,0,7);q.fill();q.shadowColor='transparent';q.fillStyle=fur;q.strokeStyle='#17191f';q.lineWidth=2.2*s;q.beginPath();q.arc(20*s,13*s,12*s,0,7);q.fill();q.stroke();q.beginPath();q.arc(49*s,13*s,12*s,0,7);q.fill();q.stroke();q.fillStyle=black?'#6a432d':'#e9c7a4';q.beginPath();q.arc(20*s,13*s,6*s,0,7);q.arc(49*s,13*s,6*s,0,7);q.fill();let body=q.createLinearGradient(12*s,28*s,56*s,68*s);body.addColorStop(0,black?'#343941':'#ffffff');body.addColorStop(1,shade);q.fillStyle=body;rr(q,13*s,32*s,43*s,34*s,16*s);q.fill();q.stroke();let head=q.createRadialGradient(27*s,18*s,2,35*s,23*s,30*s);head.addColorStop(0,black?'#454a54':'#ffffff');head.addColorStop(1,fur);q.fillStyle=head;q.beginPath();q.arc(35*s,25*s,24*s,0,7);q.fill();q.stroke();q.fillStyle=muzzle;q.beginPath();q.ellipse(40*s,34*s,14*s,10*s,0,0,7);q.fill();q.fillStyle='#121212';q.beginPath();q.ellipse(45*s,30*s,5*s,4*s,0,0,7);q.fill();q.strokeStyle='#4a2b20';q.lineWidth=1.5*s;q.beginPath();q.moveTo(45*s,34*s);q.quadraticCurveTo(40*s,40*s,34*s,36*s);q.stroke();q.fillStyle='#fff';q.beginPath();q.ellipse(27*s,23*s,5*s,7*s,0,0,7);q.ellipse(41*s,22*s,5*s,7*s,0,0,7);q.fill();q.fillStyle='#111';q.beginPath();q.arc(29*s,24*s,2.4*s,0,7);q.arc(43*s,23*s,2.4*s,0,7);q.fill();q.strokeStyle=fur;q.lineWidth=9*s;q.lineCap='round';q.beginPath();q.moveTo(17*s,43*s);q.lineTo((9-step*.25)*s,55*s);q.moveTo(54*s,43*s);q.lineTo((61+step*.25)*s,53*s);q.stroke();q.strokeStyle=fur;q.lineWidth=11*s;q.beginPath();q.moveTo(25*s,61*s);q.lineTo((23+step)*s,72*s);q.moveTo(45*s,61*s);q.lineTo((47-step)*s,72*s);q.stroke();q.fillStyle=accent;q.strokeStyle='#6a3d08';q.lineWidth=2*s;q.beginPath();q.arc(35*s,48*s,8*s,0,7);q.fill();q.stroke();q.fillStyle='#4b2a05';q.font=`bold ${9*s}px Arial`;q.textAlign='center';q.textBaseline='middle';q.fillText(black?'C':'A',35*s,48*s);q.restore()}
 document.querySelectorAll('[data-pr]').forEach(v=>{let q=v.getContext('2d');q.fillStyle='#9bdcff';q.fillRect(0,0,100,78);q.fillStyle='#61b54e';q.fillRect(0,58,100,20);dog(q,18,3,v.dataset.pr,.9)});
 
 /* AUDIO SYSTEM */
@@ -365,7 +343,7 @@ function sfx(name){
 }
 function startMusic(){
   if(musicTimer)return;
-  const melodies={1:[261.6,329.6,392,523.3,392,329.6,293.7,349.2],2:[293.7,349.2,440,523.3,440,392,349.2,293.7],3:[329.6,392,493.9,659.3,493.9,440,392,329.6],4:[261.6,392,440,523.3,440,392,329.6,293.7]};const melody=melodies[level]||melodies[1];
+  const melody=[261.6,329.6,392,523.3,392,329.6,293.7,349.2,440,587.3,440,349.2];
   musicTimer=setInterval(()=>{
     if(!audioCtx||state==='over')return;
     const base=state==='game'?(level>=3?.8:1):.9;
@@ -383,17 +361,17 @@ function hit(a,b){return a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y}func
   const z=sizes[t]||[48,44];
   en.push({x,y,w:z[0],h:z[1],t,hp:3,maxHp:3,vx:speeds[t]||58,a:1,p:Math.random()*6,hop:Math.random()*2,stomped:0})
 }
-function build(n){level=n;carriedPlayer=-1;seenLandmarks=new Set();celebrate=0;victoryPending=false;bossArena=false;bossIntro=0;gameFinished=false;difficulty=$('difficulty').value;lastLevel=n;weather=n===6?'sun':(n===2?'rain':'sun');skyMode=n===3?'day':'day';plats=[];items=[];en=[];shots=[];esh=[];parts=[];boss=null;world=[0,4200,3300,3500,3600,3900,4000,3900,4000][n]||3900;let gaps=n===1?[[690,150],[1510,180],[2460,170],[3350,190]]:n===2?[[520,190],[1420,220],[2480,180]]:n===3?[[650,180],[1580,210],[2660,200]]:[[900,190],[1980,220],[3050,180]],cur=0;gaps.forEach(g=>{if(g[0]>cur)ground(cur,g[0]-cur);cur=g[0]+g[1]});if(cur<world)ground(cur,world-cur);let S=n===1?[[260,H-230,200],[570,H-330,180],[900,H-270,220],[1250,H-390,230],[1700,H-250,220],[2040,H-410,260],[2650,H-290,230],[3010,H-430,250],[3550,H-310,230],[3890,H-400,220]]:n===2?[[260,H-260,200],[610,H-410,220],[1010,H-300,230],[1430,H-450,250],[1880,H-330,220],[2290,H-440,260]]:n===3?[[300,H-240,220],[710,H-380,240],[1120,H-290,220],[1540,H-440,250],[1990,H-320,230],[2440,H-410,260]]:[[350,H-250,230],[800,H-400,260],[1260,H-310,230],[1710,H-450,280],[2250,H-340,240],[2740,H-430,260],[3240,H-300,240]];S.forEach(v=>plat(...v));
-const floating=n===1?[[430,H-470,145],[1080,H-510,160],[1870,H-500,170],[2800,H-520,165],[3700,H-500,160]]:
+function build(n){level=n;celebrate=0;victoryPending=false;bossArena=false;bossIntro=0;gameFinished=false;difficulty=$('difficulty').value;lastLevel=n;weather=['sun','rain','snow'][Math.floor(Math.random()*3)];skyMode=Math.random()<.42?'night':'day';plats=[];items=[];en=[];shots=[];esh=[];parts=[];boss=null;world=[0,2800,3100,3400,3800][n];let gaps=n===1?[[760,170],[1720,190]]:n===2?[[520,190],[1420,220],[2480,180]]:n===3?[[650,180],[1580,210],[2660,200]]:[[900,190],[1980,220],[3050,180]],cur=0;gaps.forEach(g=>{if(g[0]>cur)ground(cur,g[0]-cur);cur=g[0]+g[1]});if(cur<world)ground(cur,world-cur);let S=n===1?[[300,H-230,220],[650,H-350,240],[1080,H-260,230],[1460,H-400,250],[2080,H-300,260]]:n===2?[[260,H-260,200],[610,H-410,220],[1010,H-300,230],[1430,H-450,250],[1880,H-330,220],[2290,H-440,260]]:n===3?[[300,H-240,220],[710,H-380,240],[1120,H-290,220],[1540,H-440,250],[1990,H-320,230],[2440,H-410,260]]:[[350,H-250,230],[800,H-400,260],[1260,H-310,230],[1710,H-450,280],[2250,H-340,240],[2740,H-430,260],[3240,H-300,240]];S.forEach(v=>plat(...v));
+const floating=n===1?[[520,H-480,150],[1280,H-510,175],[2360,H-470,155]]:
 n===2?[[390,H-500,155],[1160,H-530,180],[2140,H-500,165],[2780,H-540,150]]:
 n===3?[[500,H-500,165],[1320,H-540,175],[2240,H-510,185],[3000,H-550,145]]:
 [[560,H-510,170],[1450,H-550,180],[2480,H-520,180],[3220,H-560,150]];
 floating.forEach(v=>{plat(...v);items.push({t:'bone',x:v[0]+v[2]/2,y:v[1]-28,a:1})});
-if(n===6){
+if(n===4){
   plat(3200,H-100,600);plat(3260,H-360,150);plat(3440,H-430,150);plat(3600,H-300,140);
   items.push({t:'heart',x:3290,y:H-390,a:1},{t:'power',x:3490,y:H-465,a:1});
 }for(let i=0;i<10+n;i++)items.push({t:'bone',x:170+i*(world-340)/(9+n),y:H-(i%2?360:160),a:1});[360,980,1760,world-420].forEach((x,i)=>items.push({t:'heart',x,y:H-(i%2?250:150),a:1}));items.push({t:'power',x:world*.58,y:H-210,a:1});if(n===1){
-enemy(420,H-144,'rabbit');enemy(650,H-144,'cat');enemy(930,H-144,'fox');enemy(1210,H-144,'hedgehog');enemy(1510,H-144,'raccoon');enemy(1810,H-144,'wolf');enemy(2140,H-260,'owl');enemy(2480,H-144,'boar');enemy(2810,H-144,'cat');enemy(3150,H-250,'owl');enemy(3480,H-144,'fox');enemy(3820,H-144,'boar')
+enemy(430,H-144,'rabbit');enemy(690,H-144,'cat');enemy(980,H-144,'fox');enemy(1270,H-144,'hedgehog');enemy(1550,H-144,'raccoon');enemy(1870,H-144,'wolf');enemy(2200,H-250,'owl');enemy(2520,H-144,'boar')
 }
 if(n===2){
 enemy(360,H-144,'mouse');enemy(620,H-144,'fox');enemy(910,H-250,'bat');enemy(1190,H-144,'raccoon');enemy(1510,H-144,'hedgehog');enemy(1810,H-144,'wolf');enemy(2140,H-260,'owl');enemy(2440,H-144,'boar');enemy(2780,H-144,'rabbit')
@@ -402,27 +380,21 @@ if(n===3){
 enemy(390,H-144,'shadow');enemy(690,H-144,'hedgehog');enemy(970,H-250,'bat');enemy(1260,H-144,'wolf');enemy(1570,H-144,'fox');enemy(1900,H-260,'owl');enemy(2190,H-144,'raccoon');enemy(2510,H-144,'boar');enemy(2880,H-144,'cat');enemy(3160,H-250,'bat')
 }
 if(n===4){
-enemy(420,H-144,'fox');enemy(760,H-144,'raccoon');enemy(1120,H-250,'owl');enemy(1510,H-144,'hedgehog');enemy(1910,H-144,'wolf');enemy(2300,H-250,'bat');enemy(2710,H-144,'boar');enemy(3150,H-144,'cat')
-}
-if(n===5){
-enemy(390,H-144,'rabbit');enemy(720,H-144,'fox');enemy(1050,H-250,'owl');enemy(1410,H-144,'raccoon');enemy(1780,H-144,'wolf');enemy(2180,H-250,'bat');enemy(2580,H-144,'hedgehog');enemy(3020,H-144,'boar');enemy(3460,H-250,'owl')
-}
-if(n===6){
 enemy(420,H-144,'fox');enemy(650,H-144,'rabbit');enemy(880,H-144,'boar');enemy(1120,H-270,'owl');
 enemy(1370,H-144,'hedgehog');enemy(1610,H-144,'wolf');enemy(1880,H-260,'bat');enemy(2140,H-144,'raccoon');
 enemy(2410,H-144,'shadow');enemy(2660,H-250,'owl');enemy(2870,H-144,'cat');enemy(3070,H-144,'mouse');
 boss={x:3470,y:H-190,w:88,h:96,hp:difficulty==='easy'?9:difficulty==='hard'?18:12,max:difficulty==='easy'?9:difficulty==='hard'?18:12,a:1,cd:1.2,phase:1,anim:0,dir:-1,vy:0,stun:0,summonCd:4.5,flash:0,lastHit:0}
-}let diffMul=difficulty==='easy'?.8:difficulty==='hard'?1.25:1;en.forEach(e=>e.vx*=diffMul);P.forEach((p,i)=>{p.x=70+i*70;p.y=20;p.vx=p.vy=0;p.done=0;p.big=0;p.w=38;p.h=42});updateCountryHud();$('we').textContent=weather==='sun'?'☀️':weather==='rain'?'🌧️':'❄️';hud()}
-function start(){gameFinished=false;ensureAudio();show('');useMainGameControls(true);score=0;bonesN=0;activePlayer=0;carriedPlayer=-1;P=[mkP(1,'chanel',70),mkP(2,'armani',125)];build(1);state='game';run=1;last=performance.now()}
+}let diffMul=difficulty==='easy'?.8:difficulty==='hard'?1.25:1;en.forEach(e=>e.vx*=diffMul);P.forEach((p,i)=>{p.x=70+i*70;p.y=20;p.vx=p.vy=0;p.done=0;p.big=0;p.w=38;p.h=42});$('lev').textContent='Level '+n+'/4';$('we').textContent=weather==='sun'?'☀️':weather==='rain'?'🌧️':'❄️';hud()}
+function start(){gameFinished=false;ensureAudio();show('');useMainGameControls(true);score=0;bonesN=0;P=[mkP(1,choose[1],70)];if(mode==='coop')P.push(mkP(2,choose[2],140));build(1);state='game';run=1;last=performance.now()}
 function hud(){
       $('sc').textContent=score;$('bo').textContent=bonesN;$('li').textContent=Math.max(...P.map(p=>p.lives));
-      const visible=level===6&&boss&&boss.a&&state==='game';
+      const visible=level===4&&boss&&boss.a&&state==='game';
       $('bossBarWrap').style.display=visible?'block':'none';
       if(visible)$('bossBar').style.transform='scaleX('+(boss.hp/boss.max)+')';
     }
 function burst(x,y,col,n=10){for(let i=0;i<n;i++){let a=Math.random()*7,s=50+Math.random()*150;parts.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-70,life:.8,col,z:2+Math.random()*4})}}
 function hurt(p){if(p.inv>0)return;if(p.big){p.big=0;p.w=38;p.h=42;p.inv=1;return}p.lives--;p.inv=1.2;if(p.lives<=0){run=0;state='over';show('over');$('hud').style.display=$('move').style.display=$('act').style.display='none'}else{p.x=Math.max(30,p.x-180);p.y=20;p.vx=p.vy=0}}
-function updP(p,dt){const idx=P.indexOf(p);if(idx===carriedPlayer){const carrier=P[activePlayer];p.x=carrier.x+(carrier.w-p.w)/2-(carrier.face*4);p.y=carrier.y-p.h*.72;p.vx=carrier.vx;p.vy=carrier.vy;p.g=0;p.pose='idle';return}const isActive=P[activePlayer]===p;const leader=P[activePlayer],dx=leader&&leader!==p?leader.x-p.x:0;let L=isActive&&K.l,R=isActive&&K.r,J=isActive&&K.j,F=isActive&&K.f;if(!isActive&&leader){L=dx<-70;R=dx>70;J=(Math.abs(dx)>100&&leader.y+25<p.y)||(!p.g&&leader.y<p.y-45);F=false;if(Math.abs(dx)>520){p.x=leader.x-55;p.y=leader.y-20;p.vx=p.vy=0}}p.vx=((R?1:0)-(L?1:0))*p.sp;if(p.vx)p.face=Math.sign(p.vx);if(J&&!p.lock&&p.jumps<2){p.vy=-(p.jumps?p.j*1.08:p.j)*(carriedPlayer>=0?1.16:1);p.jumps++;p.lock=1;sfx('jump')}if(!J)p.lock=0;p.vy+=1500*dt;let oy=p.y;p.x+=p.vx*dt;p.y+=p.vy*dt;p.g=0;p.x=Math.max(0,Math.min(world-p.w,p.x));plats.forEach(r=>{if(p.x+p.w>r.x&&p.x<r.x+r.w&&oy+p.h<=r.y+8&&p.y+p.h>=r.y&&p.vy>=0){p.y=r.y-p.h;p.vy=0;p.g=1;p.jumps=0}});if(level===6&&bossArena&&p.y+p.h>H-100){p.y=H-100-p.h;p.vy=0;p.g=1;p.jumps=0}if(p.y>H+100){hurt(p);p.x=Math.max(30,p.x-250);p.y=20}p.inv=Math.max(0,p.inv-dt);p.cd-=dt;if(F&&p.cd<=0){shots.push({x:p.x+(p.face>0?p.w:0),y:p.y+p.h*.35,w:18,h:24,vx:p.face*560,d:1,dead:0,hue:Math.floor(Math.random()*360),bob:Math.random()*6});p.cd=.25;sfx('shoot')}p.pose=!p.g?'jump':Math.abs(p.vx)>10?'run':'idle';p.ft+=dt;if(p.ft>.1){p.fr=(p.fr+1)%4;p.ft=0}items.forEach(i=>{if(i.a&&Math.hypot(p.x+p.w/2-i.x,p.y+p.h/2-i.y)<35){i.a=0;if(i.t==='bone'){score+=10;bonesN++;sfx('collect')}if(i.t==='heart'){p.lives++;score+=25;sfx('heart')}if(i.t==='power'){p.big=1;p.w=64;p.h=72;p.y-=30;score+=40;sfx('power')}}});let goal=world-110;if(level===6&&boss&&boss.a&&p.x>3235)enterBossArena();if(level!==6&&p.x>goal)p.done=1;if(level===6&&boss&&!boss.a&&!gameFinished)startVictorySequence()}
+function updP(p,dt){let L=p.i===1&&K.l,R=p.i===1&&K.r,J=p.i===1&&K.j,F=p.i===1&&K.f;p.vx=((R?1:0)-(L?1:0))*p.sp;if(p.vx)p.face=Math.sign(p.vx);if(J&&!p.lock&&p.jumps<2){p.vy=-(p.jumps?p.j*1.08:p.j);p.jumps++;p.lock=1;sfx('jump')}if(!J)p.lock=0;p.vy+=1500*dt;let oy=p.y;p.x+=p.vx*dt;p.y+=p.vy*dt;p.g=0;p.x=Math.max(0,Math.min(world-p.w,p.x));plats.forEach(r=>{if(p.x+p.w>r.x&&p.x<r.x+r.w&&oy+p.h<=r.y+8&&p.y+p.h>=r.y&&p.vy>=0){p.y=r.y-p.h;p.vy=0;p.g=1;p.jumps=0}});if(level===4&&bossArena&&p.y+p.h>H-100){p.y=H-100-p.h;p.vy=0;p.g=1;p.jumps=0}if(p.y>H+100){hurt(p);p.x=Math.max(30,p.x-250);p.y=20}p.inv=Math.max(0,p.inv-dt);p.cd-=dt;if(F&&p.cd<=0){shots.push({x:p.x+(p.face>0?p.w:0),y:p.y+p.h*.35,w:18,h:24,vx:p.face*560,d:1,dead:0,hue:Math.floor(Math.random()*360),bob:Math.random()*6});p.cd=.25;sfx('shoot')}p.pose=!p.g?'jump':Math.abs(p.vx)>10?'run':'idle';p.ft+=dt;if(p.ft>.1){p.fr=(p.fr+1)%4;p.ft=0}items.forEach(i=>{if(i.a&&Math.hypot(p.x+p.w/2-i.x,p.y+p.h/2-i.y)<35){i.a=0;if(i.t==='bone'){score+=10;bonesN++;sfx('collect')}if(i.t==='heart'){p.lives++;score+=25;sfx('heart')}if(i.t==='power'){p.big=1;p.w=64;p.h=72;p.y-=30;score+=40;sfx('power')}}});let goal=world-110;if(level===4&&boss&&boss.a&&p.x>3235)enterBossArena();if(level<4&&p.x>goal)p.done=1;if(level===4&&boss&&!boss.a&&!gameFinished)startVictorySequence()}
 
 
 function hitBossShot(s,b){
@@ -438,7 +410,7 @@ function trimEffects(){
   if(esh.length>14)esh=esh.slice(-14);
 }
 function enterBossArena(){
-  if(level!==6||!boss||!boss.a||bossFightActive)return;
+  if(level!==4||!boss||!boss.a||bossFightActive)return;
   startBossFight()
 }
 function leaveBossArena(){
@@ -592,9 +564,7 @@ let fwRAF=0,zumbaRAF=0,zumbaScore=0,zumbaEnd=0,zumbaBeat=0;
 
 function startVictorySequence(){
   if(gameFinished)return;
-  gameFinished=true;run=0;bossArena=false;
-  setTimeout(()=>{gameFinished=false;startCountryMemory(6)},300);return;
-  state='firework';
+  gameFinished=true;run=0;state='firework';bossArena=false;
   shots=[];esh=[];en.forEach(e=>e.a=0);
   $('bossBarWrap').style.display='none';
   useMainGameControls(false);
@@ -677,7 +647,7 @@ function finishGame(reason='boss'){
 }
 function emergencyRecover(message){
   try{localStorage.setItem('caLastError',String(message).slice(0,500))}catch(e){}
-  if(level===6&&boss&&!boss.a)finishGame('recovery')
+  if(level===4&&boss&&!boss.a)finishGame('recovery')
 }
 window.addEventListener('error',e=>emergencyRecover(e.message||'JavaScript error'));
 window.addEventListener('unhandledrejection',e=>emergencyRecover(e.reason||'Promise error'));
@@ -685,7 +655,7 @@ window.addEventListener('unhandledrejection',e=>emergencyRecover(e.reason||'Prom
 function update(dt){time+=dt;P.forEach(p=>updP(p,dt));shots.forEach(s=>s.x+=s.vx*dt);esh.forEach(s=>{s.x+=s.vx*dt;s.y+=s.vy*dt});en.forEach(e=>{if(!e.a||e.paused)return;if(e.t==='bat'||e.t==='owl'){e.x+=e.vx*dt;e.y+=Math.sin(time*(e.t==='owl'?2.2:3.4)+e.p)*(e.t==='owl'?24:38)*dt}
 else if(e.t==='rabbit'||e.t==='cat'){e.hop+=dt;e.x+=e.vx*dt;e.y+=Math.sin(e.hop*(e.t==='rabbit'?7:5))*18*dt}
 else if(e.t==='wolf'||e.t==='fox'){const target=P[0];if(target&&Math.abs(target.x-e.x)<330)e.vx=Math.sign(target.x-e.x)*Math.abs(e.vx);e.x+=e.vx*dt}
-else e.x+=e.vx*dt;if(e.x<80||e.x>world-80)e.vx*=-1;shots.forEach(s=>{if(!s.dead&&hit(s,e)){e.hp-=s.d;s.dead=1;if(e.hp<=0){e.a=0;score+=50;sfx('enemy')}else{sfx('hit')}}});P.forEach((p,pi)=>{if(pi===carriedPlayer)return;
+else e.x+=e.vx*dt;if(e.x<80||e.x>world-80)e.vx*=-1;shots.forEach(s=>{if(!s.dead&&hit(s,e)){e.hp-=s.d;s.dead=1;if(e.hp<=0){e.a=0;score+=50;sfx('enemy')}else{sfx('hit')}}});P.forEach(p=>{
   if(!e.a||!hit(p,e))return;
   const stomp=p.vy>90&&(p.y+p.h)<=e.y+Math.max(24,e.h*.55);
   if(stomp){
@@ -739,13 +709,18 @@ else e.x+=e.vx*dt;if(e.x<80||e.x>world-80)e.vx*=-1;shots.forEach(s=>{if(!s.dead&
     }
   });
   P.forEach(p=>{if(hit(p,boss))hurt(p)})
-}esh.forEach(s=>P.forEach((p,pi)=>{if(pi===carriedPlayer)return;if(!s.dead&&hit(s,p)){s.dead=1;hurt(p)}}));shots=shots.filter(s=>!s.dead&&s.x<world+100);esh=esh.filter(s=>!s.dead&&s.y<H+100);parts.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=380*dt;p.life-=dt});parts=parts.filter(p=>p.life>0);
-let camX=Math.max(0,Math.min(world-W,(P[activePlayer]||P[0]||{x:0}).x-W*.38));
+}esh.forEach(s=>P.forEach(p=>{if(!s.dead&&hit(s,p)){s.dead=1;hurt(p)}}));shots=shots.filter(s=>!s.dead&&s.x<world+100);esh=esh.filter(s=>!s.dead&&s.y<H+100);parts.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=380*dt;p.life-=dt});parts=parts.filter(p=>p.life>0);
+let camX=Math.max(0,Math.min(world-W,(P[0]||{x:0}).x-W*.38));
 en.forEach(e=>{e.paused=Math.abs((e.x-camX)-W*.5)>W*.95});
 en=en.filter(e=>e.a||Math.abs((e.x-camX)-W*.5)<W*1.2);
-trimEffects();if(level!==6&&P.some(p=>p.done)){requestCountryTransition()}
-if(level===6&&boss&&!boss.a&&!gameFinished)startVictorySequence();
-if(!gameFinished){checkLandmarkInfo();hud()}}
+trimEffects();if(P.every(p=>p.done)){
+  if(level===1)startPac();
+  else if(level===2)startDash();
+  else if(level===3)startShadow();
+  else if(level<4)build(level+1)
+}
+if(level===4&&boss&&!boss.a&&!gameFinished)startVictorySequence();
+if(!gameFinished)hud()}
 
 function flower(x,y,col='#ff5ea8',s=1){
   c.strokeStyle='#2f7d32';c.lineWidth=2*s;c.beginPath();c.moveTo(x,y);c.lineTo(x,y-16*s);c.stroke();
@@ -794,46 +769,9 @@ function fireworksTick(dt){
     $('hud').style.display='none';$('move').style.display='none';$('act').style.display='none';
   }
 }
-function bg(ox){
-  let dark=level>=3||skyMode==='night',g=c.createLinearGradient(0,0,0,H);
-  if(skyMode==='night'){g.addColorStop(0,'#081126');g.addColorStop(.55,'#283458');g.addColorStop(1,'#1a2a1d')}
-  else if(level>=3){g.addColorStop(0,'#10162c');g.addColorStop(.55,'#3b224f');g.addColorStop(1,'#1a2a1d')}
-  else{g.addColorStop(0,'#4a9fe8');g.addColorStop(.55,'#dff4ff');g.addColorStop(1,'#4f8b3a')}
-  c.fillStyle=g;c.fillRect(0,0,W,H);drawCelestial();
-  c.fillStyle=dark?'rgba(65,50,90,.28)':'rgba(70,110,120,.22)';
-  for(let i=-1;i<9;i++){let x=i*320-(ox*.08%320);c.beginPath();c.moveTo(x,H*.7);c.lineTo(x+115,H*.42-(i%3)*20);c.lineTo(x+230,H*.7);c.closePath();c.fill()}
-  for(let i=-1;i<16;i++){let x=i*190-(ox*.22%190),b=H-105;c.fillStyle=dark?'#281f31':'#6f4725';c.fillRect(x,b-82,30,82);c.fillStyle=dark?'#30223e':'#3f9f42';c.beginPath();c.arc(x+15,b-96,40,0,7);c.fill();c.beginPath();c.arc(x-8,b-72,29,0,7);c.fill();c.beginPath();c.arc(x+40,b-72,29,0,7);c.fill()}
-  for(let i=-1;i<55;i++){let x=i*52-(ox*.58%52);flower(x,H-102-(i%2)*2,['#ff5ea8','#ffd84d','#7c5cff','#ff784d','#fff'][Math.abs(i)%5],.8+(Math.abs(i)%3)*.12)}
-  for(let i=0;i<8;i++)decoAnimal(((i*310-ox*.33)% (W+240))-80,H-122-(i%2)*12,i%3===0?'rabbit':i%3===1?'bird':'deer',i%2?1:-1);
-  if(weather==='rain'){c.strokeStyle='#cde8ffaa';for(let i=0;i<65;i++){let x=(i*73+time*400)%W,y=(i*41+time*620)%H;c.beginPath();c.moveTo(x,y);c.lineTo(x-8,y+20);c.stroke()}}
-  if(weather==='snow'){c.fillStyle='#fff';for(let i=0;i<48;i++){let x=(i*97+Math.sin(time+i)*25)%W,y=(i*57+time*70)%H;c.beginPath();c.arc(x,y,2+i%3,0,7);c.fill()}}
-}
+function bg(ox){let g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,skyMode==='night'?'#172b61':'#338dff');g.addColorStop(.62,skyMode==='night'?'#675387':'#8ed9ff');g.addColorStop(1,'#d8f3ff');c.fillStyle=g;c.fillRect(0,0,W,H);drawCelestial();for(let i=-1;i<10;i++){let x=i*250-(ox*.12%250),y=78+(i%4)*58;c.save();c.globalAlpha=.92;c.shadowColor='#2f68a455';c.shadowBlur=18;c.shadowOffsetY=8;c.fillStyle='#fff';c.beginPath();c.arc(x,y,22,0,7);c.arc(x+24,y-10,30,0,7);c.arc(x+54,y,24,0,7);c.rect(x,y,55,23);c.fill();c.restore()}for(let i=-1;i<8;i++){let x=i*360-(ox*.15%360),base=H-105;c.fillStyle=i%2?'#5eb95a':'#86d54c';c.beginPath();c.moveTo(x-80,base);c.quadraticCurveTo(x+55,base-210,x+190,base);c.closePath();c.fill()}for(let i=-1;i<16;i++){let x=i*150-(ox*.32%150),y=H-110;c.fillStyle=i%2?'#3fba3f':'#70d248';c.beginPath();c.arc(x,y,34,0,7);c.arc(x+35,y-12,42,0,7);c.arc(x+72,y,32,0,7);c.fill()}if(weather==='rain'){c.strokeStyle='#d9efffcc';c.lineWidth=2;for(let i=0;i<65;i++){let x=(i*73+time*400)%W,y=(i*41+time*620)%H;c.beginPath();c.moveTo(x,y);c.lineTo(x-8,y+20);c.stroke()}}if(weather==='snow'){c.fillStyle='#fff';for(let i=0;i<48;i++){let x=(i*97+Math.sin(time+i)*25)%W,y=(i*57+time*70)%H;c.beginPath();c.arc(x,y,2+i%3,0,7);c.fill()}}}
 
-function drawPlatform3D(r,ox){
-  const x=r.x-ox,y=r.y,depth=Math.min(24,Math.max(10,r.h*.24)),floating=r.y<H-145,dark=level>=3,italy=level===1;
-  c.save();
-  c.shadowColor='rgba(0,0,0,.32)';c.shadowBlur=floating?18:8;c.shadowOffsetY=floating?12:5;
-  let face=c.createLinearGradient(x,y,x,y+r.h);
-  face.addColorStop(0,dark?'#57405f':italy?'#c99862':'#8b6538');face.addColorStop(1,dark?'#271c2e':italy?'#765035':'#49301b');
-  c.fillStyle=face;c.fillRect(x,y,r.w,r.h);
-  c.shadowColor='transparent';
-  let top=c.createLinearGradient(x,y-depth,x,y+12);
-  top.addColorStop(0,weather==='snow'?'#ffffff':dark?'#836092':italy?'#8fcf63':'#7bd462');
-  top.addColorStop(1,weather==='snow'?'#dcecff':dark?'#4f365a':italy?'#4f943d':'#3f9d3b');
-  c.fillStyle=top;c.beginPath();c.moveTo(x,y);c.lineTo(x+depth,y-depth*.6);c.lineTo(x+r.w+depth,y-depth*.6);c.lineTo(x+r.w,y);c.closePath();c.fill();
-  let side=c.createLinearGradient(x+r.w,y,x+r.w+depth,y+r.h);
-  side.addColorStop(0,dark?'#46304f':'#6a4726');side.addColorStop(1,dark?'#211727':'#2f2114');
-  c.fillStyle=side;c.beginPath();c.moveTo(x+r.w,y);c.lineTo(x+r.w+depth,y-depth*.6);c.lineTo(x+r.w+depth,y+r.h-depth*.6);c.lineTo(x+r.w,y+r.h);c.closePath();c.fill();
-  c.strokeStyle='rgba(255,255,255,.18)';c.lineWidth=1.5;c.beginPath();c.moveTo(x+depth,y-depth*.6);c.lineTo(x+r.w+depth,y-depth*.6);c.stroke();
-  if(floating){
-    const spikes=5;
-    for(let i=0;i<spikes;i++){
-      const sx=x+10+i*(r.w-20)/(spikes-1),len=20+(i%3)*16;
-      c.fillStyle=dark?'#211725':'#4a301c';c.beginPath();c.moveTo(sx-9,y+r.h);c.lineTo(sx,y+r.h+len);c.lineTo(sx+9,y+r.h);c.closePath();c.fill()
-    }
-  }
-  c.restore()
-}
+function drawPlatform3D(r,ox){const x=r.x-ox,y=r.y,floating=r.y<H-145,tile=42;c.save();c.shadowColor='rgba(14,40,76,.30)';c.shadowBlur=floating?18:7;c.shadowOffsetY=floating?13:5;let face=c.createLinearGradient(x,y,x,y+r.h);face.addColorStop(0,'#c96431');face.addColorStop(.52,'#9e421f');face.addColorStop(1,'#682511');c.fillStyle=face;rr(c,x,y,r.w,r.h,4);c.fill();c.shadowColor='transparent';c.strokeStyle='#4b1b0d';c.lineWidth=2.4;for(let yy=y;yy<y+r.h;yy+=24){c.beginPath();c.moveTo(x,yy);c.lineTo(x+r.w,yy);c.stroke();let off=((yy-y)/24)%2?tile/2:0;for(let xx=x+off;xx<x+r.w;xx+=tile){c.beginPath();c.moveTo(xx,yy);c.lineTo(xx,Math.min(y+r.h,yy+24));c.stroke()}}c.strokeStyle='rgba(255,188,121,.72)';c.lineWidth=2;c.beginPath();c.moveTo(x+3,y+3);c.lineTo(x+r.w-3,y+3);c.stroke();if(!floating){let cap=c.createLinearGradient(x,y-7,x,y+6);cap.addColorStop(0,'#8bea45');cap.addColorStop(1,'#2a9c34');c.fillStyle=cap;c.fillRect(x,y-7,r.w,9)}c.restore()}
 function drawDepthFog(){
   const fog=c.createLinearGradient(0,H*.45,0,H);
   fog.addColorStop(0,'rgba(255,255,255,0)');
@@ -884,8 +822,8 @@ function drawWorldLife(ox){
   for(let i=0;i<10;i++){let x=(i*173+Math.sin(time*2+i)*24)-(ox*.2%173),y=100+(i%4)*65+Math.sin(time*3+i)*10;c.fillStyle=i%2?'#ffd84d':'#67e8f9';c.beginPath();c.arc(x,y,4,0,7);c.fill()}
 }
 
-function draw(){c.clearRect(0,0,W,H);let ox=Math.max(0,Math.min(world-W,(P[activePlayer]||P[0]||{x:0}).x-W*.38));bg(ox);drawWorldLife(ox);plats.forEach(r=>drawPlatform3D(r,ox));drawDepthFog();
-drawCountryLandmarks(ox);items.forEach(i=>{if(!i.a)return;let x=i.x-ox,y=i.y;if(i.t==='bone'){drawBone3D(x,y)}if(i.t==='heart'){drawHeart3D(x,y)}if(i.t==='power'){let g=c.createRadialGradient(x,y,2,x,y,22);g.addColorStop(0,'#60a5fa');g.addColorStop(.5,'#111827');g.addColorStop(1,'#2563eb');c.fillStyle=g;c.beginPath();c.arc(x,y,22,0,7);c.fill()}});en.forEach(e=>{if(!e.a||e.paused)return;drawEnemy3D(e,ox)});if(boss&&boss.a){
+function drawQuestionBlock(x,y){c.save();c.shadowColor='#173c7066';c.shadowBlur=12;c.shadowOffsetY=8;let g=c.createLinearGradient(x,y,x,y+54);g.addColorStop(0,'#ffe653');g.addColorStop(1,'#eea817');c.fillStyle=g;c.strokeStyle='#33220b';c.lineWidth=3;rr(c,x,y,54,54,5);c.fill();c.stroke();c.shadowColor='transparent';c.fillStyle='#fff';c.strokeStyle='#111';c.lineWidth=3;c.font='bold 36px Arial Black';c.textAlign='center';c.textBaseline='middle';c.strokeText('?',x+27,y+27);c.fillText('?',x+27,y+27);c.restore()}function drawPipe(x,y,h=88){c.save();c.shadowColor='#173c7066';c.shadowBlur=12;c.shadowOffsetY=7;let g=c.createLinearGradient(x,0,x+58,0);g.addColorStop(0,'#087c20');g.addColorStop(.22,'#26d747');g.addColorStop(.62,'#0bae2f');g.addColorStop(1,'#04651b');c.fillStyle=g;c.strokeStyle='#073b15';c.lineWidth=3;c.fillRect(x,y-h+18,58,h-18);c.strokeRect(x,y-h+18,58,h-18);rr(c,x-7,y-h,72,25,3);c.fill();c.stroke();c.fillStyle='rgba(255,255,255,.24)';c.fillRect(x+12,y-h+23,7,h-28);c.restore()}function draw(){c.clearRect(0,0,W,H);let ox=Math.max(0,Math.min(world-W,(P[0]||{x:0}).x-W*.38));bg(ox);drawWorldLife(ox);plats.forEach(r=>drawPlatform3D(r,ox));drawDepthFog();
+for(let i=0;i<6;i++){let x=i*560-(ox*.7%560)+120,y=H-105;if(i%2===0)drawQuestionBlock(x,y-125);else drawPipe(x,y,72+(i%3)*22)}items.forEach(i=>{if(!i.a)return;let x=i.x-ox,y=i.y;if(i.t==='bone'){drawBone3D(x,y)}if(i.t==='heart'){drawHeart3D(x,y)}if(i.t==='power'){let g=c.createRadialGradient(x,y,2,x,y,22);g.addColorStop(0,'#60a5fa');g.addColorStop(.5,'#111827');g.addColorStop(1,'#2563eb');c.fillStyle=g;c.beginPath();c.arc(x,y,22,0,7);c.fill()}});en.forEach(e=>{if(!e.a||e.paused)return;drawEnemy3D(e,ox)});if(boss&&boss.a){
   let x=boss.x-ox,y=boss.y,bob=Math.sin(boss.anim*5)*3,wing=Math.sin(boss.anim*7)*8;
   c.save();c.translate(x,y+bob);if(boss.dir>0){c.translate(boss.w,0);c.scale(-1,1)}
   let gl=c.createRadialGradient(44,45,5,44,45,82);gl.addColorStop(0,boss.phase===3?'rgba(239,68,68,.75)':'rgba(168,85,247,.8)');gl.addColorStop(1,'rgba(168,85,247,0)');
@@ -904,157 +842,12 @@ drawCountryLandmarks(ox);items.forEach(i=>{if(!i.a)return;let x=i.x-ox,y=i.y;if(
   if(boss.phase>=2){c.strokeStyle='rgba(255,255,255,.65)';c.lineWidth=2;for(let i=0;i<5;i++){let a=boss.anim*2+i*1.25;c.beginPath();c.arc(44+Math.cos(a)*48,44+Math.sin(a)*28,4,0,7);c.stroke()}}
   c.restore();
   c.fillStyle='#111827';c.fillRect(x,y-18,boss.w,10);c.fillStyle=boss.phase===3?'#ef4444':'#22c55e';c.fillRect(x,y-18,boss.w*(boss.hp/boss.max),10)
-}shots.forEach(s=>{let x=s.x-ox,y=s.y+Math.sin(time*7+(s.bob||0))*2;c.save();c.fillStyle='hsl('+(s.hue||320)+',90%,62%)';c.strokeStyle='#fff';c.lineWidth=1.5;c.beginPath();c.ellipse(x+9,y+9,8,10,0,0,7);c.fill();c.stroke();c.fillStyle='#fff';c.beginPath();c.moveTo(x+6,y+18);c.lineTo(x+12,y+18);c.lineTo(x+9,y+23);c.closePath();c.fill();c.strokeStyle='rgba(255,255,255,.7)';c.beginPath();c.moveTo(x+9,y+23);c.lineTo(x+9,y+28);c.stroke();c.restore()});esh.forEach(s=>{c.fillStyle='#c084fc';c.beginPath();c.arc(s.x-ox,s.y,8,0,7);c.fill()});P.forEach((p,pi)=>{if(pi===carriedPlayer)return;c.globalAlpha=p.inv>0&&Math.floor(p.inv*12)%2===0?.45:1;dog(c,p.x-ox,p.y,p.k,p.big?1:.58,p.face,p.pose,p.fr);c.globalAlpha=1});if(carriedPlayer>=0){const p=P[carriedPlayer];c.globalAlpha=p.inv>0&&Math.floor(p.inv*12)%2===0?.45:1;dog(c,p.x-ox,p.y,p.k,p.big?1:.48,P[activePlayer].face,'idle',p.fr);c.globalAlpha=1}if(level===6&&bossArena){
+}shots.forEach(s=>{let x=s.x-ox,y=s.y+Math.sin(time*7+(s.bob||0))*2;c.save();c.fillStyle='hsl('+(s.hue||320)+',90%,62%)';c.strokeStyle='#fff';c.lineWidth=1.5;c.beginPath();c.ellipse(x+9,y+9,8,10,0,0,7);c.fill();c.stroke();c.fillStyle='#fff';c.beginPath();c.moveTo(x+6,y+18);c.lineTo(x+12,y+18);c.lineTo(x+9,y+23);c.closePath();c.fill();c.strokeStyle='rgba(255,255,255,.7)';c.beginPath();c.moveTo(x+9,y+23);c.lineTo(x+9,y+28);c.stroke();c.restore()});esh.forEach(s=>{c.fillStyle='#c084fc';c.beginPath();c.arc(s.x-ox,s.y,8,0,7);c.fill()});P.forEach(p=>{c.globalAlpha=p.inv>0&&Math.floor(p.inv*12)%2===0?.45:1;dog(c,p.x-ox,p.y,p.k,p.big?1:.58,p.face,p.pose,p.fr);c.globalAlpha=1});if(level===4&&bossArena){
   c.fillStyle='rgba(120,70,160,.18)';c.fillRect(3200-ox,0,600,H);
   c.strokeStyle='#a855f7';c.lineWidth=3;c.strokeRect(3200-ox,78,600,H-178);
   c.fillStyle='#fff';c.font='bold 18px Arial';c.fillText('ENDBOSS-ARENA',3380-ox,108)
 }
-let gx=world-80-ox;c.fillStyle=level===6&&boss&&boss.a?'#777':'#22c55e';c.fillRect(gx,H-220,8,120)}
-
-/* V18: neue Bärenfiguren und deutlich getrennte Länderwelten */
-function dog(q,x,y,k,s=1,f=1,pose='idle',fr=0){
-  const brown=k==='chanel';
-  const fur=brown?'#9a5b32':'#f7f7f2', dark=brown?'#6f351d':'#20242a', muzzle=brown?'#d9a06f':'#ece8dc';
-  const bob=pose==='run'?Math.sin(fr*1.57)*2:Math.sin(time*3)*1.1;
-  q.save();q.translate(x,y+bob);if(f<0){q.translate(66*s,0);q.scale(-1,1)}
-  q.fillStyle='rgba(0,0,0,.24)';q.beginPath();q.ellipse(32*s,69*s,25*s,6*s,0,0,7);q.fill();
-  // body
-  q.fillStyle=fur;q.strokeStyle='#2b211b';q.lineWidth=2*s;rr(q,14*s,29*s,40*s,31*s,13*s);q.fill();q.stroke();
-  // ears and head
-  q.beginPath();q.arc(23*s,9*s,10*s,0,7);q.arc(49*s,9*s,10*s,0,7);q.fill();q.stroke();
-  if(!brown){q.fillStyle=dark;q.beginPath();q.arc(23*s,9*s,8*s,0,7);q.arc(49*s,9*s,8*s,0,7);q.fill()}
-  q.fillStyle=fur;q.beginPath();q.arc(36*s,22*s,22*s,0,7);q.fill();q.stroke();
-  if(!brown){q.fillStyle=dark;q.beginPath();q.ellipse(27*s,19*s,8*s,10*s,-.22,0,7);q.ellipse(45*s,19*s,8*s,10*s,.22,0,7);q.fill()}
-  q.fillStyle='#fff';q.beginPath();q.arc(28*s,18*s,4*s,0,7);q.arc(44*s,18*s,4*s,0,7);q.fill();
-  q.fillStyle='#111';q.beginPath();q.arc(29*s,19*s,2*s,0,7);q.arc(45*s,19*s,2*s,0,7);q.fill();
-  q.fillStyle=muzzle;q.beginPath();q.ellipse(36*s,30*s,13*s,9*s,0,0,7);q.fill();
-  q.fillStyle='#241712';q.beginPath();q.ellipse(36*s,27*s,4.5*s,3.5*s,0,0,7);q.fill();
-  q.strokeStyle='#241712';q.lineWidth=1.6*s;q.beginPath();q.moveTo(36*s,30*s);q.quadraticCurveTo(31*s,35*s,27*s,32*s);q.moveTo(36*s,30*s);q.quadraticCurveTo(41*s,35*s,45*s,32*s);q.stroke();
-  // accessories matching the supplied bears: Chanel bow, Armani neck bow
-  if(brown){q.fillStyle='#d8b4fe';q.beginPath();q.moveTo(18*s,3*s);q.lineTo(7*s,-3*s);q.lineTo(9*s,11*s);q.closePath();q.fill();q.beginPath();q.moveTo(20*s,3*s);q.lineTo(30*s,-3*s);q.lineTo(29*s,11*s);q.closePath();q.fill();q.fillStyle='#7c3aed';q.beginPath();q.arc(19*s,4*s,4*s,0,7);q.fill()}
-  else{q.fillStyle='#ef4444';q.beginPath();q.moveTo(36*s,42*s);q.lineTo(25*s,36*s);q.lineTo(25*s,48*s);q.closePath();q.fill();q.beginPath();q.moveTo(36*s,42*s);q.lineTo(47*s,36*s);q.lineTo(47*s,48*s);q.closePath();q.fill();q.fillStyle='#991b1b';q.beginPath();q.arc(36*s,42*s,4*s,0,7);q.fill()}
-  // legs and arms
-  q.fillStyle=fur;rr(q,17*s,(54+(fr%2?5:-2))*s,12*s,18*s,6*s);q.fill();q.stroke();rr(q,43*s,(54+(fr%2?-2:5))*s,12*s,18*s,6*s);q.fill();q.stroke();
-  q.beginPath();q.arc(13*s,43*s,7*s,0,7);q.arc(59*s,43*s,7*s,0,7);q.fill();q.stroke();
-  q.restore()
-}
-function drawItalianScene(ox){
-  // Layered Italian journey: Tuscany -> Rome -> Venice -> Pisa -> Amalfi
-  c.fillStyle='rgba(92,142,64,.40)';
-  for(let i=-1;i<12;i++){let x=i*360-(ox*.10%360);c.beginPath();c.ellipse(x+160,H*.68,250,100,0,Math.PI,0);c.fill()}
-  c.fillStyle='rgba(218,183,104,.30)';
-  for(let i=-1;i<14;i++){let x=i*300-(ox*.18%300);c.beginPath();c.ellipse(x+130,H*.75,190,65,0,Math.PI,0);c.fill()}
-  // Cypress trees
-  for(let i=-1;i<28;i++){let x=i*155-(ox*.34%155);c.fillStyle='#3d6b35';c.fillRect(x,H-218,7,112);c.beginPath();c.ellipse(x+3,H-226,18,65,0,0,7);c.fill()}
-  // Warm distant villages
-  for(let i=-1;i<18;i++){let x=i*230-(ox*.25%230),y=H-165-(i%3)*18;c.fillStyle='#e7c28a';c.fillRect(x,y-35,58,35);c.fillStyle='#b85138';c.beginPath();c.moveTo(x-5,y-35);c.lineTo(x+29,y-58);c.lineTo(x+63,y-35);c.fill();c.fillStyle='#8a5a39';c.fillRect(x+24,y-18,9,18)}
-}
-function drawItalyForeground(ox){
-  const zones=[
-    {x:280,label:'TOSKANA',flag:'🍇'},
-    {x:1120,label:'ROM',flag:'🏛️'},
-    {x:2050,label:'VENEDIG',flag:'🚤'},
-    {x:2920,label:'PISA',flag:'🗼'},
-    {x:3700,label:'AMALFI',flag:'🍋'}
-  ];
-  zones.forEach(z=>{let x=z.x-ox;if(x<-180||x>W+180)return;c.save();c.translate(x,H-118);c.fillStyle='rgba(255,255,255,.90)';c.strokeStyle='#6b3f24';c.lineWidth=3;rr(c,-72,-55,144,42,12);c.fill();c.stroke();c.fillStyle='#5b2c1b';c.font='900 16px Arial';c.textAlign='center';c.fillText(z.flag+' '+z.label,0,-28);c.restore()});
-  // Venice water canal section
-  let vx=1900-ox;c.fillStyle='rgba(25,150,190,.65)';c.fillRect(vx,H-100,620,100);c.strokeStyle='rgba(255,255,255,.55)';c.lineWidth=2;for(let i=0;i<8;i++){let yy=H-88+i*12;c.beginPath();c.moveTo(vx,yy);c.quadraticCurveTo(vx+150,yy-5,vx+310,yy);c.quadraticCurveTo(vx+470,yy+5,vx+620,yy);c.stroke()}
-  // Gondola
-  let gx=2210-ox+Math.sin(time*.8)*25;c.fillStyle='#171717';c.beginPath();c.moveTo(gx-55,H-116);c.quadraticCurveTo(gx,H-92,gx+60,H-116);c.lineTo(gx+48,H-102);c.lineTo(gx-45,H-102);c.closePath();c.fill();c.strokeStyle='#d9b24c';c.lineWidth=3;c.beginPath();c.moveTo(gx+35,H-122);c.lineTo(gx+68,H-160);c.stroke();
-  // Accurate Leaning Tower of Pisa silhouette
-  drawPisaTowerDetailed(3020-ox,H-105,0.92);
-  // Lemon trees near Amalfi
-  for(let i=0;i<5;i++){let x=3570+i*120-ox;c.strokeStyle='#6b4424';c.lineWidth=7;c.beginPath();c.moveTo(x,H-105);c.lineTo(x,H-175);c.stroke();c.fillStyle='#2f8d46';c.beginPath();c.arc(x,H-188,31,0,7);c.fill();c.fillStyle='#ffd633';for(let j=0;j<4;j++){c.beginPath();c.arc(x-15+j*10,H-196+(j%2)*13,5,0,7);c.fill()}}
-}
-function drawFrenchScene(ox){
-  c.fillStyle='rgba(119,142,180,.25)';for(let i=-1;i<14;i++){let x=i*240-(ox*.16%240);c.fillRect(x,H-250-(i%3)*20,155,145+(i%3)*20);c.fillStyle='rgba(244,114,182,.22)';c.fillRect(x+18,H-225,20,20);c.fillStyle='rgba(119,142,180,.25)'}
-  c.fillStyle='#7c3aed';for(let i=-1;i<50;i++){let x=i*65-(ox*.55%65);c.beginPath();c.arc(x,H-112,9,0,7);c.fill()}
-}
-function drawSpanishScene(ox){
-  c.fillStyle='rgba(205,111,58,.40)';for(let i=-1;i<12;i++){let x=i*280-(ox*.18%280);c.fillRect(x,H-245,210,140);c.fillStyle='#f6c453';c.fillRect(x+18,H-225,30,35);c.fillStyle='rgba(205,111,58,.40)'}
-  for(let i=-1;i<20;i++){let x=i*190-(ox*.42%190);c.strokeStyle='#71451d';c.lineWidth=7;c.beginPath();c.moveTo(x,H-105);c.lineTo(x,H-185);c.stroke();c.fillStyle='#159447';c.beginPath();c.arc(x,H-195,28,0,7);c.fill()}
-}
-function drawMaldivesScene(ox){
-  c.fillStyle='#22b8cf';c.fillRect(0,H*.60,W,H*.40);c.fillStyle='rgba(255,255,255,.35)';for(let i=0;i<20;i++){let y=H*.64+i*16;c.fillRect((i*73-time*25)%W,y,70,2)}
-  for(let i=-1;i<12;i++){let x=i*310-(ox*.22%310);c.fillStyle='#d7a86e';c.fillRect(x,H-195,85,55);c.fillStyle='#a65332';c.beginPath();c.moveTo(x-10,H-195);c.lineTo(x+42,H-230);c.lineTo(x+95,H-195);c.fill();c.fillStyle='#8b5a2b';c.fillRect(x+20,H-140,7,35);c.fillRect(x+60,H-140,7,35)}
-}
-function drawIranScene(ox){
-  c.fillStyle='rgba(210,164,95,.38)';for(let i=-1;i<14;i++){let x=i*290-(ox*.18%290);c.fillRect(x,H-245,210,140);c.fillStyle='#2a9d8f';c.beginPath();c.arc(x+105,H-245,46,Math.PI,0);c.fill();c.fillStyle='rgba(210,164,95,.38)'}
-  c.fillStyle='#1f6f5f';for(let i=-1;i<24;i++){let x=i*150-(ox*.42%150);c.fillRect(x,H-175,8,70);c.beginPath();c.ellipse(x+4,H-185,25,45,0,0,7);c.fill()}
-}
-function drawTurkeyScene(ox){
-  c.fillStyle='rgba(195,120,75,.35)';for(let i=-1;i<18;i++){let x=i*220-(ox*.20%220);c.beginPath();c.moveTo(x,H-105);c.lineTo(x+45,H-250-(i%3)*25);c.lineTo(x+90,H-105);c.closePath();c.fill()}
-  for(let i=0;i<9;i++){let x=((i*190-time*(10+i%3))-ox*.12)%(W+300)-120,y=90+(i%4)*55;c.fillStyle=['#ef4444','#f59e0b','#3b82f6','#10b981'][i%4];c.beginPath();c.ellipse(x,y,26,34,0,0,7);c.fill();c.strokeStyle='#5b3a29';c.beginPath();c.moveTo(x-9,y+28);c.lineTo(x-6,y+45);c.lineTo(x+6,y+45);c.lineTo(x+9,y+28);c.stroke();c.fillStyle='#7c4a2d';c.fillRect(x-7,y+44,14,9)}
-}
-function drawPisaTowerDetailed(x,y,scale=1){
- c.save();c.translate(x,y);c.rotate(-0.115);c.scale(scale,scale);c.fillStyle='#eadfc8';c.strokeStyle='#8b7b68';c.lineWidth=2;
- c.fillRect(-31,-160,62,150);c.strokeRect(-31,-160,62,150);
- for(let r=0;r<7;r++){let yy=-151+r*20;c.fillStyle=r%2?'#f4ead6':'#e9ddc5';c.fillRect(-34,yy,68,17);c.strokeRect(-34,yy,68,17);c.fillStyle='#6f6559';for(let a=0;a<5;a++){c.beginPath();c.arc(-23+a*11,yy+11,3.8,Math.PI,0);c.fill()}}
- c.fillStyle='#ddd0b8';c.beginPath();c.ellipse(0,-164,34,8,0,0,7);c.fill();c.stroke();c.fillStyle='#c8b99e';c.fillRect(-38,-10,76,10);c.strokeRect(-38,-10,76,10);c.restore();
-}
-function bg(ox){
-  const gradients={1:['#67b7ef','#f4e5b5','#78a84b'],2:['#8bc7ef','#f4dce8','#6f9b62'],3:['#f8b36a','#f9d67c','#a65b3c'],4:['#59b5c9','#f1d6a6','#7b9a63'],5:['#76b9e8','#f6c77b','#b86643'],6:['#57d4ed','#b9f2ff','#19a7a8']};
-  let a=gradients[level]||gradients[1],g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,a[0]);g.addColorStop(.55,a[1]);g.addColorStop(1,a[2]);c.fillStyle=g;c.fillRect(0,0,W,H);drawCelestial();
-  if(level===1)drawItalianScene(ox);else if(level===2)drawFrenchScene(ox);else if(level===3)drawSpanishScene(ox);else if(level===4)drawIranScene(ox);else if(level===5)drawTurkeyScene(ox);else if(level===6)drawMaldivesScene(ox);else if(level===7)drawGermanyScene(ox);else drawSwitzerlandScene(ox);
-  if(weather==='rain'){c.strokeStyle='#d8efffcc';for(let i=0;i<65;i++){let x=(i*73+time*400)%W,y=(i*41+time*620)%H;c.beginPath();c.moveTo(x,y);c.lineTo(x-8,y+20);c.stroke()}}
-}
-function drawCountryLandmarks(ox){
-  if(level===1)drawItalyForeground(ox);
-  for(let i=0;i<7;i++){let x=i*520-(ox*.72%520)+100,y=H-165;c.save();
-    if(level===1){
-      if(i%2===0){c.fillStyle='#d7a66f';c.fillRect(x-48,y-85,96,85);c.strokeStyle='#80552f';c.lineWidth=3;for(let r=0;r<3;r++)for(let a=0;a<4;a++){c.beginPath();c.arc(x-33+a*22,y-62+r*23,7,Math.PI,0);c.stroke()}}
-      else{c.translate(x,y);c.rotate(-.12);c.fillStyle='#eee0c8';c.fillRect(-23,-105,46,105);c.strokeStyle='#8a7258';for(let r=0;r<5;r++)c.strokeRect(-19,-95+r*19,38,12)}
-    }else if(level===2){
-      c.strokeStyle='#374151';c.lineWidth=6;c.beginPath();c.moveTo(x,y);c.lineTo(x,y-115);c.moveTo(x,y-115);c.lineTo(x-43,y);c.moveTo(x,y-115);c.lineTo(x+43,y);c.moveTo(x-30,y-34);c.lineTo(x+30,y-34);c.moveTo(x-18,y-70);c.lineTo(x+18,y-70);c.stroke();c.fillStyle='#fbbf24';c.fillRect(x-3,y-127,6,14)
-    }else if(level===3){
-      c.fillStyle='#e7a34d';for(let t=0;t<4;t++){let tx=x-48+t*30;c.fillRect(tx,y-80-(t%2)*35,22,80+(t%2)*35);c.fillStyle='#c23b32';c.beginPath();c.moveTo(tx-5,y-80-(t%2)*35);c.lineTo(tx+11,y-110-(t%2)*35);c.lineTo(tx+27,y-80-(t%2)*35);c.fill();c.fillStyle='#e7a34d'}
-    }else if(level===4){
-      c.fillStyle='#d7b36a';c.fillRect(x-48,y-75,96,75);c.fillStyle='#2a9d8f';c.beginPath();c.arc(x,y-75,38,Math.PI,0);c.fill();c.fillStyle='#f3ead3';for(let a=0;a<3;a++)c.fillRect(x-38+a*38,y-48,20,48)
-    }else if(level===5){
-      c.fillStyle='#c8794b';c.beginPath();c.moveTo(x-45,y);c.lineTo(x,y-125);c.lineTo(x+45,y);c.closePath();c.fill();c.fillStyle='#ef4444';c.beginPath();c.ellipse(x-55,y-135,17,23,0,0,7);c.fill();c.fillStyle='#7c4a2d';c.fillRect(x-61,y-112,12,9)
-    }else{
-      c.fillStyle='#8b5a2b';c.fillRect(x-3,y-100,7,100);c.strokeStyle='#8b5a2b';c.lineWidth=6;c.beginPath();c.moveTo(x,y-90);c.quadraticCurveTo(x+15,y-122,x+30,y-135);c.stroke();c.fillStyle='#2fb344';for(let a=0;a<7;a++){let ang=-2.8+a*.45;c.beginPath();c.ellipse(x+30+Math.cos(ang)*22,y-135+Math.sin(ang)*18,24,7,ang,0,7);c.fill()}c.fillStyle='#f4ddad';c.fillRect(x-55,y-10,110,10)
-    }c.restore()
-  }
-  c.save();c.font='900 19px Arial';c.textAlign='center';c.fillStyle='rgba(255,255,255,.88)';c.strokeStyle='rgba(0,0,0,.5)';c.lineWidth=4;let label=(COUNTRIES[level]||COUNTRIES[1]).flag+' '+(COUNTRIES[level]||COUNTRIES[1]).name;c.strokeText(label,W/2,92);c.fillText(label,W/2,92);c.restore();
-  c.save();c.textAlign='center';c.font='900 12px Arial';(LANDMARKS[level]||[]).forEach((lm,i)=>{const x=lm.x-ox;if(x<-100||x>W+100)return;const y=H-135;c.fillStyle='rgba(255,255,255,.92)';c.strokeStyle='rgba(0,0,0,.7)';c.lineWidth=3;c.strokeText((seenLandmarks.has(i)?'✓ ':'')+lm.title,x,y);c.fillText((seenLandmarks.has(i)?'✓ ':'')+lm.title,x,y)});c.restore()
-}
-
-// ---------- V23 LANDMARK INFO & COUNTRY MEMORIES ----------
-const LANDMARKS={
-1:[{x:520,icon:'🍇',title:'Tuscany',text:'Tuscany is known for rolling hills, vineyards, olive trees and historic cities such as Florence.'},{x:1220,icon:'🏛️',title:'The Colosseum',text:'The Colosseum in Rome opened nearly 2,000 years ago and is one of the best-known buildings of ancient Rome.'},{x:1980,icon:'🚤',title:'Venice',text:'Venice was built on many small islands. Its canals are used like streets, and gondolas are traditional boats.'},{x:2380,icon:'🌉',title:'Rialto Bridge',text:'The Rialto Bridge crosses the Grand Canal and is one of Venice’s most famous bridges.'},{x:3020,icon:'PISA',title:'The Leaning Tower of Pisa',text:'This is the bell tower of Pisa Cathedral. It began to lean because the ground underneath was too soft.'},{x:3740,icon:'🍋',title:'Amalfi Coast',text:'The Amalfi Coast is famous for steep cliffs, colourful seaside towns and large lemons.'}],
-2:[{x:550,icon:'🗼',title:'Eiffel Tower',text:'The Eiffel Tower was completed in 1889 and became a symbol of Paris.'},{x:1450,icon:'🖼️',title:'The Louvre',text:'The Louvre is one of the world’s largest museums and is home to the Mona Lisa.'},{x:2450,icon:'🏛️',title:'Arc de Triomphe',text:'The Arc de Triomphe stands at the end of the Champs-Élysées in Paris.'}],
-3:[{x:600,icon:'⛪',title:'Sagrada Família',text:'This basilica in Barcelona was designed by Antoni Gaudí and is still being completed.'},{x:1650,icon:'🌳',title:'Park Güell',text:'Park Güell is filled with colourful mosaics and playful architecture by Gaudí.'},{x:2800,icon:'🏰',title:'Alhambra',text:'The Alhambra is a palace and fortress complex above Granada.'}],
-4:[{x:650,icon:'🏺',title:'Persepolis',text:'Persepolis was a ceremonial capital of the ancient Persian Empire.'},{x:1800,icon:'🕌',title:'Imam Square',text:'Imam Square in Isfahan is surrounded by famous mosques, a palace and a historic bazaar.'},{x:3000,icon:'🗼',title:'Azadi Tower',text:'The Azadi Tower is a modern landmark and gateway to Tehran.'}],
-5:[{x:600,icon:'🎈',title:'Cappadocia',text:'Cappadocia is known for unusual rock formations and colourful hot-air balloons at sunrise.'},{x:1800,icon:'🕌',title:'Hagia Sophia',text:'Hagia Sophia in Istanbul has served as a church, mosque and museum during its long history.'},{x:3050,icon:'💧',title:'Pamukkale',text:'Pamukkale has bright white terraces formed by mineral-rich thermal water.'}],
-6:[{x:650,icon:'🏝️',title:'Coral Islands',text:'The Maldives is made up of low coral islands grouped into atolls.'},{x:1900,icon:'🐢',title:'Coral Reefs',text:'Maldivian reefs support colourful fish, rays and sea turtles.'},{x:3150,icon:'🏠',title:'Water Villas',text:'Many resorts have villas built on stilts above clear lagoon water.'}],
-7:[{x:760,icon:'🏛️',title:'Brandenburg Gate',text:'The Brandenburg Gate is an 18th-century landmark in Berlin and a symbol of German unity.'},{x:2100,icon:'⛪',title:'Cologne Cathedral',text:'Cologne Cathedral is a major Gothic cathedral and UNESCO World Heritage Site.'},{x:3150,icon:'🏰',title:'Neuschwanstein Castle',text:'Neuschwanstein is a 19th-century castle in Bavaria, built for King Ludwig II.'}],
-8:[{x:900,icon:'🏔️',title:'Matterhorn',text:'The Matterhorn is one of the best-known peaks of the Alps.'},{x:2200,icon:'🌉',title:'Chapel Bridge',text:'The wooden Chapel Bridge in Lucerne dates from the 14th century.'},{x:3300,icon:'💧',title:'Rhine Falls',text:'The Rhine Falls near Schaffhausen is one of Europe’s most powerful waterfalls.'}]
-};
-let seenLandmarks=new Set(),landmarkPaused=false;
-function showLandmarkInfo(lm){landmarkPaused=true;run=0;K.l=K.r=K.j=K.f=0;$('lmIcon').textContent=lm.icon;$('lmTitle').textContent=lm.title;$('lmText').textContent=lm.text;$('landmarkInfo').classList.add('show')}
-$('lmContinue').textContent='CONTINUE';
-$('lmContinue').onclick=()=>{$('landmarkInfo').classList.remove('show');landmarkPaused=false;if(state==='game'){run=1;last=performance.now()}};
-function checkLandmarkInfo(){if(state!=='game'||landmarkPaused)return;const px=(P[activePlayer]||P[0]||{x:0}).x;(LANDMARKS[level]||[]).forEach((lm,i)=>{if(!seenLandmarks.has(i)&&Math.abs(px-lm.x)<48){seenLandmarks.add(i);showLandmarkInfo(lm)}})}
-const MEMORY_BY_COUNTRY={
-1:[['pisa','Leaning Tower of Pisa','The tower is the freestanding bell tower of Pisa Cathedral.'],['colosseum','Colosseum','The Colosseum stands in Rome and opened in AD 80.'],['bridge','Rialto Bridge','The Rialto Bridge crosses Venice’s Grand Canal.'],['gondola','Gondola','Gondolas are traditional narrow boats from Venice.'],['lemon','Amalfi Coast','The Amalfi Coast is famous for dramatic cliffs and lemons.'],['grapes','Tuscany','Tuscany is known for vineyards, art and historic cities.']],
-2:[['eiffel','Eiffel Tower','The Eiffel Tower was built for the 1889 World’s Fair.'],['louvre','Louvre','The Louvre is one of the world’s largest museums.'],['arc','Arc de Triomphe','The monument honours people who fought for France.'],['notredame','Notre-Dame','Notre-Dame is a Gothic cathedral on an island in the Seine.'],['versailles','Versailles','Versailles was a royal palace near Paris.'],['croissant','French culture','The croissant is strongly associated with French bakeries.']],
-3:[['sagrada','Sagrada Família','Gaudí designed this extraordinary basilica in Barcelona.'],['guell','Park Güell','The park is famous for colourful mosaics.'],['alhambra','Alhambra','The Alhambra overlooks Granada.'],['flamenco','Flamenco','Flamenco combines singing, guitar and dance.'],['windmill','La Mancha','La Mancha is known for windmills and Don Quixote.'],['sun','Mediterranean coast','Spain has a long Mediterranean coastline.']],
-4:[['persepolis','Persepolis','Persepolis was a capital of the ancient Persian Empire.'],['azadi','Azadi Tower','The Azadi Tower is a landmark of Tehran.'],['square','Imam Square','Imam Square is a major historic square in Isfahan.'],['garden','Persian garden','Persian gardens use water, shade and symmetry.'],['tile','Persian tiles','Iranian architecture is famous for colourful tilework.'],['mountain','Mount Damavand','Damavand is the highest peak in Iran.']],
-5:[['balloon','Cappadocia balloons','Hot-air balloons often fly over Cappadocia at sunrise.'],['hagia','Hagia Sophia','Hagia Sophia is one of Istanbul’s best-known buildings.'],['mosque','Blue Mosque','The Blue Mosque is known for its six minarets.'],['pamukkale','Pamukkale','Mineral water formed Pamukkale’s white terraces.'],['bazaar','Grand Bazaar','Istanbul’s Grand Bazaar has thousands of shops.'],['tulip','Tulips','Tulips have an important place in Ottoman art and culture.']],
-6:[['island','Coral island','The Maldives contains about 1,200 coral islands.'],['villa','Water villa','Water villas stand on stilts above lagoons.'],['turtle','Sea turtle','Green and hawksbill turtles live around Maldivian reefs.'],['reef','Coral reef','Reefs protect islands and support marine life.'],['palm','Coconut palm','The coconut palm is the national tree of the Maldives.'],['dolphin','Dolphin','Several dolphin species can be seen in Maldivian waters.']],
-7:[['brandenburg','Brandenburg Gate','The gate stands in Berlin.'],['cathedral','Cologne Cathedral','The cathedral is famous for its twin towers.'],['castle','Neuschwanstein','The castle stands in the Bavarian Alps.'],['pretzel','Pretzel','Pretzels are a traditional baked food in Germany.'],['forest','Black Forest','The Black Forest is a wooded mountain region.'],['eagle','Federal Eagle','The eagle is Germany’s heraldic animal.']],
-8:[['matterhorn','Matterhorn','The Matterhorn lies on the Swiss-Italian border.'],['chapel','Chapel Bridge','The bridge crosses the Reuss in Lucerne.'],['falls','Rhine Falls','The falls are near Schaffhausen.'],['train','Mountain railway','Swiss mountain railways climb steep alpine routes.'],['cheese','Swiss cheese','Cheese is an important part of Swiss food culture.'],['watch','Swiss watch','Switzerland is well known for precision watchmaking.']]
-};
-function cardPicture(type){const svg={pisa:`<svg viewBox="0 0 100 100"><g transform="translate(50 94) rotate(-7)"><rect x="-22" y="-76" width="44" height="72" rx="3" fill="#eadfc8" stroke="#776b5d" stroke-width="2"/><g fill="#71675c">${[0,1,2,3,4,5].map(r=>[0,1,2,3].map(a=>`<path d="M${-16+a*10} ${-67+r*11}a4 4 0 0 1 8 0v5h-8z"/>`).join('')).join('')}</g><ellipse cy="-79" rx="24" ry="6" fill="#d8c9af" stroke="#776b5d" stroke-width="2"/></g></svg>`,colosseum:'🏛️',bridge:'🌉',gondola:'🚤',lemon:'🍋',grapes:'🍇',eiffel:'🗼',louvre:'🖼️',arc:'🏛️',notredame:'⛪',versailles:'🏰',croissant:'🥐',sagrada:'⛪',guell:'🦎',alhambra:'🏰',flamenco:'💃',windmill:'🌬️',sun:'☀️',persepolis:'🏺',azadi:'🗼',square:'🕌',garden:'🌳',tile:'🔷',mountain:'🏔️',balloon:'🎈',hagia:'🕌',mosque:'🕌',pamukkale:'💧',bazaar:'🛍️',tulip:'🌷',island:'🏝️',villa:'🏠',turtle:'🐢',reef:'🐠',palm:'🌴',dolphin:'🐬',brandenburg:'🏛️',cathedral:'⛪',castle:'🏰',pretzel:'🥨',forest:'🌲',eagle:'🦅',matterhorn:'🏔️',chapel:'🌉',falls:'💧',train:'🚞',cheese:'🧀',watch:'⌚'};return svg[type]||'⭐'}
-let memoryLevel=1,memDeck=[],memOpen=[],memMatched=0,memMoves=0,memLocked=false;
-function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function startCountryMemory(n){countryTransitionBusy=false;memoryLevel=n;run=0;state='memory';K.l=K.r=K.j=K.f=0;useMainGameControls(false);show('memory');const country=COUNTRIES[n],data=MEMORY_BY_COUNTRY[n];$('memoryTitle').textContent=country.flag+' '+country.name.toUpperCase()+' MEMORY';$('memoryIntro').textContent='Match all landmark pictures. Every pair reveals a short fact.';$('memoryContinue').textContent=n<COUNTRY_COUNT?'COLLECT STAMP AND CONTINUE':'COLLECT FINAL STAMP';$('italyStamp').textContent='✅'+country.flag;memDeck=shuffle(data.flatMap((x,i)=>[{type:x[0],name:x[1],fact:x[2],pair:i,id:i+'a'},{type:x[0],name:x[1],fact:x[2],pair:i,id:i+'b'}]));memOpen=[];memMatched=0;memMoves=0;memLocked=false;$('memMoves').textContent='0';$('memPairs').textContent='0';$('memoryFact').textContent='Tap two cards.';$('memoryContinue').style.display='none';$('italyStamp').style.display='none';renderMemory()}
-function renderMemory(){const g=$('memoryGrid');g.innerHTML='';memDeck.forEach((card,idx)=>{const b=document.createElement('button');b.className='memTile'+(card.matched?' matched':memOpen.includes(idx)?' open':'');const open=card.matched||memOpen.includes(idx);if(open){const pic=cardPicture(card.type);const picHtml=pic.startsWith('<svg')?pic:'<span>'+pic+'</span>';b.innerHTML='<div class="memPic">'+picHtml+'</div><div class="memName">'+card.name+'</div>'}else b.innerHTML='<div class="memPic">?</div><div class="memName">Find the match</div>';b.setAttribute('aria-label',open?card.name:'Hidden card');b.onclick=()=>flipMemory(idx);g.appendChild(b)})}
-function flipMemory(idx){if(memLocked||memDeck[idx].matched||memOpen.includes(idx)||memOpen.length>=2)return;memOpen.push(idx);renderMemory();if(memOpen.length===2){memMoves++;$('memMoves').textContent=memMoves;const[a,b]=memOpen;if(memDeck[a].pair===memDeck[b].pair){memDeck[a].matched=memDeck[b].matched=true;memMatched++;$('memPairs').textContent=memMatched;$('memoryFact').innerHTML='<b>'+memDeck[a].name+':</b> '+memDeck[a].fact;memOpen=[];score+=100;sfx('collect');renderMemory();if(memMatched===6){$('memoryFact').innerHTML='<b>Excellent!</b> You found every pair.';$('memoryContinue').style.display='inline-block';$('italyStamp').style.display='block';try{localStorage.setItem('caStamp'+memoryLevel,'earned')}catch(e){}}}else{memLocked=true;$('memoryFact').textContent='Not a match yet — try again.';setTimeout(()=>{memOpen=[];memLocked=false;renderMemory()},720)}}}
-$('memoryContinue').onclick=()=>{useMainGameControls(true);if(memoryLevel<COUNTRY_COUNT){gameFinished=false;state='game';build(memoryLevel+1);seenLandmarks=new Set();show('');run=1;last=performance.now();toast((COUNTRIES[memoryLevel].name+' COMPLETE! '+COUNTRIES[memoryLevel].flag).toUpperCase())}else{state='win';show('win');run=0;useMainGameControls(false)}};
-
+let gx=world-80-ox;c.fillStyle=level===4&&boss&&boss.a?'#777':'#22c55e';c.fillRect(gx,H-220,8,120)}
 let hiddenPause=false;
 document.addEventListener('visibilitychange',()=>{hiddenPause=document.hidden;last=performance.now()});
 function loop(t){
@@ -1070,10 +863,9 @@ function loop(t){
   }
   requestAnimationFrame(loop)
 }requestAnimationFrame(loop);
-$('journeyStart').onclick=()=>show('worldmap');$('country1').onclick=start;$('mapBack').onclick=()=>show('menu');$('switchChar').onclick=switchCharacter;$('carryChar').onclick=toggleCarry;$('carryMobile').onclick=toggleCarry;document.querySelectorAll('.char').forEach(b=>b.onclick=()=>{let p=b.dataset.p;choose[p]=b.dataset.c;document.querySelectorAll('.char[data-p="'+p+'"]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')});$('start').onclick=start;$('retry').onclick=()=>{gameFinished=false;bossFightActive=false;bossArena=false;try{cancelAnimationFrame(bossRAF)}catch(_e){}show('');useMainGameControls(true);activePlayer=0;carriedPlayer=-1;K.l=K.r=K.j=K.f=0;P=[mkP(1,'chanel',70),mkP(2,'armani',125)];build(lastLevel);state='game';run=1;last=performance.now()};$('home').onclick=()=>{run=0;state='menu';show('menu')};$('again').onclick=()=>{gameFinished=false;state='menu';show('menu')};$('zumbaTap').onclick=zumbaTap;$('prev').onclick=()=>{if(state==='game'&&level>1)build(level-1)};$('one').onclick=()=>{if(state==='game'&&level>1)build(1)};
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;$('p2').style.display=mode==='coop'?'block':'none';show('select')});document.querySelectorAll('.char').forEach(b=>b.onclick=()=>{let p=b.dataset.p;choose[p]=b.dataset.c;document.querySelectorAll('.char[data-p="'+p+'"]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')});$('start').onclick=start;$('retry').onclick=()=>{gameFinished=false;show('');useMainGameControls(true);P=[mkP(1,choose[1],70)];if(mode==='coop')P.push(mkP(2,choose[2],140));build(lastLevel);state='game';run=1;last=performance.now()};$('home').onclick=()=>{run=0;state='menu';show('menu')};$('again').onclick=()=>{gameFinished=false;state='menu';show('menu')};$('zumbaTap').onclick=zumbaTap;$('prev').onclick=()=>{if(state==='game'&&level>1)build(level-1)};$('one').onclick=()=>{if(state==='game'&&level>1)build(1)};
 
 addEventListener('keydown',e=>{
-  if(e.key==='q'||e.key==='Q'){switchCharacter();e.preventDefault();return}if(e.key==='e'||e.key==='E'){toggleCarry();e.preventDefault();return}
   const m={a:'l',A:'l',d:'r',D:'r',w:'j',W:'j',f:'f',F:'f',ArrowLeft:'l',ArrowRight:'r',ArrowUp:'j',Enter:'f',' ':'j'};
   if(m[e.key]){K[m[e.key]]=1;e.preventDefault()}
 });
@@ -1087,7 +879,7 @@ $('settingsBtn').onclick=()=>{ensureAudio();$('settingsPanel').classList.toggle(
 $('musicVol').oninput=applyAudioSettings;
 $('sfxVol').oninput=applyAudioSettings;
 $('difficulty').onchange=()=>{difficulty=$('difficulty').value;try{localStorage.setItem('caDifficulty',difficulty)}catch(e){}};
-$('muteBtn').onclick=()=>{audioMuted=!audioMuted;applyAudioSettings();$('muteBtn').textContent=audioMuted?'🔇 AUS':'🔊 ON/OFF'};
+$('muteBtn').onclick=()=>{audioMuted=!audioMuted;applyAudioSettings();$('muteBtn').textContent=audioMuted?'🔇 AUS':'🔊 AN/AUS'};
 try{
   const d=localStorage.getItem('caDifficulty');if(d&&['easy','normal','hard'].includes(d)){$('difficulty').value=d;difficulty=d}
 }catch(e){}
@@ -1293,7 +1085,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
   if('serviceWorker' in navigator){
     navigator.serviceWorker.ready.then(async reg=>{
       try{
-        const cache = await caches.open('chanel-armani-offline-v22');
+        const cache = await caches.open('chanel-armani-offline-v13');
         const ok = await cache.match('./index.html');
         showMessage(ok ? 'Offline bereit. Auf iPhone/iPad über „Zum Home-Bildschirm“ installieren.' : 'Offline-Dateien werden vorbereitet …', false);
         if(ok) setTimeout(()=>banner.style.display='none',4500);
@@ -1425,260 +1217,4 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 })();
 </script>
 
-
-<script>
-'use strict';
-const V25_LANG={
- de:{language:'Sprache',guide:'Spielanleitung',startTour:'🌍 WELTREISE STARTEN',scores:'🏆 BESTENLISTE',map:'🌍 WELTKARTE',mapText:'Schließe jedes Land und sein Memory ab, um das nächste Reiseziel freizuschalten.',back:'ZURÜCK',choose:'Figur wählen',player:'Spieler 1',start:'SPIEL STARTEN',help:'❓ Hilfe & Installation',continue:'WEITER',moves:'Züge',pairs:'Paare',tap:'Tippe zwei Karten an.',hidden:'Finde das Paar',notmatch:'Noch kein Paar – versuche es erneut.',excellent:'Sehr gut! Du hast alle Paare gefunden.',collect:'STEMPEL SAMMELN UND WEITER',finalStamp:'LETZTEN STEMPEL SAMMELN',memoryIntro:'Finde alle Paare. Jedes Paar erklärt eine Sehenswürdigkeit.',complete:'ABGESCHLOSSEN',win:'WELTREISE GESCHAFFT!',winText:'Du hast alle acht Länder und ihre Memory-Spiele abgeschlossen!',retry:'LETZTES LEVEL WIEDERHOLEN',home:'HAUPTMENÜ',playAgain:'NOCH EINMAL SPIELEN',saveScore:'PUNKTZAHL SPEICHERN',settings:'⚙️ TON',music:'Musik',effects:'Effekte',difficulty:'Schwierigkeit',switch:'🔄 WECHSELN',carry:'🐻 HUCKEPACK',country:'Land',italy:'Italien',orientation:'Das Jump-and-Run spielt sich am besten im Querformat. Drehe das Gerät für das Memory-Bonuslevel ins Hochformat.',controlsTitle:'Steuerung und Spielziel',controls:['⬅️ ➡️: laufen','⬆️: springen','🎈: Ballon werfen','Q oder 🔄: Figur wechseln','E oder 🐻: zweite Figur huckepack nehmen','Entdecke alle Sehenswürdigkeiten und beende danach das Memory.'],ios:['Spiel in Safari öffnen.','Auf Teilen 📤 tippen.','„Zum Home-Bildschirm“ wählen.','Auf „Hinzufügen“ tippen.'],android:['Spiel in Chrome öffnen.','Menü ⋮ öffnen.','„App installieren“ oder „Zum Startbildschirm hinzufügen“ wählen.'],windows:['Spiel in Edge oder Chrome öffnen.','Im Browsermenü „Apps“ oder das Installationssymbol wählen.','„Diese Website als App installieren“ bestätigen.'],close:'SCHLIESSEN'},
- en:{language:'Language',guide:'Game guide',startTour:'🌍 START WORLD TOUR',scores:'🏆 HIGH SCORES',map:'🌍 WORLD MAP',mapText:'Complete each country and its memory game to unlock the next destination.',back:'BACK',choose:'Choose a character',player:'Player 1',start:'START GAME',help:'❓ Help & Installation',continue:'CONTINUE',moves:'Moves',pairs:'Pairs',tap:'Tap two cards.',hidden:'Find the match',notmatch:'Not a match yet — try again.',excellent:'Excellent! You found every pair.',collect:'COLLECT STAMP AND CONTINUE',finalStamp:'COLLECT FINAL STAMP',memoryIntro:'Match every pair. Each pair explains a landmark.',complete:'COMPLETE',win:'WORLD TOUR COMPLETE!',winText:'You completed all eight countries and their memory games!',retry:'RETRY LAST LEVEL',home:'MAIN MENU',playAgain:'PLAY AGAIN',saveScore:'SAVE SCORE',settings:'⚙️ SOUND',music:'Music',effects:'Effects',difficulty:'Difficulty',switch:'🔄 SWITCH',carry:'🐻 CARRY',country:'Country',italy:'Italy',orientation:'The platform levels play best in landscape. Rotate the device to portrait for each Memory bonus level.',controlsTitle:'Controls and objective',controls:['⬅️ ➡️: move','⬆️: jump','🎈: throw a balloon','Q or 🔄: switch character','E or 🐻: carry the second character piggyback','Discover every landmark, then complete the Memory game.'],ios:['Open the game in Safari.','Tap Share 📤.','Choose “Add to Home Screen”.','Tap “Add”.'],android:['Open the game in Chrome.','Open the ⋮ menu.','Choose “Install app” or “Add to Home screen”.'],windows:['Open the game in Edge or Chrome.','Choose “Apps” or the install icon in the browser menu.','Confirm “Install this site as an app”.'],close:'CLOSE'},
- fr:{language:'Langue',guide:'Mode d’emploi',startTour:'🌍 COMMENCER LE TOUR DU MONDE',scores:'🏆 MEILLEURS SCORES',map:'🌍 CARTE DU MONDE',mapText:'Termine chaque pays et son Memory pour débloquer la prochaine destination.',back:'RETOUR',choose:'Choisis un personnage',player:'Joueur 1',start:'COMMENCER',help:'❓ Aide et installation',continue:'CONTINUER',moves:'Coups',pairs:'Paires',tap:'Touche deux cartes.',hidden:'Trouve la paire',notmatch:'Pas encore une paire — réessaie.',excellent:'Bravo ! Tu as trouvé toutes les paires.',collect:'PRENDRE LE TAMPON ET CONTINUER',finalStamp:'PRENDRE LE DERNIER TAMPON',memoryIntro:'Trouve toutes les paires. Chaque paire explique un monument.',complete:'TERMINÉ',win:'TOUR DU MONDE TERMINÉ !',winText:'Tu as terminé les huit pays et leurs jeux Memory !',retry:'REJOUER LE DERNIER NIVEAU',home:'MENU PRINCIPAL',playAgain:'REJOUER',saveScore:'ENREGISTRER LE SCORE',settings:'⚙️ SON',music:'Musique',effects:'Effets',difficulty:'Difficulté',switch:'🔄 CHANGER',carry:'🐻 PORTER',country:'Pays',italy:'Italie',orientation:'Les niveaux de plateforme se jouent mieux en mode paysage. Pour le bonus Memory, tourne l’appareil en mode portrait.',controlsTitle:'Commandes et objectif',controls:['⬅️ ➡️ : marcher','⬆️ : sauter','🎈 : lancer un ballon','Q ou 🔄 : changer de personnage','E ou 🐻 : porter le deuxième personnage','Découvre tous les monuments puis termine le Memory.'],ios:['Ouvre le jeu dans Safari.','Touche Partager 📤.','Choisis « Sur l’écran d’accueil ».','Touche « Ajouter ».'],android:['Ouvre le jeu dans Chrome.','Ouvre le menu ⋮.','Choisis « Installer l’application » ou « Ajouter à l’écran d’accueil ».'],windows:['Ouvre le jeu dans Edge ou Chrome.','Choisis « Applications » ou l’icône d’installation.','Confirme l’installation du site comme application.'],close:'FERMER'},
- fa:{language:'زبان',guide:'راهنمای بازی',startTour:'🌍 شروع سفر دور دنیا',scores:'🏆 امتیازهای برتر',map:'🌍 نقشه جهان',mapText:'هر کشور و بازی حافظه آن را تمام کنید تا مقصد بعدی باز شود.',back:'بازگشت',choose:'شخصیت را انتخاب کنید',player:'بازیکن ۱',start:'شروع بازی',help:'❓ راهنما و نصب',continue:'ادامه',moves:'حرکت‌ها',pairs:'جفت‌ها',tap:'دو کارت را لمس کنید.',hidden:'جفت را پیدا کن',notmatch:'این دو کارت جفت نیستند — دوباره تلاش کن.',excellent:'عالی! همه جفت‌ها را پیدا کردی.',collect:'گرفتن مهر و ادامه',finalStamp:'گرفتن مهر پایانی',memoryIntro:'همه جفت‌ها را پیدا کن. هر جفت یک بنای دیدنی را توضیح می‌دهد.',complete:'کامل شد',win:'سفر دور دنیا تمام شد!',winText:'هر هشت کشور و بازی‌های حافظه آن‌ها را کامل کردی!',retry:'تکرار مرحله قبلی',home:'منوی اصلی',playAgain:'دوباره بازی کن',saveScore:'ذخیره امتیاز',settings:'⚙️ صدا',music:'موسیقی',effects:'افکت‌ها',difficulty:'سختی',switch:'🔄 تعویض',carry:'🐻 کول کردن',country:'کشور',italy:'ایتالیا',orientation:'مرحله‌های پرشی در حالت افقی بهتر هستند. برای مرحله جایزه Memory دستگاه را عمودی کنید.',controlsTitle:'کنترل‌ها و هدف بازی',controls:['⬅️ ➡️ حرکت','⬆️ پرش','🎈 پرتاب بادکنک','Q یا 🔄 تعویض شخصیت','E یا 🐻 کول کردن شخصیت دوم','همه دیدنی‌ها را پیدا کن و سپس Memory را تمام کن.'],ios:['بازی را در Safari باز کنید.','روی اشتراک‌گذاری 📤 بزنید.','«Add to Home Screen» را انتخاب کنید.','روی «Add» بزنید.'],android:['بازی را در Chrome باز کنید.','منوی ⋮ را باز کنید.','«Install app» یا «Add to Home screen» را انتخاب کنید.'],windows:['بازی را در Edge یا Chrome باز کنید.','گزینه Apps یا نماد نصب را انتخاب کنید.','نصب سایت به صورت برنامه را تأیید کنید.'],close:'بستن'}
-};
-let v25Lang=localStorage.getItem('caLanguage')||'de';
-const L=()=>V25_LANG[v25Lang]||V25_LANG.de;
-const LM_TRANSLATIONS={
-1:[['Toskana','Tuscany','Toscane','توسکانی'],['Kolosseum','The Colosseum','Colisée','کولوسئوم'],['Venedig','Venice','Venise','ونیز'],['Rialtobrücke','Rialto Bridge','Pont du Rialto','پل ریالتو'],['Schiefer Turm von Pisa','Leaning Tower of Pisa','Tour penchée de Pise','برج کج پیزا'],['Amalfiküste','Amalfi Coast','Côte amalfitaine','ساحل آمالفی']],
-2:[['Eiffelturm','Eiffel Tower','Tour Eiffel','برج ایفل'],['Louvre','The Louvre','Musée du Louvre','موزه لوور'],['Arc de Triomphe','Arc de Triomphe','Arc de Triomphe','طاق پیروزی']],
-3:[['Sagrada Família','Sagrada Família','Sagrada Família','ساگرادا فامیلیا'],['Park Güell','Park Güell','Parc Güell','پارک گوئل'],['Alhambra','Alhambra','Alhambra','الحمرا']],
-4:[['Persepolis','Persepolis','Persépolis','تخت جمشید'],['Imam-Platz','Imam Square','Place de l’Imam','میدان امام'],['Azadi-Turm','Azadi Tower','Tour Azadi','برج آزادی']],
-5:[['Kappadokien','Cappadocia','Cappadoce','کاپادوکیه'],['Hagia Sophia','Hagia Sophia','Sainte-Sophie','ایاصوفیه'],['Pamukkale','Pamukkale','Pamukkale','پاموک‌کاله']],
-6:[['Koralleninseln','Coral Islands','Îles coralliennes','جزایر مرجانی'],['Korallenriffe','Coral Reefs','Récifs coralliens','صخره‌های مرجانی'],['Wasserbungalows','Water Villas','Villas sur l’eau','ویلاهای روی آب']]
-};
-const LM_FACTS={de:[['Toskana ist bekannt für Hügel, Weinberge, Olivenbäume und historische Städte wie Florenz.','Das Kolosseum in Rom wurde vor fast 2.000 Jahren eröffnet.','Venedig wurde auf vielen kleinen Inseln erbaut. Kanäle dienen dort wie Straßen.','Die Rialtobrücke überquert den Canal Grande und ist eine der berühmtesten Brücken Venedigs.','Der Glockenturm des Doms von Pisa neigt sich, weil der Untergrund zu weich war.','Die Amalfiküste ist für steile Klippen, farbige Orte und große Zitronen bekannt.'],['Der Eiffelturm wurde 1889 fertiggestellt und ist das Wahrzeichen von Paris.','Der Louvre ist eines der größten Museen der Welt und beherbergt die Mona Lisa.','Der Arc de Triomphe steht am Ende der Champs-Élysées.'],['Die Basilika in Barcelona wurde von Antoni Gaudí entworfen.','Der Park Güell ist für bunte Mosaike und fantasievolle Bauwerke bekannt.','Die Alhambra ist eine Palast- und Festungsanlage oberhalb von Granada.'],['Persepolis war eine Zeremonialhauptstadt des alten Perserreichs.','Der Imam-Platz in Isfahan ist von Moscheen, einem Palast und einem historischen Basar umgeben.','Der Azadi-Turm ist ein modernes Wahrzeichen und Tor zu Teheran.'],['Kappadokien ist für Felsformationen und Heißluftballons bei Sonnenaufgang bekannt.','Die Hagia Sophia diente im Lauf ihrer Geschichte als Kirche, Moschee und Museum.','Pamukkale besitzt weiße Terrassen aus mineralreichem Thermalwasser.'],['Die Malediven bestehen aus flachen Koralleninseln, die in Atollen liegen.','Die Riffe bieten Lebensraum für Fische, Rochen und Meeresschildkröten.','Viele Resorts besitzen Villen auf Stelzen über klarem Lagunenwasser.']],
-en:null,fr:null,fa:null};
-LM_FACTS.en=Object.values(LANDMARKS).map(a=>a.map(x=>x.text));
-LM_FACTS.fr=[['La Toscane est connue pour ses collines, ses vignobles et ses villes historiques.','Le Colisée de Rome a ouvert il y a presque 2 000 ans.','Venise est construite sur de petites îles et ses canaux servent de rues.','Le pont du Rialto traverse le Grand Canal.','Le campanile de Pise penche à cause d’un sol trop meuble.','La côte amalfitaine est célèbre pour ses falaises et ses villages colorés.'],['La tour Eiffel a été achevée en 1889.','Le Louvre est l’un des plus grands musées du monde.','L’Arc de Triomphe se trouve au bout des Champs-Élysées.'],['Cette basilique de Barcelone a été conçue par Antoni Gaudí.','Le parc Güell est célèbre pour ses mosaïques colorées.','L’Alhambra est un palais-forteresse au-dessus de Grenade.'],['Persépolis était une capitale cérémonielle de l’ancien empire perse.','La place de l’Imam à Ispahan est entourée de monuments historiques.','La tour Azadi est un symbole moderne de Téhéran.'],['La Cappadoce est célèbre pour ses rochers et ses montgolfières.','Sainte-Sophie a été église, mosquée et musée.','Pamukkale possède des terrasses blanches formées par l’eau thermale.'],['Les Maldives sont composées d’îles coralliennes regroupées en atolls.','Les récifs abritent poissons, raies et tortues.','De nombreuses villas sont construites sur pilotis au-dessus des lagons.']];
-LM_FACTS.fa=[['توسکانی به تپه‌ها، تاکستان‌ها و شهرهای تاریخی معروف است.','کولوسئوم رم نزدیک به دو هزار سال قدمت دارد.','ونیز روی جزیره‌های کوچک ساخته شده و کانال‌هایش مانند خیابان هستند.','پل ریالتو از روی کانال بزرگ ونیز می‌گذرد.','برج ناقوس پیزا به دلیل خاک نرم زیر آن کج شده است.','ساحل آمالفی به صخره‌ها و شهرهای رنگارنگ معروف است.'],['برج ایفل در سال ۱۸۸۹ کامل شد.','لوور یکی از بزرگ‌ترین موزه‌های جهان است.','طاق پیروزی در انتهای خیابان شانزه‌لیزه قرار دارد.'],['این کلیسای بارسلونا را آنتونی گائودی طراحی کرد.','پارک گوئل به موزاییک‌های رنگی معروف است.','الحمرا مجموعه‌ای از کاخ و دژ در بالای گرانادا است.'],['تخت جمشید پایتخت آیینی امپراتوری باستانی ایران بود.','میدان امام اصفهان با مسجدها، کاخ و بازار تاریخی احاطه شده است.','برج آزادی نماد مدرن تهران است.'],['کاپادوکیه به صخره‌های خاص و بالن‌های هوای گرم معروف است.','ایاصوفیه در طول تاریخ کلیسا، مسجد و موزه بوده است.','پاموک‌کاله تراس‌های سفید ساخته‌شده از آب گرم معدنی دارد.'],['مالدیو از جزیره‌های مرجانی کم‌ارتفاع تشکیل شده است.','صخره‌های مرجانی زیستگاه ماهی‌ها، سفره‌ماهی‌ها و لاک‌پشت‌ها هستند.','بسیاری از ویلاها روی پایه‌هایی بالای آب زلال ساخته شده‌اند.']];
-function v25Svg(type){const C={sky:'#bde8ff',stone:'#e8ddc5',dark:'#55483b',gold:'#d99b31',red:'#c84b3c',blue:'#2f80c9',green:'#4d9d63',water:'#49c9df'};const wrap=x=>`<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><rect width="240" height="150" rx="16" fill="${C.sky}"/>${x}<rect y="132" width="240" height="18" fill="#73b65d"/></svg>`;
-const arch=(x,y,w,h)=>`<path d="M${x} ${y+h}V${y+h/2}a${w/2} ${h/2} 0 0 1 ${w} 0v${h/2}z" fill="#3d342d"/>`;
-const map={
-pisa:wrap(`<g transform="translate(120 134) rotate(-7)"><rect x="-27" y="-112" width="54" height="108" fill="${C.stone}" stroke="${C.dark}" stroke-width="3"/><g fill="${C.dark}">${[0,1,2,3,4,5].map(r=>[-18,-6,6,18].map(x=>`<path d="M${x-4} ${-99+r*16}a4 5 0 0 1 8 0v6h-8z"/>`).join('')).join('')}</g><ellipse cy="-116" rx="31" ry="8" fill="#d1c2a6" stroke="${C.dark}" stroke-width="3"/></g>`),
-colosseum:wrap(`<path d="M42 130V54Q120 18 198 54v76z" fill="#c7905c" stroke="${C.dark}" stroke-width="3"/>${[0,1,2].map(r=>[0,1,2,3,4,5].map(a=>arch(54+a*23,68+r*22,13,15)).join('')).join('')}`),
-bridge:wrap(`<rect y="105" width="240" height="27" fill="${C.water}"/><path d="M25 110Q120 42 215 110v18H25z" fill="#e1c39d" stroke="${C.dark}" stroke-width="3"/><path d="M55 111Q120 67 185 111" fill="none" stroke="#fff" stroke-width="8"/>`),
-gondola:wrap(`<rect y="92" width="240" height="40" fill="${C.water}"/><path d="M45 101q75 31 150 0q-22 35-75 35q-53 0-75-35" fill="#292929"/><path d="M150 74l-22 42" stroke="#7d4f2d" stroke-width="5"/>`),
-lemon:wrap(`<path d="M30 118Q95 75 210 45" stroke="#694d28" stroke-width="7"/><g fill="#f2cd32">${[45,80,118,155,190].map((x,i)=>`<ellipse cx="${x}" cy="${105-i*14}" rx="12" ry="16"/>`).join('')}</g>`),
-grapes:wrap(`<path d="M25 118Q100 72 215 90" stroke="#6b4d2d" stroke-width="8"/><g fill="#733e8f">${Array.from({length:18},(_,i)=>`<circle cx="${95+(i%5)*15-(Math.floor(i/5)*5)}" cy="${65+Math.floor(i/5)*16}" r="9"/>`).join('')}</g>`),
-eiffel:wrap(`<g fill="none" stroke="#424242" stroke-width="6"><path d="M120 18L72 130M120 18l48 112M88 92h64M76 126h88M104 58h32"/></g>`),
-louvre:wrap(`<rect x="20" y="72" width="200" height="60" fill="#d8b98d" stroke="${C.dark}" stroke-width="3"/><path d="M120 40l45 86H75z" fill="#9ee7f3aa" stroke="#39778a" stroke-width="3"/>`),
-arc:wrap(`<rect x="57" y="33" width="126" height="99" fill="#e4d4ba" stroke="${C.dark}" stroke-width="3"/>${arch(88,62,64,68)}<path d="M63 55h114" stroke="#a08b70" stroke-width="5"/>`),
-notredame:wrap(`<rect x="56" y="52" width="128" height="80" fill="#c6b39a"/><rect x="62" y="22" width="35" height="110" fill="#c6b39a"/><rect x="143" y="22" width="35" height="110" fill="#c6b39a"/><circle cx="120" cy="72" r="18" fill="#6e8e9e"/>`),
-versailles:wrap(`<rect x="25" y="66" width="190" height="66" fill="#e8bf62" stroke="${C.dark}" stroke-width="3"/><path d="M45 66l25-28 25 28M145 66l25-28 25 28" fill="#6d7482"/>`),
-croissant:wrap(`<path d="M64 86q56-70 112 0q-37 50-56 6q-19 44-56-6" fill="#e9a43c" stroke="#8a5725" stroke-width="4"/>`),
-sagrada:wrap(`<g fill="#c88553" stroke="${C.dark}" stroke-width="2"><path d="M48 132L62 38l14 94zM82 132L98 18l16 114zM126 132L142 25l16 107zM166 132L180 44l14 88z"/></g><circle cx="120" cy="95" r="18" fill="#4b7b97"/>`),
-guell:wrap(`<path d="M25 112Q120 45 215 112v20H25z" fill="#f3d483" stroke="${C.dark}" stroke-width="3"/><g fill="#e34d59">${[40,65,90,115,140,165,190].map(x=>`<circle cx="${x}" cy="101" r="7"/>`).join('')}</g>`),
-alhambra:wrap(`<rect x="32" y="62" width="176" height="70" fill="#c87547"/><rect x="42" y="35" width="35" height="97" fill="#c87547"/><rect x="163" y="35" width="35" height="97" fill="#c87547"/>${arch(88,79,64,53)}`),
-flamenco:wrap(`<path d="M120 30q-25 18-10 45q-30 20-43 57h106q-13-37-43-57q15-27-10-45" fill="#d43a42"/><circle cx="120" cy="22" r="12" fill="#d2a176"/>`),
-windmill:wrap(`<rect x="108" y="67" width="24" height="65" fill="#eee6d5"/><circle cx="120" cy="66" r="8" fill="#6b4d2d"/><g stroke="#6b4d2d" stroke-width="7"><path d="M120 66L55 28M120 66l65-38M120 66l-65 38M120 66l65 38"/></g>`),
-sun:wrap(`<circle cx="120" cy="60" r="30" fill="#ffd34d"/>`),
-persepolis:wrap(`<g fill="#c9a26a" stroke="${C.dark}" stroke-width="3"><rect x="25" y="115" width="190" height="17"/><rect x="45" y="88" width="150" height="27"/><rect x="58" y="35" width="17" height="53"/><rect x="102" y="35" width="17" height="53"/><rect x="146" y="35" width="17" height="53"/><path d="M48 35h37l-10-14H58zM92 35h37l-10-14h-17zM136 35h37l-10-14h-17z"/></g>`),
-azadi:wrap(`<path d="M66 132Q91 30 120 28Q149 30 174 132h-24q-15-65-30-65t-30 65z" fill="#e7e1d6" stroke="${C.dark}" stroke-width="3"/><path d="M90 76h60" stroke="#69a8c0" stroke-width="6"/>`),
-square:wrap(`<rect x="35" y="88" width="170" height="44" fill="#d9b87f"/><path d="M72 88a48 48 0 0 1 96 0" fill="#2e9aa1"/><path d="M58 132V47M182 132V47" stroke="#d9b87f" stroke-width="14"/>`),
-garden:wrap(`<rect y="100" width="240" height="32" fill="#4eaa65"/><rect x="112" y="52" width="16" height="80" fill="#52b9d0"/><g fill="#267645">${[30,60,90,150,180,210].map(x=>`<circle cx="${x}" cy="82" r="21"/>`).join('')}</g>`),
-tile:wrap(`<g stroke="#fff" stroke-width="3">${[0,1,2,3,4].map(r=>[0,1,2,3,4,5,6].map(a=>`<path d="M${15+a*32} ${18+r*28}l16 14l-16 14l-16-14z" fill="${(a+r)%2?'#2f80c9':'#33a6a6'}"/>`).join('')).join('')}</g>`),
-mountain:wrap(`<path d="M25 132L120 25l95 107z" fill="#7f8f9d"/><path d="M83 67l37-42l38 43l-22-9l-16 16l-17-18z" fill="#fff"/>`),
-balloon:wrap(`<g fill="#e55445"><ellipse cx="88" cy="52" rx="28" ry="38"/><ellipse cx="150" cy="45" rx="35" ry="45" fill="#f0a33c"/></g><path d="M78 85l5 20h10l5-20M138 86l6 21h12l6-21" stroke="#6a4a2e" stroke-width="3" fill="none"/>`),
-hagia:wrap(`<rect x="43" y="78" width="154" height="54" fill="#d7a867"/><path d="M70 78a50 44 0 0 1 100 0" fill="#7f9fa7"/><g stroke="#d7a867" stroke-width="10"><path d="M50 132V35M190 132V35"/></g>`),
-mosque:wrap(`<rect x="42" y="83" width="156" height="49" fill="#d6b581"/><path d="M68 83a52 45 0 0 1 104 0" fill="#4d8da4"/><g stroke="#d6b581" stroke-width="8"><path d="M48 132V30M192 132V30M75 132V48M165 132V48"/></g>`),
-pamukkale:wrap(`<path d="M15 125q35-35 70-12q35-50 70-18q35-45 70-20v57H15z" fill="#f5fbff" stroke="#8cc9d8" stroke-width="4"/><g fill="#66c7dc">${[50,105,165].map((x,i)=>`<ellipse cx="${x}" cy="${107-i*10}" rx="30" ry="9"/>`).join('')}</g>`),
-bazaar:wrap(`<path d="M30 132V65q90-70 180 0v67z" fill="#c88c59"/><g fill="#efcf7d">${[50,85,120,155,190].map(x=>`<path d="M${x-12} 132V94a12 12 0 0 1 24 0v38z"/>`).join('')}</g>`),
-tulip:wrap(`<g fill="#e74b59">${[60,100,140,180].map((x,i)=>`<path d="M${x} 80q-22-18-15-45q15 4 15 18q0-14 15-18q7 27-15 45"/>`).join('')}</g><g stroke="#3d8b4f" stroke-width="5">${[60,100,140,180].map(x=>`<path d="M${x} 75v57"/>`).join('')}</g>`),
-island:wrap(`<rect y="88" width="240" height="44" fill="${C.water}"/><ellipse cx="125" cy="107" rx="78" ry="22" fill="#f0d99a"/><path d="M115 106q10-62 35-70" stroke="#79522e" stroke-width="8"/><g fill="#36a957">${[-45,-20,8,35].map(a=>`<ellipse cx="${150+a}" cy="${38+Math.abs(a)/5}" rx="28" ry="8" transform="rotate(${a/2} ${150+a} ${38+Math.abs(a)/5})"/>`).join('')}</g>`),
-villa:wrap(`<rect y="96" width="240" height="36" fill="${C.water}"/><rect x="67" y="57" width="106" height="57" fill="#f2dfb3" stroke="${C.dark}" stroke-width="3"/><path d="M55 59l65-35l65 35z" fill="#9c5e35"/><path d="M78 114v18M162 114v18" stroke="#6f4b2e" stroke-width="8"/>`),
-turtle:wrap(`<ellipse cx="120" cy="82" rx="44" ry="31" fill="#4c9a67" stroke="#2e6145" stroke-width="4"/><circle cx="170" cy="82" r="13" fill="#68b37e"/><g fill="#68b37e"><ellipse cx="85" cy="51" rx="24" ry="10" transform="rotate(-28 85 51)"/><ellipse cx="85" cy="113" rx="24" ry="10" transform="rotate(28 85 113)"/></g>`),
-reef:wrap(`<rect y="72" width="240" height="60" fill="${C.water}"/><g fill="#e86f5b">${[35,65,100,145,180,210].map((x,i)=>`<circle cx="${x}" cy="${110-(i%3)*12}" r="13"/>`).join('')}</g><g fill="#ffd34d">${[55,125,195].map(x=>`<path d="M${x} 88q18-15 36 0q-18 15-36 0l-10 9v-18z"/>`).join('')}</g>`),
-palm:wrap(`<path d="M116 132q-6-70 14-102" stroke="#80522f" stroke-width="10"/><g fill="#35a854">${[-55,-28,0,28,55].map(a=>`<ellipse cx="${130+a/2}" cy="${35+Math.abs(a)/8}" rx="34" ry="8" transform="rotate(${a} ${130+a/2} ${35+Math.abs(a)/8})"/>`).join('')}</g>`),
-dolphin:wrap(`<rect y="68" width="240" height="64" fill="${C.water}"/><path d="M50 92q48-53 112-13q18 9 34-3q-6 22-29 25q-58 32-117-9" fill="#5f8fa8"/><path d="M108 72l20-30l15 36" fill="#5f8fa8"/>`)
-};return map[type]||map.arc}
-function v25PictureForLevel(n,i){const types={1:['grapes','colosseum','gondola','bridge','pisa','lemon'],2:['eiffel','louvre','arc'],3:['sagrada','guell','alhambra'],4:['persepolis','square','azadi'],5:['balloon','hagia','pamukkale'],6:['island','reef','villa'],7:['brandenburg','cathedral','castle'],8:['matterhorn','chapel','falls']};return v25Svg((types[n]||[])[i]||'arc')}
-function applyLang(){const t=L();document.documentElement.lang=v25Lang;document.documentElement.dir=v25Lang==='fa'?'rtl':'ltr';$('languageSelect').value=v25Lang;$('languageLabel').textContent=t.language;$('v25HelpLabel').textContent=t.guide;$('journeyStart').textContent=t.startTour;$('rankOpen').textContent=t.scores;const wm=$('worldmap').querySelector('h1');if(wm)wm.textContent=t.map;const wmp=$('worldmap').querySelector('p');if(wmp)wmp.textContent=t.mapText;$('mapBack').textContent=t.back;const sh=$('select').querySelector('h2');if(sh)sh.textContent=t.choose;const ph=$('select').querySelector('h3');if(ph)ph.textContent=t.player;$('start').textContent=t.start;$('openHelpBtn').textContent=t.help;$('lmContinue').textContent=t.continue;$('switchChar').textContent=t.switch;$('carryChar').textContent=t.carry;$('settingsBtn').textContent=t.settings;$('retry').textContent=t.retry;$('home').textContent=t.home;$('again').textContent=t.playAgain;$('winRank').textContent=t.saveScore;const win=$('win');win.querySelector('h1').textContent=t.win;win.querySelector('p').textContent=t.winText;const mt=$('memory').querySelector('.memoryTop');mt.innerHTML=`<span>${t.moves}: <b id="memMoves">${memMoves||0}</b></span><span>${t.pairs}: <b id="memPairs">${memMatched||0}</b>/6</span>`;$('guideTitle').textContent=t.guide;$('guideOrientation').textContent=t.orientation;$('guideControlsTitle').textContent=t.controlsTitle;$('guideControls').innerHTML=t.controls.map(x=>`<p>${x}</p>`).join('');$('guideIOS').innerHTML=t.ios.map((x,i)=>`<p>${i+1}. ${x}</p>`).join('');$('guideAndroid').innerHTML=t.android.map((x,i)=>`<p>${i+1}. ${x}</p>`).join('');$('guideWindows').innerHTML=t.windows.map((x,i)=>`<p>${i+1}. ${x}</p>`).join('');$('guideClose').textContent=t.close;if(state==='memory')startCountryMemory(memoryLevel);}
-$('languageSelect').addEventListener('change',e=>{v25Lang=e.target.value;localStorage.setItem('caLanguage',v25Lang);applyLang()});$('v25HelpBtn').onclick=()=>$('v25Guide').classList.add('show');$('guideClose').onclick=()=>$('v25Guide').classList.remove('show');
-showLandmarkInfo=function(lm){landmarkPaused=true;run=0;K.l=K.r=K.j=K.f=0;const idx=(LANDMARKS[level]||[]).indexOf(lm),li=['de','en','fr','fa'].indexOf(v25Lang);$('lmIcon').innerHTML=v25PictureForLevel(level,idx);$('lmTitle').textContent=(LM_TRANSLATIONS[level]&&LM_TRANSLATIONS[level][idx]?LM_TRANSLATIONS[level][idx][li]:lm.title);$('lmText').textContent=(LM_FACTS[v25Lang]&&LM_FACTS[v25Lang][level-1]?LM_FACTS[v25Lang][level-1][idx]:lm.text);$('landmarkInfo').classList.add('show')};
-function drawV25Landmark(ctx,type,x,y,s=1){ctx.save();ctx.translate(x,y);ctx.scale(s,s);ctx.lineWidth=3;ctx.strokeStyle='#493c31';if(type==='eiffel'){ctx.strokeStyle='#333';ctx.lineWidth=7;ctx.beginPath();ctx.moveTo(0,-150);ctx.lineTo(-52,0);ctx.moveTo(0,-150);ctx.lineTo(52,0);ctx.moveTo(-38,-38);ctx.lineTo(38,-38);ctx.moveTo(-22,-88);ctx.lineTo(22,-88);ctx.stroke()}else if(type==='louvre'){ctx.fillStyle='#d7b78a';ctx.fillRect(-65,-55,130,55);ctx.strokeRect(-65,-55,130,55);ctx.fillStyle='#b9eff5aa';ctx.beginPath();ctx.moveTo(0,-110);ctx.lineTo(-48,0);ctx.lineTo(48,0);ctx.closePath();ctx.fill();ctx.stroke()}else if(type==='arc'){ctx.fillStyle='#e5d5bc';ctx.fillRect(-55,-105,110,105);ctx.strokeRect(-55,-105,110,105);ctx.fillStyle='#453b33';ctx.beginPath();ctx.moveTo(-22,0);ctx.lineTo(-22,-44);ctx.arc(0,-44,22,Math.PI,0);ctx.lineTo(22,0);ctx.fill()}else if(type==='sagrada'){ctx.fillStyle='#c77e4f';[-48,-16,18,50].forEach((xx,i)=>{ctx.beginPath();ctx.moveTo(xx-12,0);ctx.lineTo(xx,-110-(i%2)*35);ctx.lineTo(xx+12,0);ctx.fill();ctx.stroke()})}else if(type==='guell'){ctx.fillStyle='#f0d37b';ctx.beginPath();ctx.moveTo(-70,0);ctx.quadraticCurveTo(0,-90,70,0);ctx.lineTo(70,15);ctx.lineTo(-70,15);ctx.closePath();ctx.fill();ctx.stroke();ctx.fillStyle='#dd4c58';for(let q=-55;q<=55;q+=22){ctx.beginPath();ctx.arc(q,-18-Math.cos(q)*10,6,0,7);ctx.fill()}}else if(type==='alhambra'){ctx.fillStyle='#c46f43';ctx.fillRect(-70,-75,140,75);ctx.fillRect(-60,-115,30,115);ctx.fillRect(30,-115,30,115);ctx.strokeRect(-70,-75,140,75)}else if(type==='persepolis'){ctx.fillStyle='#caa36c';ctx.fillRect(-75,-18,150,18);[-50,-5,40].forEach(xx=>ctx.fillRect(xx,-100,14,82));ctx.fillRect(-65,-112,125,12)}else if(type==='square'){ctx.fillStyle='#d4ae72';ctx.fillRect(-70,-45,140,45);ctx.fillStyle='#2e9ba0';ctx.beginPath();ctx.arc(0,-45,42,Math.PI,0);ctx.fill();ctx.fillStyle='#d4ae72';ctx.fillRect(-65,-105,12,105);ctx.fillRect(53,-105,12,105)}else if(type==='azadi'){ctx.fillStyle='#e9e2d7';ctx.beginPath();ctx.moveTo(-55,0);ctx.quadraticCurveTo(-30,-120,0,-125);ctx.quadraticCurveTo(30,-120,55,0);ctx.lineTo(30,0);ctx.quadraticCurveTo(18,-70,0,-70);ctx.quadraticCurveTo(-18,-70,-30,0);ctx.closePath();ctx.fill();ctx.stroke()}else if(type==='balloon'){for(let q=0;q<3;q++){ctx.fillStyle=['#e85243','#f2a238','#3387cb'][q];ctx.beginPath();ctx.ellipse(-50+q*50,-95-q*10,20,29,0,0,7);ctx.fill();ctx.stroke();ctx.fillStyle='#7d4d2d';ctx.fillRect(-57+q*50,-62-q*10,14,10)}}else if(type==='hagia'){ctx.fillStyle='#d5a76b';ctx.fillRect(-70,-45,140,45);ctx.fillStyle='#7e9ca4';ctx.beginPath();ctx.arc(0,-45,45,Math.PI,0);ctx.fill();ctx.fillStyle='#d5a76b';ctx.fillRect(-72,-115,10,115);ctx.fillRect(62,-115,10,115)}else if(type==='pamukkale'){ctx.fillStyle='#f7fcff';ctx.beginPath();ctx.moveTo(-80,0);ctx.quadraticCurveTo(-55,-45,-25,-18);ctx.quadraticCurveTo(0,-70,28,-35);ctx.quadraticCurveTo(55,-70,80,-42);ctx.lineTo(80,0);ctx.closePath();ctx.fill();ctx.strokeStyle='#78c8d9';ctx.stroke()}else if(type==='island'){ctx.fillStyle='#4bc8df';ctx.fillRect(-100,-35,200,35);ctx.fillStyle='#f0d99a';ctx.beginPath();ctx.ellipse(0,-20,70,18,0,0,7);ctx.fill();ctx.strokeStyle='#7b542e';ctx.lineWidth=8;ctx.beginPath();ctx.moveTo(0,-20);ctx.quadraticCurveTo(5,-80,30,-110);ctx.stroke();ctx.fillStyle='#38a954';for(let a=-2;a<=2;a++){ctx.beginPath();ctx.ellipse(30+a*10,-110+Math.abs(a)*4,28,7,a*.3,0,7);ctx.fill()}}else if(type==='reef'){ctx.fillStyle='#4bc8df';ctx.fillRect(-100,-65,200,65);ctx.fillStyle='#e86d59';for(let q=-65;q<=65;q+=26){ctx.beginPath();ctx.arc(q,-10-Math.abs(q)%30,12,0,7);ctx.fill()}}else if(type==='villa'){ctx.fillStyle='#4bc8df';ctx.fillRect(-100,-35,200,35);ctx.fillStyle='#f1deb1';ctx.fillRect(-55,-80,110,55);ctx.strokeRect(-55,-80,110,55);ctx.fillStyle='#985d36';ctx.beginPath();ctx.moveTo(-65,-80);ctx.lineTo(0,-115);ctx.lineTo(65,-80);ctx.closePath();ctx.fill();ctx.fillRect(-45,-25,8,25);ctx.fillRect(37,-25,8,25)}ctx.restore()}
-const oldDrawCountryLandmarks=drawCountryLandmarks;drawCountryLandmarks=function(ox){oldDrawCountryLandmarks(ox);const types={2:['eiffel','louvre','arc'],3:['sagrada','guell','alhambra'],4:['persepolis','square','azadi'],5:['balloon','hagia','pamukkale'],6:['island','reef','villa'],7:['brandenburg','cathedral','castle'],8:['matterhorn','chapel','falls']};if(level>1)(LANDMARKS[level]||[]).forEach((lm,i)=>{const x=lm.x-ox;if(x>-150&&x<W+150)drawV25Landmark(c,types[level][i],x,H-145,level===6?1.05:.82)});};
-cardPicture=function(type){return v25Svg(type)};
-const oldStartCountryMemory=startCountryMemory;startCountryMemory=function(n){countryTransitionBusy=false;memoryLevel=n;run=0;state='memory';K.l=K.r=K.j=K.f=0;useMainGameControls(false);show('memory');const country=COUNTRIES[n],data=MEMORY_BY_COUNTRY[n];const t=L(),li=['de','en','fr','fa'].indexOf(v25Lang);$('memoryTitle').textContent=country.flag+' '+country.name.toUpperCase()+' MEMORY';$('memoryIntro').textContent=t.memoryIntro;$('memoryContinue').textContent=n<COUNTRY_COUNT?t.collect:t.finalStamp;$('italyStamp').textContent='✅'+country.flag;memDeck=shuffle(data.flatMap((x,i)=>{const nm=(LM_TRANSLATIONS[n]&&LM_TRANSLATIONS[n][Math.min(i,LM_TRANSLATIONS[n].length-1)]?LM_TRANSLATIONS[n][Math.min(i,LM_TRANSLATIONS[n].length-1)][li]:x[1]);return[{type:x[0],name:nm,fact:x[2],pair:i,id:i+'a'},{type:x[0],name:nm,fact:x[2],pair:i,id:i+'b'}]}));memOpen=[];memMatched=0;memMoves=0;memLocked=false;$('memory').querySelector('.memoryTop').innerHTML=`<span>${t.moves}: <b id="memMoves">0</b></span><span>${t.pairs}: <b id="memPairs">0</b>/6</span>`;$('memoryFact').textContent=t.tap;$('memoryContinue').style.display='none';$('italyStamp').style.display='none';renderMemory()};
-renderMemory=function(){const g=$('memoryGrid'),t=L();g.innerHTML='';memDeck.forEach((card,idx)=>{const b=document.createElement('button');b.className='memTile'+(card.matched?' matched':memOpen.includes(idx)?' open':'');const open=card.matched||memOpen.includes(idx);if(open)b.innerHTML='<div class="memPic">'+cardPicture(card.type)+'</div><div class="memName">'+card.name+'</div>';else b.innerHTML='<div class="memPic">?</div><div class="memName">'+t.hidden+'</div>';b.setAttribute('aria-label',open?card.name:t.hidden);b.onclick=()=>flipMemory(idx);g.appendChild(b)})};
-const oldFlip=flipMemory;flipMemory=function(idx){if(memLocked||memDeck[idx].matched||memOpen.includes(idx)||memOpen.length>=2)return;memOpen.push(idx);renderMemory();if(memOpen.length===2){memMoves++;$('memMoves').textContent=memMoves;const[a,b]=memOpen,t=L();if(memDeck[a].pair===memDeck[b].pair){memDeck[a].matched=memDeck[b].matched=true;memMatched++;$('memPairs').textContent=memMatched;const data=MEMORY_BY_COUNTRY[memoryLevel][memDeck[a].pair];$('memoryFact').innerHTML='<b>'+memDeck[a].name+':</b> '+data[2];memOpen=[];score+=100;sfx('collect');renderMemory();if(memMatched===6){$('memoryFact').innerHTML='<b>'+t.excellent+'</b>';$('memoryContinue').style.display='inline-block';$('italyStamp').style.display='block';try{localStorage.setItem('caStamp'+memoryLevel,'earned')}catch(e){}}}else{memLocked=true;$('memoryFact').textContent=t.notmatch;setTimeout(()=>{memOpen=[];memLocked=false;renderMemory()},720)}}};
-applyLang();
-</script>
-
-<style>
-#v26Loading{position:fixed;inset:0;z-index:200000;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 25%,#2563eb,#07101f 68%);color:#fff}.v26LoadCard{text-align:center;width:min(520px,90vw)}.v26Logo{font-size:clamp(34px,7vw,68px);font-weight:1000;text-shadow:0 6px 18px #000}.v26Plane{font-size:42px;animation:v26fly 1.8s ease-in-out infinite}.v26Bar{height:18px;border:2px solid #fff;border-radius:20px;overflow:hidden;background:#ffffff26;margin:18px 0}.v26Bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,#facc15,#22c55e);animation:v26load 1.35s forwards}@keyframes v26load{to{width:100%}}@keyframes v26fly{50%{transform:translateX(24px) rotate(5deg)}}
-.v26MenuExtras{display:grid;grid-template-columns:repeat(2,minmax(150px,1fr));gap:9px;max-width:650px;margin:10px auto}.v26MenuExtras button{font-size:14px;padding:9px}.v26Continue{background:#86efac!important}.v26Album{background:#93c5fd!important}.v26Legal{background:#e9d5ff!important}.v26Reset{background:#fecaca!important}
-.v26Modal{position:fixed;inset:0;z-index:110000;display:none;align-items:center;justify-content:center;padding:10px;background:#07101fe8}.v26Modal.show{display:flex}.v26ModalCard{width:min(960px,96vw);max-height:94vh;overflow:auto;background:#fff;border:4px solid #2563eb;border-radius:22px;padding:16px;color:#172033;text-align:left}.v26ModalCard h2{text-align:center}.v26Close{display:block;margin:15px auto 0}.v26AlbumGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.v26AlbumItem{border:2px solid #94a3b8;border-radius:14px;padding:8px;background:#f8fafc;text-align:center}.v26AlbumItem.locked{filter:grayscale(1);opacity:.55}.v26AlbumItem svg{width:100%;height:115px}.v26Badge{display:inline-block;padding:5px 9px;margin:3px;border-radius:999px;background:#e2e8f0;font-weight:900}.v26Badge.done{background:#bbf7d0}.v26LegalText{line-height:1.45;font-size:14px}.v26LegalText input{width:100%;padding:7px;border:2px solid #94a3b8;border-radius:8px;user-select:text}.v26MusicNow{position:fixed;left:8px;top:52px;z-index:22;background:#07101dcc;color:#fff;border:1px solid #60a5fa;border-radius:10px;padding:4px 8px;font-size:10px;font-weight:900;display:none}
-@media(max-width:580px){.v26MenuExtras{grid-template-columns:1fr 1fr}.v26ModalCard{font-size:14px}}
-</style>
-<div id="v26Loading"><div class="v26LoadCard"><div class="v26Plane">✈️</div><div class="v26Logo">CHANEL & ARMANI</div><h2>WORLD TOUR DELUXE · V27 STABLE</h2><div class="v26Bar"><i></i></div><p id="v26LoadTip">Loading countries, memories and music…</p></div></div>
-<div id="v26MusicNow" class="v26MusicNow"></div>
-<div id="v26AlbumModal" class="v26Modal"><div class="v26ModalCard"><h2 id="v26AlbumTitle">📖 Sammelalbum</h2><div id="v26AlbumGrid" class="v26AlbumGrid"></div><h3 id="v26AchievementsTitle">🏆 Erfolge</h3><div id="v26Achievements"></div><button class="v26Close" data-v26close="v26AlbumModal">SCHLIESSEN</button></div></div>
-<div id="v26LegalModal" class="v26Modal"><div class="v26ModalCard"><h2 id="v26LegalTitle">ℹ️ Datenschutz & Impressum</h2><div id="v26LegalContent" class="v26LegalText"></div><button class="v26Close" data-v26close="v26LegalModal">SCHLIESSEN</button></div></div>
-<script>
-(function(){
-'use strict';
-const V26_KEY='caV26Save';
-const v26Default={highest:1,completed:[],landmarks:{},memory:{},score:0,achievements:[],lastPlayed:Date.now()};
-function v26Load(){try{return Object.assign({},v26Default,JSON.parse(localStorage.getItem(V26_KEY)||'{}'))}catch(e){return Object.assign({},v26Default)}}
-let v26Save=v26Load();
-function v26Write(){v26Save.lastPlayed=Date.now();v26Save.score=Math.max(v26Save.score||0,typeof score==='number'?score:0);try{localStorage.setItem(V26_KEY,JSON.stringify(v26Save))}catch(e){}}
-function v26Unlock(id){if(!v26Save.achievements.includes(id)){v26Save.achievements.push(id);v26Write();try{toast('🏆 '+id)}catch(e){}}}
-const v26Text={
- de:{cont:'▶ SPIEL FORTSETZEN',album:'📖 SAMMELALBUM & ERFOLGE',legal:'ℹ️ DATENSCHUTZ & IMPRESSUM',reset:'↺ SPIELSTAND LÖSCHEN',albumTitle:'📖 Sammelalbum',ach:'🏆 Erfolge',close:'SCHLIESSEN',confirm:'Spielstand wirklich löschen?',music:['Italien: mediterrane Saiten','Frankreich: Pariser Walzer','Spanien: rhythmische Gitarre','Iran: persische Klangfarben','Türkei: anatolische Klangfarben','Malediven: ruhige Inselklänge','Deutschland: orchestrales Volksmotiv','Schweiz: Alpenklang und Streicher'],locked:'Noch nicht entdeckt',privacy:`<h3>Datenschutzerklärung</h3><p>Dieses Spiel arbeitet lokal im Browser. Es verlangt keine Registrierung und überträgt nach aktuellem Stand keine personenbezogenen Daten an einen Server. Spielfortschritt, Sprache und Audioeinstellungen werden ausschließlich im lokalen Speicher des Geräts gespeichert.</p><p>Es werden keine Analyse-, Werbe- oder Trackingdienste eingesetzt. Beim Löschen der Browserdaten oder der App können gespeicherte Spielstände verloren gehen.</p><p>Wird das Spiel später um Online-Dienste, Werbung, Konten oder externe Medien erweitert, muss diese Erklärung vor Veröffentlichung angepasst werden.</p><h3>Impressum – vor Veröffentlichung ausfüllen</h3><p><b>Verantwortlich:</b></p><input value="Ralf Jung" aria-label="Name"><p><b>Anschrift:</b></p><input placeholder="Vollständige ladungsfähige Anschrift"><p><b>E-Mail:</b></p><input placeholder="Kontakt-E-Mail"><p><b>Hinweis zur Musik:</b> Die V26-Musik und Umgebungsgeräusche werden im Spiel zur Laufzeit algorithmisch erzeugt. Es werden keine aufgenommenen bekannten Musikstücke oder externen Audiodateien eingebunden.</p>`},
- en:{cont:'▶ CONTINUE GAME',album:'📖 ALBUM & ACHIEVEMENTS',legal:'ℹ️ PRIVACY & LEGAL NOTICE',reset:'↺ DELETE SAVE',albumTitle:'📖 Collection album',ach:'🏆 Achievements',close:'CLOSE',confirm:'Delete the saved progress?',music:['Italy: Mediterranean strings','France: Parisian waltz','Spain: rhythmic guitar','Iran: Persian-inspired timbres','Turkey: Anatolian-inspired timbres','Maldives: calm island sounds','Germany: orchestral folk motif','Switzerland: alpine bells and strings'],locked:'Not discovered yet',privacy:`<h3>Privacy policy</h3><p>This game runs locally in the browser. It requires no registration and currently sends no personal data to a server. Progress, language and audio settings are stored only in the device's local browser storage.</p><p>No analytics, advertising or tracking services are used. Clearing browser data or deleting the app may remove the saved game.</p><p>If online services, advertising, accounts or external media are added later, this policy must be updated before publication.</p><h3>Legal notice – complete before publication</h3><p><b>Responsible person:</b></p><input value="Ralf Jung"><p><b>Address:</b></p><input placeholder="Complete service address"><p><b>Email:</b></p><input placeholder="Contact email"><p><b>Music notice:</b> V27 music and ambience are generated algorithmically at runtime. No recorded well-known songs or external audio files are included.</p>`},
- fr:{cont:'▶ CONTINUER LA PARTIE',album:'📖 ALBUM ET SUCCÈS',legal:'ℹ️ CONFIDENTIALITÉ ET MENTIONS',reset:'↺ EFFACER LA SAUVEGARDE',albumTitle:'📖 Album de collection',ach:'🏆 Succès',close:'FERMER',confirm:'Effacer la progression sauvegardée ?',music:['Italie : cordes méditerranéennes','France : valse parisienne','Espagne : guitare rythmique','Iran : timbres inspirés de la Perse','Turquie : timbres inspirés de l’Anatolie','Maldives : sons calmes des îles','Allemagne : motif folklorique orchestral','Suisse : cloches alpines et cordes'],locked:'Pas encore découvert',privacy:`<h3>Politique de confidentialité</h3><p>Ce jeu fonctionne localement dans le navigateur. Il ne demande aucune inscription et ne transmet actuellement aucune donnée personnelle à un serveur. La progression, la langue et les réglages audio sont stockés uniquement sur l’appareil.</p><p>Aucun service d’analyse, de publicité ou de suivi n’est utilisé. La suppression des données du navigateur peut effacer la sauvegarde.</p><h3>Mentions légales – à compléter avant publication</h3><p><b>Responsable :</b></p><input value="Ralf Jung"><p><b>Adresse :</b></p><input placeholder="Adresse complète"><p><b>E-mail :</b></p><input placeholder="E-mail de contact"><p><b>Musique :</b> les musiques et ambiances V27 sont générées de manière algorithmique pendant le jeu. Aucun morceau connu enregistré ni fichier audio externe n’est inclus.</p>`},
- fa:{cont:'▶ ادامه بازی',album:'📖 آلبوم و دستاوردها',legal:'ℹ️ حریم خصوصی و اطلاعات قانونی',reset:'↺ حذف ذخیره بازی',albumTitle:'📖 آلبوم مجموعه',ach:'🏆 دستاوردها',close:'بستن',confirm:'ذخیره بازی حذف شود؟',music:['ایتالیا: سازهای زهی مدیترانه‌ای','فرانسه: والس پاریسی','اسپانیا: گیتار ریتمیک','ایران: رنگ‌آمیزی صوتی الهام‌گرفته از ایران','ترکیه: رنگ‌آمیزی صوتی الهام‌گرفته از آناتولی','مالدیو: صدای آرام جزیره','آلمان: موسیقی ارکسترال محلی','سوئیس: زنگ‌های آلپی و سازهای زهی'],locked:'هنوز کشف نشده',privacy:`<h3>حریم خصوصی</h3><p>این بازی به‌صورت محلی در مرورگر اجرا می‌شود، ثبت‌نام نمی‌خواهد و در نسخه فعلی داده شخصی را به سرور ارسال نمی‌کند. پیشرفت بازی، زبان و تنظیمات صدا فقط در حافظه محلی دستگاه ذخیره می‌شود.</p><p>هیچ سرویس تبلیغاتی، تحلیلی یا ردیابی استفاده نمی‌شود. پاک‌کردن داده‌های مرورگر ممکن است ذخیره بازی را حذف کند.</p><h3>اطلاعات قانونی – پیش از انتشار تکمیل شود</h3><p><b>مسئول:</b></p><input value="Ralf Jung"><p><b>نشانی:</b></p><input placeholder="نشانی کامل"><p><b>ایمیل:</b></p><input placeholder="ایمیل تماس"><p><b>موسیقی:</b> موسیقی و صدای محیط نسخه ۲۷ هنگام اجرا به‌صورت الگوریتمی ساخته می‌شوند و هیچ آهنگ شناخته‌شده یا فایل صوتی خارجی در بازی وجود ندارد.</p>`}
-};
-function TX(){return v26Text[window.v25Lang||'de']||v26Text.de}
-function v26Menu(){
- const row=document.querySelector('#menu .row');if(!row||document.getElementById('v26Extras'))return;
- const box=document.createElement('div');box.id='v26Extras';box.className='v26MenuExtras';
- box.innerHTML='<button id="v26Continue" class="v26Continue"></button><button id="v26Album" class="v26Album"></button><button id="v26Legal" class="v26Legal"></button><button id="v26Reset" class="v26Reset"></button>';
- row.after(box);document.querySelector('#menu h2 small').textContent='V27 – STABLE TRANSITIONS HOTFIX 4';
- document.getElementById('v26Continue').onclick=()=>v26StartAt(Math.max(1,Math.min(COUNTRY_COUNT,v26Save.highest||1)));
- document.getElementById('v26Album').onclick=v26OpenAlbum;document.getElementById('v26Legal').onclick=v26OpenLegal;
- document.getElementById('v26Reset').onclick=()=>{if(confirm(TX().confirm)){localStorage.removeItem(V26_KEY);for(let i=1;i<=COUNTRY_COUNT;i++)localStorage.removeItem('caStamp'+i);v26Save=v26Load();v26Refresh();}};
- v26Refresh();
-}
-function v26Refresh(){const t=TX();['v26Continue','v26Album','v26Legal','v26Reset'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent={v26Continue:t.cont,v26Album:t.album,v26Legal:t.legal,v26Reset:t.reset}[id]});document.querySelectorAll('[data-v26close]').forEach(b=>b.textContent=t.close);const a=document.getElementById('v26AlbumTitle');if(a)a.textContent=t.albumTitle;const h=document.getElementById('v26AchievementsTitle');if(h)h.textContent=t.ach;v26UpdateWorldMap();}
-function v26StartAt(n){countryTransitionBusy=false;gameFinished=false;ensureAudio();show('');useMainGameControls(true);score=v26Save.score||0;bonesN=0;activePlayer=0;carriedPlayer=-1;P=[mkP(1,'chanel',70),mkP(2,'armani',125)];build(n);state='game';run=1;last=performance.now();v26Unlock('First Journey');}
-function v26UpdateWorldMap(){const buttons=[...document.querySelectorAll('#worldmap .country')];buttons.forEach((b,i)=>{const n=i+1,unlocked=n<=Math.max(1,v26Save.highest||1);b.classList.toggle('locked',!unlocked);b.disabled=!unlocked;if(unlocked)b.onclick=()=>v26StartAt(n);const done=v26Save.completed.includes(n);b.style.outline=done?'5px solid #22c55e':'';});}
-function v26OpenAlbum(){const t=TX(),grid=document.getElementById('v26AlbumGrid');grid.innerHTML='';for(let n=1;n<=COUNTRY_COUNT;n++){const country=COUNTRIES[n],lms=LANDMARKS[n]||[];lms.forEach((lm,i)=>{const found=(v26Save.landmarks[n]||[]).includes(i),d=document.createElement('div');d.className='v26AlbumItem'+(found?'':' locked');d.innerHTML=(found?v25PictureForLevel(n,i):'<div style="height:115px;display:grid;place-items:center;font-size:48px">🔒</div>')+'<b>'+country.flag+' '+(found?lm.title:t.locked)+'</b>';grid.appendChild(d)})}const ach=document.getElementById('v26Achievements');const all=['First Journey','First Landmark','Piggyback Team','Memory Master','World Explorer','World Tour Champion'];ach.innerHTML=all.map(x=>'<span class="v26Badge '+(v26Save.achievements.includes(x)?'done':'')+'">'+(v26Save.achievements.includes(x)?'✓ ':'🔒 ')+x+'</span>').join('');document.getElementById('v26AlbumModal').classList.add('show')}
-function v26OpenLegal(){document.getElementById('v26LegalContent').innerHTML=TX().privacy;document.getElementById('v26LegalModal').classList.add('show')}
-document.querySelectorAll('[data-v26close]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.v26close).classList.remove('show'));
-
-// Original, runtime-generated music: no sampled or copied recordings.
-let v26AmbientTimer=null,v26MusicLevel=0;
-const V26_SCALES={1:[261.63,293.66,329.63,392,440,523.25],2:[293.66,349.23,440,523.25,587.33,698.46],3:[329.63,349.23,415.3,493.88,523.25,659.25],4:[261.63,311.13,349.23,392,466.16,523.25],5:[293.66,349.23,392,440,523.25,587.33],6:[261.63,329.63,392,493.88,523.25,659.25],7:[261.63,329.63,392,523.25,659.25,783.99],8:[293.66,369.99,440,554.37,659.25,739.99]};
-window.startMusic=function(){if(musicTimer)return;ensureAudio();v26MusicLevel=level;let step=0;const patterns={1:[0,2,4,3,2,1,0,3],2:[0,2,4,5,4,2,1,3],3:[0,1,3,1,4,3,1,0],4:[0,3,1,4,3,2,0,1],5:[0,2,3,5,3,2,1,0],6:[0,2,4,2,5,4,2,1],7:[0,2,4,5,4,2,1,3],8:[0,2,4,5,3,2,1,0]};musicTimer=setInterval(()=>{if(!audioCtx||state==='over')return;if(v26MusicLevel!==level){stopMusic();startMusic();return}const sc=V26_SCALES[level]||V26_SCALES[1],p=patterns[level]||patterns[1],f=sc[p[step%p.length]];const type=[null,'triangle','sine','triangle','sine','triangle','sine','triangle','sine'][level]||'triangle';tone(f,.30,type,.065,0,'music');if(level===2&&step%3===0)tone(f/2,.42,'sine',.035,.05,'music');if(level===3&&step%2===0){tone(f*2,.06,'square',.022,.12,'music');noise(.035,.012)}if((level===4||level===5)&&step%4===0)tone(sc[0]/2,.5,'sine',.035,0,'music');if(level===6&&step%4===0)tone(130.81,.7,'sine',.025,0,'music');step++},level===2?390:330);if(v26AmbientTimer)clearInterval(v26AmbientTimer);v26AmbientTimer=setInterval(()=>{if(!audioCtx||state!=='game')return;if(level===6)noise(.8,.012);else if(level===5||level===4)noise(.35,.008);else if(Math.random()>.55)tone(900+Math.random()*500,.04,'sine',.012,0,'sfx')},1450);const label=document.getElementById('v26MusicNow');if(label){label.textContent='🎵 '+TX().music[level-1];label.style.display='block'}};
-const v26OldStop=window.stopMusic;window.stopMusic=function(){if(v26OldStop)v26OldStop();if(v26AmbientTimer){clearInterval(v26AmbientTimer);v26AmbientTimer=null}};
-const v26OldBuild=window.build;window.build=function(n){if(typeof level==='number'&&level!==n)stopMusic();v26OldBuild(n);v26Save.highest=Math.max(v26Save.highest||1,n);v26Write();setTimeout(()=>{if(state==='game')startMusic()},80)};
-const v26OldLandmark=window.showLandmarkInfo;window.showLandmarkInfo=function(lm){const i=(LANDMARKS[level]||[]).indexOf(lm);v26Save.landmarks[level]=v26Save.landmarks[level]||[];if(!v26Save.landmarks[level].includes(i))v26Save.landmarks[level].push(i);v26Unlock('First Landmark');if(Object.values(v26Save.landmarks).reduce((a,b)=>a+b.length,0)>=27)v26Unlock('World Explorer');v26Write();v26OldLandmark(lm)};
-const v26OldCarry=window.toggleCarry;window.toggleCarry=function(){const before=carriedPlayer;v26OldCarry();if(before<0&&carriedPlayer>=0)v26Unlock('Piggyback Team')};
-const v26OldMemory=window.startCountryMemory;window.startCountryMemory=function(n){v26OldMemory(n);v26Save.highest=Math.max(v26Save.highest||1,n);v26Write()};
-const memBtn=document.getElementById('memoryContinue');if(memBtn){const old=memBtn.onclick;memBtn.onclick=function(e){const n=memoryLevel;v26Save.memory[n]=true;if(!v26Save.completed.includes(n))v26Save.completed.push(n);v26Save.highest=Math.max(v26Save.highest||1,Math.min(COUNTRY_COUNT,n+1));if(Object.keys(v26Save.memory).length>=COUNTRY_COUNT)v26Unlock('Memory Master');if(n===COUNTRY_COUNT)v26Unlock('World Tour Champion');v26Write();v26UpdateWorldMap();return old&&old.call(this,e)}}
-const oldApply=window.applyLang;window.applyLang=function(){oldApply();v26Refresh();const label=document.getElementById('v26MusicNow');if(label&&level)label.textContent='🎵 '+TX().music[level-1]};
-window.addEventListener('beforeunload',v26Write);setInterval(()=>{if(state==='game')v26Write()},10000);
-window.addEventListener('load',()=>{v26Menu();v26UpdateWorldMap();setTimeout(()=>{const l=document.getElementById('v26Loading');if(l){l.style.opacity='0';l.style.transition='opacity .35s';setTimeout(()=>l.remove(),380)}},1450)});
-// Public bridge for later expansion modules. The previous Phase-2 module called
-// private functions from this closure, which caused runtime ReferenceErrors.
-Object.defineProperty(window,'v26Save',{configurable:true,get:()=>v26Save,set:(value)=>{v26Save=value||v26Load()}});
-Object.assign(window,{v26StartAt,v26UpdateWorldMap,v26Write,v26Unlock,v26OpenAlbum,v26OpenLegal,v26Refresh});
-})();
-</script>
-
-
-<div id="quiz" class="screen"><div class="quizCard"><h1 id="quizTitle">QUIZ</h1><div class="quizProgress" id="quizProgress"></div><div class="quizQuestion" id="quizQuestion"></div><div class="quizAnswers" id="quizAnswers"></div><div class="quizFact" id="quizFact"></div><button id="quizNext" style="display:none">WEITER</button></div></div>
-<div id="phaseBadge" class="phaseBadge" style="display:none"></div>
-\n<script id="v27p2js">
-(()=>{
-'use strict';
-const P2_LANDMARKS={
-  7:[{x:720,icon:'🗼',title:'Berlin TV Tower',text:'The Berlin TV Tower is the tallest structure in Germany.'},{x:1950,icon:'🌲',title:'Black Forest',text:'The Black Forest is a wooded mountain region in south-west Germany.'},{x:3250,icon:'🏔️',title:'Zugspitze',text:'At 2,962 metres, the Zugspitze is Germany’s highest mountain.'}],
-  8:[{x:760,icon:'🏰',title:'Chillon Castle',text:'Chillon Castle stands on the shore of Lake Geneva.'},{x:2050,icon:'🏛️',title:'Federal Palace',text:'The Federal Palace in Bern is the seat of the Swiss government and parliament.'},{x:3300,icon:'🚂',title:'Glacier Express',text:'The Glacier Express crosses the Swiss Alps on a scenic railway route.'}]
-};
-const P2_QUIZ={
-  7:[
-    {q:'Was ist die Hauptstadt Deutschlands?',a:['Berlin','München','Hamburg'],c:0,f:'Berlin ist die Hauptstadt und zugleich die bevölkerungsreichste Stadt Deutschlands.'},
-    {q:'Wie heißt Deutschlands höchster Berg?',a:['Zugspitze','Matterhorn','Brocken'],c:0,f:'Die Zugspitze ist 2.962 Meter hoch.'},
-    {q:'In welcher Stadt steht der Kölner Dom?',a:['Köln','Dresden','Frankfurt'],c:0,f:'Der Kölner Dom gehört zum UNESCO-Welterbe.'},
-    {q:'Welches Bauwerk steht in Berlin?',a:['Brandenburger Tor','Eiffelturm','Schiefer Turm'],c:0,f:'Das Brandenburger Tor gilt als Symbol der deutschen Einheit.'},
-    {q:'Welche Währung wird in Deutschland verwendet?',a:['Euro','Franken','Dollar'],c:0,f:'Deutschland gehört zur Eurozone.'}
-  ],
-  8:[
-    {q:'Wie heißt die Hauptstadt der Schweiz?',a:['Bern','Zürich','Genf'],c:0,f:'Bern ist die Bundesstadt der Schweiz.'},
-    {q:'Welche Währung wird in der Schweiz verwendet?',a:['Schweizer Franken','Euro','Krone'],c:0,f:'Die offizielle Währung ist der Schweizer Franken.'},
-    {q:'Wie heißt der berühmte Berg an der Grenze zu Italien?',a:['Matterhorn','Zugspitze','Mont Blanc'],c:0,f:'Das Matterhorn ist 4.478 Meter hoch.'},
-    {q:'Bei welcher Stadt liegt der Rheinfall?',a:['Schaffhausen','Luzern','Lausanne'],c:0,f:'Der Rheinfall liegt bei Neuhausen am Rheinfall nahe Schaffhausen.'},
-    {q:'Wie viele Landessprachen hat die Schweiz?',a:['Vier','Zwei','Sechs'],c:0,f:'Deutsch, Französisch, Italienisch und Rätoromanisch sind Landessprachen.'}
-  ]
-};
-let p2Stage=1, quizCountry=0, quizIndex=0, quizScore=0, quizLocked=false;
-const BASE_LANDMARKS={7:(LANDMARKS[7]||[]).slice(),8:(LANDMARKS[8]||[]).slice()};
-function setP2Landmarks(n){if(n===7||n===8) LANDMARKS[n]=(p2Stage===2?P2_LANDMARKS[n]:BASE_LANDMARKS[n]);}
-const previousBuild=window.build;
-window.build=function(n){setP2Landmarks(n);previousBuild(n);if((n===7||n===8)&&p2Stage===2){
-  world=n===7?4300:4200; plats.length=0; items.length=0; en.length=0;
-  const gaps=n===7?[[560,170],[1320,210],[2300,190],[3450,220]]:[[700,190],[1640,220],[2700,210],[3600,170]];let cur=0;gaps.forEach(g=>{if(g[0]>cur)ground(cur,g[0]-cur);cur=g[0]+g[1]});if(cur<world)ground(cur,world-cur);
-  const platforms=n===7?[[260,H-250,190],[700,H-380,210],[1090,H-300,220],[1510,H-450,240],[1970,H-330,210],[2460,H-430,250],[3010,H-300,220],[3560,H-440,240],[3950,H-320,190]]:[[280,H-260,200],[760,H-410,220],[1180,H-310,210],[1690,H-470,250],[2180,H-350,220],[2670,H-440,240],[3150,H-310,220],[3650,H-460,230]];
-  platforms.forEach(v=>{plat(...v);items.push({t:'bone',x:v[0]+v[2]/2,y:v[1]-22,a:1})});
-  const foes=n===7?[[520,'fox'],[1160,'boar'],[1860,'raccoon'],[2600,'wolf'],[3320,'owl'],[3890,'fox']]:[[620,'goat'],[1350,'owl'],[2050,'wolf'],[2850,'goat'],[3500,'owl'],[3920,'wolf']];
-  foes.forEach((v,i)=>enemy(v[0],H-150-(i%2)*80,['fox','boar','raccoon','wolf','owl'].includes(v[1])?v[1]:'rabbit'));
-  P.forEach((p,i)=>{p.x=70+i*55;p.y=20;p.done=0});seenLandmarks=new Set();
- }
- updatePhaseBadge();
-};
-function updatePhaseBadge(){const b=document.getElementById('phaseBadge');if(state==='game'&&(level===7||level===8)){b.style.display='block';b.textContent=(COUNTRIES[level].flag+' '+COUNTRIES[level].name+' · LEVEL '+p2Stage+'/2').toUpperCase()}else b.style.display='none'}
-const oldV26StartAt=window.v26StartAt;window.v26StartAt=function(n){p2Stage=1;setP2Landmarks(n);return oldV26StartAt(n)};
-let countryTransitionBusy=false;
-function requestCountryTransition(){
-  if(countryTransitionBusy||state!=='game'||gameFinished)return;
-  countryTransitionBusy=true;run=0;K.l=K.r=K.j=K.f=0;
-  P.forEach(p=>{p.done=1;p.vx=0;p.vy=0});
-  setTimeout(()=>{
-    try{phase2CountryComplete()}
-    catch(err){console.error('Country transition failed',err);state='worldmap';show('worldmap');run=0;useMainGameControls(false);v26UpdateWorldMap()}
-    finally{setTimeout(()=>{countryTransitionBusy=false},450)}
-  },80)
-}
-window.phase2CountryComplete=function(){if((level===7||level===8)&&p2Stage===1){p2Stage=2;P.forEach(p=>p.done=0);toast((COUNTRIES[level].name+' LEVEL 2').toUpperCase());build(level);state='game';run=1;useMainGameControls(true);last=performance.now();return}startCountryMemory(level)};
-const oldMemoryStart=window.startCountryMemory;window.startCountryMemory=function(n){setP2Landmarks(n);oldMemoryStart(n)};
-const mem=document.getElementById('memoryContinue');
-function saveCountryCompletion(n){
-  v26Save.memory=v26Save.memory||{};
-  v26Save.completed=Array.isArray(v26Save.completed)?v26Save.completed:[];
-  v26Save.memory[n]=true;
-  if(!v26Save.completed.includes(n))v26Save.completed.push(n);
-  v26Save.highest=Math.max(v26Save.highest||1,Math.min(COUNTRY_COUNT,n+1));
-  if(Object.keys(v26Save.memory).length>=COUNTRY_COUNT)v26Unlock('Memory Master');
-  if(n===COUNTRY_COUNT)v26Unlock('World Tour Champion');
-  try{localStorage.setItem('caStamp'+n,'earned')}catch(_e){}
-  v26Write();v26UpdateWorldMap();
-}
-function resetForNextCountry(){
-  run=0;gameFinished=false;bossFightActive=false;bossArena=false;bossIntro=0;victoryPending=false;celebrate=0;
-  try{cancelAnimationFrame(bossRAF)}catch(_e){}
-  K.l=K.r=K.j=K.f=0;activePlayer=0;carriedPlayer=-1;
-  P=[mkP(1,'chanel',70),mkP(2,'armani',125)];
-  seenLandmarks=new Set();
-}
-function continueAfterMemory(e){
-  if(e){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation&&e.stopImmediatePropagation()}
-  const button=document.getElementById('memoryContinue');
-  if(!button||button.dataset.busy==='1')return false;
-  button.dataset.busy='1';
-  const n=Math.max(1,Math.min(COUNTRY_COUNT,Number(memoryLevel)||1));
-  saveCountryCompletion(n);
-  $('italyStamp').style.display='block';
-  if(n===7||n===8){
-    button.dataset.busy='0';
-    startQuiz(n);
-    return false;
-  }
-  resetForNextCountry();
-  if(n<COUNTRY_COUNT){
-    p2Stage=1;
-    // Der zentrale Länderstart setzt Figuren, Kamera, Steuerung und Levelzustand vollständig zurück.
-    v26StartAt(n+1);
-    toast((COUNTRIES[n].name+' COMPLETE! '+COUNTRIES[n].flag).toUpperCase());
-  }else{
-    state='win';show('win');run=0;useMainGameControls(false);
-  }
-  setTimeout(()=>{const b=document.getElementById('memoryContinue');if(b)b.dataset.busy='0'},350);
-  return false;
-}
-if(mem){
-  // Button klonen: entfernt zuverlässig sämtliche alten click/touch-Handler aus früheren Versionen.
-  const clean=mem.cloneNode(true);
-  mem.replaceWith(clean);
-  clean.onclick=continueAfterMemory;
-  clean.type='button';
-  clean.style.position='relative';clean.style.zIndex='20';clean.style.pointerEvents='auto';
-}
-function startQuiz(n){quizCountry=n;quizIndex=0;quizScore=0;quizLocked=false;state='quiz';run=0;useMainGameControls(false);document.getElementById('memory').classList.remove('show');document.getElementById('quiz').classList.add('show');renderQuiz()}
-function renderQuiz(){const qs=P2_QUIZ[quizCountry],q=qs[quizIndex];document.getElementById('quizTitle').textContent=COUNTRIES[quizCountry].flag+' '+COUNTRIES[quizCountry].name.toUpperCase()+' QUIZ';document.getElementById('quizProgress').textContent=(quizIndex+1)+' / '+qs.length+' · ⭐ '+quizScore;document.getElementById('quizQuestion').textContent=q.q;document.getElementById('quizFact').textContent='';const a=document.getElementById('quizAnswers');a.innerHTML='';q.a.forEach((txt,i)=>{const b=document.createElement('button');b.textContent=txt;b.onclick=()=>answerQuiz(i,b);a.appendChild(b)});const n=document.getElementById('quizNext');n.style.display='none';n.textContent=quizIndex===qs.length-1?'QUIZ ABSCHLIESSEN':'WEITER';quizLocked=false}
-function answerQuiz(i,btn){if(quizLocked)return;quizLocked=true;const q=P2_QUIZ[quizCountry][quizIndex],buttons=[...document.querySelectorAll('#quizAnswers button')];buttons[q.c].classList.add('correct');if(i===q.c){quizScore++;sfx('collect')}else{btn.classList.add('wrong');sfx('hit')}document.getElementById('quizFact').textContent=q.f;document.getElementById('quizNext').style.display='inline-block'}
-document.getElementById('quizNext').onclick=()=>{const qs=P2_QUIZ[quizCountry];if(++quizIndex<qs.length){renderQuiz();return}finishQuiz()};
-function finishQuiz(){document.getElementById('quiz').classList.remove('show');v26Save.quiz=v26Save.quiz||{};v26Save.quiz[quizCountry]={score:quizScore,total:P2_QUIZ[quizCountry].length};v26Save.memory[quizCountry]=true;if(!v26Save.completed.includes(quizCountry))v26Save.completed.push(quizCountry);v26Save.highest=Math.max(v26Save.highest||1,Math.min(COUNTRY_COUNT,quizCountry+1));if(quizScore===5)v26Unlock('Quiz Champion');if(quizCountry===COUNTRY_COUNT)v26Unlock('World Tour Champion');v26Write();v26UpdateWorldMap();p2Stage=1;if(quizCountry<COUNTRY_COUNT){resetForNextCountry();v26StartAt(quizCountry+1)}else{countryTransitionBusy=false;state='win';show('win');run=0;useMainGameControls(false)}}
-const oldAlbum=window.v26OpenAlbum;window.v26OpenAlbum=function(){oldAlbum();const ach=document.getElementById('v26Achievements');if(ach&&!ach.textContent.includes('Quiz Champion')){const done=v26Save.achievements.includes('Quiz Champion');ach.insertAdjacentHTML('beforeend','<span class="v26Badge '+(done?'done':'')+'">'+(done?'✓ ':'🔒 ')+'Quiz Champion</span>')}};
-const oldShow=window.show;window.show=function(id){oldShow(id);updatePhaseBadge()};
-})();
-</script>\n</body></html>
+</body></html>

@@ -1,6 +1,6 @@
 {
-  "name": "Chanel & Armani V27 Europe Expansion – Phase 2",
-  "short_name": "C&A V27 P2",
+  "name": "Chanel & Armani – V16 Remastered",
+  "short_name": "C&A Remastered",
   "description": "Neu gebaute Bonusspiele und Bosskampf mit eigener, zuverlässig sichtbarer Touch-Steuerung.",
   "start_url": "./index.html?source=pwa",
   "scope": "./",
@@ -28,6 +28,5 @@
   "categories": [
     "games",
     "entertainment"
-  ],
-  "version": "27.2"
+  ]
 }
